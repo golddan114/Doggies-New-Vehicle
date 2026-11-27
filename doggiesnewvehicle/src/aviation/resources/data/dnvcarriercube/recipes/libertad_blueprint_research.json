@@ -1,0 +1,17 @@
+{
+  "type": "superbwarfare:researching",
+  "base": {
+    "item": "minecraft:paper"
+  },
+  "input": {
+    "item": "superbwarfare:legendary_material_pack"
+  },
+  "addition": {
+    "item": "superbwarfare:cannon_core"
+  },
+  "result": {
+    "item": "dnvcarriercube:libertad_blueprint",
+    "count": 1
+  },
+  "time": 2400
+}

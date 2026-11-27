@@ -1,0 +1,942 @@
+{
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/client/walker/HexbotRenderer.java": [
+    {
+      "before": "stack.pushPose();stack.mulPoseMatrix(piece.matrix());\n            stack.last().normal().mul(normalTransform.set(piece.matrix()).invert().transpose());",
+      "after": "stack.pushPose();stack.mulPose(piece.matrix()); // 1.21.1 also updates the normal matrix.",
+      "count": 1
+    },
+    {
+      "before": "import org.joml.Matrix3f;\n",
+      "after": "",
+      "count": 1
+    },
+    {
+      "before": "        Matrix3f normalTransform = new Matrix3f();\n",
+      "after": "",
+      "count": 1
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/client/weapons/Dsx1Model.java": [
+    {
+      "before": "software.bernie.geckolib.core.animation.AnimationState",
+      "after": "software.bernie.geckolib.animation.AnimationState",
+      "count": 1
+    },
+    {
+      "before": "void handleAnimations(AwmItem item, long instanceId, AnimationState<AwmItem> state)",
+      "after": "void handleAnimations(AwmItem item, long instanceId, AnimationState<AwmItem> state, float partialTick)",
+      "count": 1
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/client/weapons/Dsx1Renderer.java": [
+    {
+      "before": "int light, int overlay, float red, float green, float blue, float alpha)",
+      "after": "int light, int overlay, int color)",
+      "count": 2
+    },
+    {
+      "before": "int light, int overlay, int color) {",
+      "after": "int light, int overlay, int color) {\n        float red=((color >>> 16) & 255) / 255f, green=((color >>> 8) & 255) / 255f;\n        float blue=(color & 255) / 255f, alpha=(color >>> 24) / 255f;",
+      "count": 2
+    },
+    {
+      "before": "light, overlay, red, green, blue, alpha);",
+      "after": "light, overlay, color);",
+      "count": 1
+    },
+    {
+      "before": "part, 15728880, overlay, 1, 1, 1, alpha);",
+      "after": "part, 15728880, overlay, 1, 1, 1, (color >>> 24) / 255f);",
+      "count": 1
+    },
+    {
+      "before": "renderReticle(stack, overlay, alpha);",
+      "after": "renderReticle(stack, overlay, (color >>> 24) / 255f);",
+      "count": 1
+    },
+    {
+      "before": "software.bernie.geckolib.util.RenderUtils",
+      "after": "software.bernie.geckolib.util.RenderUtil",
+      "count": 1
+    },
+    {
+      "before": "RenderUtils.prepMatrixForBone",
+      "after": "RenderUtil.prepMatrixForBone",
+      "count": 3
+    },
+    {
+      "before": "stack.mulPoseMatrix(local);\n        stack.last().normal().mul(new Matrix3f(local).invert().transpose());",
+      "after": "stack.mulPose(local); // 1.21.1 updates its normal matrix in this operation.",
+      "count": 1
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/client/weapons/Dsx1BonePose.java": [
+    {
+      "before": "software.bernie.geckolib.core.animatable.model.CoreGeoBone",
+      "after": "software.bernie.geckolib.cache.object.GeoBone",
+      "count": 1
+    },
+    {
+      "before": "CoreGeoBone bone",
+      "after": "GeoBone bone",
+      "count": 5
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/weapons/Dsx1Item.java": [
+    {
+      "before": "software.bernie.geckolib.core.animation.AnimationController",
+      "after": "software.bernie.geckolib.animation.AnimationController",
+      "count": 1
+    },
+    {
+      "before": "software.bernie.geckolib.core.animation.AnimatableManager",
+      "after": "software.bernie.geckolib.animation.AnimatableManager",
+      "count": 1
+    },
+    {
+      "before": "software.bernie.geckolib.core.object.PlayState",
+      "after": "software.bernie.geckolib.animation.PlayState",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearPreparationRemoteItem.java": [
+    {
+      "before": "ItemStack stack,Level level,List<Component> tooltip",
+      "after": "ItemStack stack,net.minecraft.world.item.Item.TooltipContext context,List<Component> tooltip",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearDeploymentRemoteItem.java": [
+    {
+      "before": "stack.getTag()",
+      "after": "com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.read(stack)",
+      "count": 2
+    },
+    {
+      "before": "stack.setTag(data);",
+      "after": "com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.set(stack, data);",
+      "count": 1
+    },
+    {
+      "before": "ItemStack stack,Level level,List<Component> tooltip",
+      "after": "ItemStack stack,net.minecraft.world.item.Item.TooltipContext context,List<Component> tooltip",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearContainerDeployment.java": [
+    {
+      "before": "candidate.serializeNBT()",
+      "after": "candidate.serializeNBT(level.registryAccess())",
+      "count": 1
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/DoggiesNewVehicle.java": [
+    {
+      "before": "import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;",
+      "after": "",
+      "count": 1
+    },
+    {
+      "before": "DoggiesNewVehicle(FMLJavaModLoadingContext loadingContext)",
+      "after": "DoggiesNewVehicle(IEventBus modBus)",
+      "count": 1
+    },
+    {
+      "before": "IEventBus modBus = loadingContext.getModEventBus();",
+      "after": "com.liucodex.doggiesnewvehicle.neoforge.DnvNeoChannel.install(modBus);\n        com.liucodex.doggiesnewvehicle.compat.DnvVehicleCrewCapability.register(modBus);",
+      "count": 1
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/compat/DnvVehicleCrewServices.java": [
+    {
+      "before": "import net.neoforged.neoforge.event.AttachCapabilitiesEvent;",
+      "after": "",
+      "count": 1
+    },
+    {
+      "before": "  @SubscribeEvent\n  public static void attachVehicleCapability(AttachCapabilitiesEvent<Entity> event) {\n    if (!(event.getObject() instanceof VehicleEntity vehicle)) {\n      return;\n    }\n    DnvVehicleCrewCapabilityProvider provider =\n        new DnvVehicleCrewCapabilityProvider(vehicle);\n    event.addCapability(CREW_CAPABILITY_ID, provider);\n    event.addListener(provider::invalidate);\n  }\n",
+      "after": "",
+      "count": 1
+    },
+    {
+      "before": "stack.getTag()",
+      "after": "stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag()",
+      "count": 2
+    },
+    {
+      "before": "stack.setTag(DnvVehicleCrewCoreCodec.encode(result));",
+      "after": "stack.set(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.of(DnvVehicleCrewCoreCodec.encode(result)));",
+      "count": 1
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/item/DnvVehicleCrewCoreItem.java": [
+    {
+      "before": "stack.getTag()",
+      "after": "stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag()",
+      "count": 3
+    },
+    {
+      "before": "stack.setTag(DnvVehicleCrewCoreCodec.encode(snapshot));",
+      "after": "stack.set(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.of(DnvVehicleCrewCoreCodec.encode(snapshot)));",
+      "count": 1
+    },
+    {
+      "before": "@Nullable Level level,",
+      "after": "net.minecraft.world.item.Item.TooltipContext context,",
+      "count": 1
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/compat/DnvVehicleCrewAttachment.java": [
+    {
+      "before": "cores.get(0).getTag()",
+      "after": "cores.get(0).getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY).copyTag()",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/DnvArtilleryBlueprintLoot.java": [
+    {
+      "before": "import com.mojang.serialization.Codec;",
+      "after": "import com.mojang.serialization.MapCodec;",
+      "count": 1
+    },
+    {
+      "before": "Codec<",
+      "after": "MapCodec<",
+      "count": 4
+    },
+    {
+      "before": "RecordCodecBuilder.create(",
+      "after": "RecordCodecBuilder.mapCodec(",
+      "count": 1
+    },
+    {
+      "before": "RegistryObject<MapCodec<DnvArtilleryBlueprintLoot>>",
+      "after": "DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<DnvArtilleryBlueprintLoot>>",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/compat/DnvM1RemoteCrew.java": [
+    {
+      "before": "stack.getTag()",
+      "after": "com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.read(stack)",
+      "count": 3
+    },
+    {
+      "before": "held.getOrCreateTag().put(BINDING, binding);",
+      "after": "com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.update(held, tag -> tag.put(BINDING, binding));",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/compat/DnvRemoteWeaponStationContent.java": [
+    {
+      "before": "stack.getTag()",
+      "after": "com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.read(stack)",
+      "count": 3
+    },
+    {
+      "before": "private static final VoxelShape SHAPE",
+      "after": "@Override protected com.mojang.serialization.MapCodec<? extends BaseEntityBlock> codec() { return com.mojang.serialization.MapCodec.unit(StationBlock::new); }\n    private static final VoxelShape SHAPE",
+      "count": 1
+    },
+    {
+      "before": "    @Override public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player,\n        InteractionHand hand, BlockHitResult hit) {\n      if (hand == InteractionHand.MAIN_HAND && player instanceof ServerPlayer serverPlayer) {\n        DnvM1RemoteCrew.enter(serverPlayer, pos);\n      }\n      return InteractionResult.sidedSuccess(level.isClientSide);\n    }\n\n",
+      "after": "    @Override protected net.minecraft.world.ItemInteractionResult useItemOn(ItemStack stack, BlockState state,\n        Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {\n      if (hand == InteractionHand.MAIN_HAND && player instanceof ServerPlayer serverPlayer)\n        DnvM1RemoteCrew.enter(serverPlayer, pos);\n      return net.minecraft.world.ItemInteractionResult.sidedSuccess(level.isClientSide);\n    }\n    @Override protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,\n        Player player, BlockHitResult hit) {\n      if (player instanceof ServerPlayer serverPlayer) DnvM1RemoteCrew.enter(serverPlayer, pos);\n      return InteractionResult.sidedSuccess(level.isClientSide);\n    }\n\n",
+      "count": 1
+    },
+    {
+      "before": "public void load(CompoundTag tag) { invalidateRuntime(); super.load(tag); }",
+      "after": "protected void loadAdditional(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries) { invalidateRuntime(); super.loadAdditional(tag, registries); }",
+      "count": 1
+    }
+  ],
+  "src/boss/java/com/liucodex/doggiesnewvehicle/item/DnvBehaviorControllerItem.java": [
+    {
+      "before": "stack.getTag()",
+      "after": "com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.read(stack)",
+      "count": 2
+    },
+    {
+      "before": "CompoundTag tag = stack.getOrCreateTag();",
+      "after": "CompoundTag tag = com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.copy(stack);",
+      "count": 1
+    },
+    {
+      "before": "tag.putBoolean(holdTag, holdingPosition.test(vehicle));",
+      "after": "tag.putBoolean(holdTag, holdingPosition.test(vehicle));\n        com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.set(stack, tag);",
+      "count": 1
+    },
+    {
+      "before": "stack.getOrCreateTag().putBoolean(holdTag, hold);",
+      "after": "com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.update(stack, tag -> tag.putBoolean(holdTag, hold));",
+      "count": 1
+    },
+    {
+      "before": "@Nullable Level level,",
+      "after": "net.minecraft.world.item.Item.TooltipContext context,",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/compat/DnvM1IndicatorOrders.java": [
+    {
+      "before": "stack.hasTag()",
+      "after": "stack.has(net.minecraft.core.component.DataComponents.CUSTOM_DATA)",
+      "count": 1
+    },
+    {
+      "before": "stack.getTag()",
+      "after": "com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.copy(stack)",
+      "count": 1
+    },
+    {
+      "before": "stack.getOrCreateTag()",
+      "after": "com.liucodex.doggiesnewvehicle.neoforge.DnvNeoItemData.copy(stack)",
+      "count": 5
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/compat/DnvRemoteWeaponLinkStore.java": [
+    {
+      "before": "DnvRemoteWeaponLinkStore::load, DnvRemoteWeaponLinkStore::new, DATA_NAME",
+      "after": "new SavedData.Factory<>(DnvRemoteWeaponLinkStore::new, (tag, registries) -> load(tag), null), DATA_NAME",
+      "count": 1
+    },
+    {
+      "before": "save(CompoundTag tag)",
+      "after": "save(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries)",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/entity/DnvM1YunlongEntity.java": [
+    {
+      "before": "  @Override public <T> net.neoforged.neoforge.common.util.LazyOptional<T> getCapability(\n      net.neoforged.neoforge.common.capabilities.Capability<T> capability, net.minecraft.core.Direction side) {\n    if (nativeStateInvalid && (capability == net.neoforged.neoforge.common.capabilities.ForgeCapabilities.ITEM_HANDLER\n        || capability == net.neoforged.neoforge.common.capabilities.ForgeCapabilities.ENERGY))\n      return net.neoforged.neoforge.common.util.LazyOptional.empty();\n    return super.getCapability(capability, side);\n  }\n\n",
+      "after": "  // SBW's NeoForge capability providers query these virtual predicates for every entity type.\n  @Override public boolean hasContainer() { return !nativeStateInvalid && super.hasContainer(); }\n  @Override public boolean hasEnergyStorage() { return !nativeStateInvalid && super.hasEnergyStorage(); }\n\n",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/compat/mixin/DnvBlizzardFireReleaseMixin.java": [
+    {
+      "before": "Supplier<Context> context",
+      "after": "net.neoforged.neoforge.network.handling.IPayloadContext context",
+      "count": 1
+    },
+    {
+      "before": "var player = context.get().getSender();",
+      "after": "var player = context.player() instanceof net.minecraft.server.level.ServerPlayer serverPlayer ? serverPlayer : null;",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/compat/mixin/ArtilleryIndicatorFireMessageMixin.java": [
+    {
+      "before": "Supplier<Context> context",
+      "after": "net.neoforged.neoforge.network.handling.IPayloadContext context",
+      "count": 1
+    },
+    {
+      "before": "var player = context.get().getSender();",
+      "after": "var player = context.player() instanceof net.minecraft.server.level.ServerPlayer serverPlayer ? serverPlayer : null;",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/transform/ExactMuzzleMixinService.java": [
+    {
+      "before": "  private byte[] bytes(String name) throws IOException {\n    if (releaseMinecraft != null) {\n      byte[] data = releaseBytes(name);\n      if (data != null) return data;\n    }\n    if (name.equals(\"mixins.doggiesnewvehicle.json\") || name.equals(\"mixins.dnvartillery.json\") || name.equals(\"mixins.dnvblizzard.json\")) {\n      var config = JsonParser.parseString(Files.readString(Path.of(\n          !name.equals(\"mixins.doggiesnewvehicle.json\") ? \"src/artillery/resources\" : \"src/main/resources\", name))).getAsJsonObject();\n      // This fixture transforms development-named classes; release refmaps have their own gate.\n      config.remove(\"refmap\");\n      for (String side : List.of(\"mixins\", \"client\")) {\n        JsonArray selected = new JsonArray();\n        for (var value : config.getAsJsonArray(side)) if (value.getAsString().equals(selectedMixin)\n                || selectedMixin.equals(\"ApocalypseClientFireMixin\") && value.getAsString().equals(\"DragonClientPredictionMixin\")\n                || cameraArtifact!=null && (value.getAsString().equals(\"BlizzardCameraAccess\")\n                    || value.getAsString().equals(\"BlizzardCameraFrameMixin\"))) selected.add(value);\n        config.add(side, selected);\n      }\n      return config.toString().getBytes(StandardCharsets.UTF_8);\n    }\n    if (name.startsWith(\"com/liucodex/doggiesnewvehicle/\")) {\n      Path production = Path.of(\"build/classes/java/main\", name);\n      if (!Files.exists(production)) production = Path.of(\"build/classes/java/artillery\", name);\n      return Files.readAllBytes(production);\n    }\n    try (ZipFile sbw = new ZipFile(com.liucodex.doggiesnewvehicle.compat.SbwTestDependency.path().toFile())) {\n      var entry = sbw.getEntry(name);\n      if (entry != null) return sbw.getInputStream(entry).readAllBytes();\n      if (name.startsWith(\"com/github/mcmodderanchor/\")) {\n        try (ZipInputStream nested = new ZipInputStream(sbw.getInputStream(sbw.getEntry(\"META-INF/jarjar/simplebedrockmodel-2.5.1-forge-mc1.20.1.jar\")))) {\n          for (var part = nested.getNextEntry(); part != null; part = nested.getNextEntry()) {\n            if (part.getName().equals(name)) return nested.readAllBytes();\n          }\n        }\n      }\n    }\n    try (InputStream stream = getClass().getClassLoader().getResourceAsStream(name)) {\n      if (stream == null) throw new IOException(name);\n      return stream.readAllBytes();\n    }\n  }\n\n",
+      "after": "  private byte[] bytes(String name) throws IOException {\n    if (name.startsWith(\"com/liucodex/\") || name.startsWith(\"mixins.\") && name.endsWith(\".json\")) {\n      byte[] data;\n      String archive = System.getProperty(\"dnv.artifact\");\n      if (archive != null && !archive.isBlank()) {\n        try (ZipFile artifact = new ZipFile(archive)) {\n          var entry = artifact.getEntry(name);\n          if (entry == null) throw new IOException(\"Missing production artifact member: \" + name);\n          data = artifact.getInputStream(entry).readAllBytes();\n        }\n      } else {\n        String property = name.endsWith(\".class\") ? \"dnv.production.classDirs\" : \"dnv.production.resourceDirs\";\n        String roots = System.getProperty(property);\n        if (roots == null || roots.isBlank()) throw new IOException(\"Missing current production input: \" + property);\n        Path found = null;\n        for (String directory : roots.split(java.util.regex.Pattern.quote(java.io.File.pathSeparator))) {\n          Path candidate = Path.of(directory, name);\n          if (Files.isRegularFile(candidate)) {\n            if (found != null) throw new IOException(\"Duplicate production member: \" + name);\n            found = candidate;\n          }\n        }\n        if (found == null) throw new IOException(\"Missing current compiled/resource member: \" + name);\n        data = Files.readAllBytes(found);\n      }\n      if (name.startsWith(\"mixins.\") && name.endsWith(\".json\")) {\n        var config = JsonParser.parseString(new String(data, StandardCharsets.UTF_8)).getAsJsonObject();\n        for (String side : List.of(\"mixins\", \"client\")) {\n          JsonArray selected = new JsonArray();\n          if (config.has(side)) for (var value : config.getAsJsonArray(side))\n            if (value.getAsString().equals(selectedMixin)\n                || selectedMixin.equals(\"ApocalypseClientFireMixin\") && value.getAsString().equals(\"DragonClientPredictionMixin\")\n                || cameraArtifact!=null && (value.getAsString().equals(\"BlizzardCameraAccess\")\n                    || value.getAsString().equals(\"BlizzardCameraFrameMixin\"))) selected.add(value);\n          config.add(side, selected);\n        }\n        return config.toString().getBytes(StandardCharsets.UTF_8);\n      }\n      return data;\n    }\n    // Platform classes cannot come from an embedded mod library; avoid inflating every nested JAR for each hierarchy lookup.\n    if (name.startsWith(\"net/minecraft/\") || name.startsWith(\"java/\")) {\n      try (InputStream platform = getClass().getClassLoader().getResourceAsStream(name)) {\n        if (platform != null) return platform.readAllBytes();\n      }\n    }\n    try (ZipFile sbw = new ZipFile(System.getProperty(\"dnv.sbw.jar\"))) {\n      var entry = sbw.getEntry(name);\n      if (entry != null) return sbw.getInputStream(entry).readAllBytes();\n      for (var candidate : sbw.stream().filter(e -> e.getName().startsWith(\"META-INF/jarjar/\") && e.getName().endsWith(\".jar\")).toList()) {\n        try (ZipInputStream nested = new ZipInputStream(sbw.getInputStream(candidate))) {\n          for (var part = nested.getNextEntry(); part != null; part = nested.getNextEntry())\n            if (part.getName().equals(name)) return nested.readAllBytes();\n        }\n      }\n    }\n    try (InputStream stream = getClass().getClassLoader().getResourceAsStream(name)) {\n      if (stream == null) throw new IOException(name);\n      return stream.readAllBytes();\n    }\n  }\n\n",
+      "count": 1
+    },
+    {
+      "before": "Mixins.addConfiguration(selectedMixin.startsWith(\"Blizzard\") ? \"mixins.dnvblizzard.json\" : artilleryMixin() ?",
+      "after": "Mixins.addConfiguration(selectedMixin.startsWith(\"Blizzard\") ? \"mixins.dnvblizzard.json\" : selectedMixin.equals(\"TacticalMapScreenMixin\") ? \"mixins.dnvplatform.json\" : artilleryMixin() ?",
+      "count": 1
+    },
+    {
+      "before": "MixinEnvironment.CompatibilityLevel.JAVA_17",
+      "after": "MixinEnvironment.CompatibilityLevel.JAVA_21",
+      "count": 1
+    },
+    {
+      "before": "  @Override public IPropertyKey resolveKey(String name)",
+      "after": "  @Override public ClassNode getClassNode(String name, boolean runTransformers, int flags) throws ClassNotFoundException, IOException { return getClassNode(name, runTransformers); }\n  @Override public IPropertyKey resolveKey(String name)"
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/DnvMuzzleMixinApplicationTest.java": [
+    {
+      "before": "\"src/main/resources/mixins.doggiesnewvehicle.json\"",
+      "after": "\"build/neoforge1211/generated/main/resources/mixins.doggiesnewvehicle.json\"",
+      "count": 2
+    },
+    {
+      "before": "\"src/platform/resources/mixins.dnvplatform.json\"",
+      "after": "\"build/neoforge1211/generated/platform/resources/mixins.dnvplatform.json\"",
+      "count": 1
+    },
+    {
+      "before": "      // Exact ForgeGradle 1.20.1 mapping, checked independently of the development method name.\n      String mappings = Files.readString(Path.of(\"build/createSrgToMcp/output.srg\"));\n      assertTrue(mappings.contains(\"MD: net/minecraft/world/entity/Entity/saveWithoutId (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag; net/minecraft/world/entity/Entity/saveWithoutId\"));",
+      "after": "",
+      "count": 1
+    },
+    {
+      "before": "\"entity/vehicle/base/VehicleEntity,VehicleQueuedShotMixin,SERVER,3\",",
+      "after": "\"entity/vehicle/base/VehicleEntity,VehicleQueuedShotMixin,SERVER,3\",\n      \"inventory/handler/VehicleContainerHandler,VehicleContainerHandlerMixin,SERVER,1\",\n      \"entity/vehicle/base/VehicleEntity,VehicleSeatChangeMixin,SERVER,4\",\n      \"client/screens/TacticalMapScreen,TacticalMapScreenMixin,CLIENT,4\",",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/boss/MothershipEntityExecutionFixture.java": [
+    {
+      "before": "net/minecraftforge/registries/RegistryObject",
+      "after": "net/neoforged/neoforge/registries/DeferredHolder"
+    },
+    {
+      "before": "public static class Effects {public static final EffectType MOVEMENT_SLOWDOWN=new EffectType();}",
+      "after": "public static class Effects {public static final net.minecraft.core.Holder<EffectType> MOVEMENT_SLOWDOWN=net.minecraft.core.Holder.direct(new EffectType());}"
+    },
+    {
+      "before": "public record Effect(EffectType type,int duration,int amplifier,boolean ambient,boolean visible,boolean icon) { }",
+      "after": "public record Effect(net.minecraft.core.Holder<EffectType> type,int duration,int amplifier,boolean ambient,boolean visible,boolean icon) { }"
+    },
+    {
+      "before": "new net.minecraft.resources.ResourceLocation(id)",
+      "after": "net.minecraft.resources.ResourceLocation.parse(id)"
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/boss/MothershipWeaponsExecutionTest.java": [
+    {
+      "before": "net/minecraftforge/registries/RegistryObject",
+      "after": "net/neoforged/neoforge/registries/DeferredHolder"
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/boss/MothershipSoundRangeExecutionTest.java": [
+    {
+      "before": "net/minecraftforge/registries/RegistryObject",
+      "after": "net/neoforged/neoforge/registries/DeferredHolder"
+    },
+    {
+      "before": "net/minecraftforge/registries/DeferredRegister",
+      "after": "net/neoforged/neoforge/registries/DeferredRegister"
+    },
+    {
+      "before": "net/minecraftforge/registries/ForgeRegistries",
+      "after": "net/minecraft/core/registries/BuiltInRegistries"
+    },
+    {
+      "before": "net/minecraftforge/registries/IForgeRegistry",
+      "after": "net/minecraft/core/Registry"
+    },
+    {
+      "before": "public static final Registry SOUND_EVENTS=",
+      "after": "public static final Registry SOUND_EVENT="
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/boss/MothershipArmorTest.java": [
+    {
+      "before": "import com.liucodex.doggiesnewvehicle.compat.SbwTestDependency;",
+      "after": ""
+    },
+    {
+      "before": "SbwTestDependency.path()",
+      "after": "Path.of(System.getProperty(\"dnv.sbw.jar\"))"
+    },
+    {
+      "before": "ResourceLocation.fromNamespaceAndPath(kind.id)",
+      "after": "ResourceLocation.parse(kind.id)"
+    },
+    {
+      "before": "            for(String line:Files.readAllLines(Path.of(\"build/createSrgToMcp/output.srg\"))) {\n                String[] split=line.split(\" \");if(split[0].equals(\"MD:\"))methods.put(shortName(split[1]),shortName(split[3]));\n            }",
+      "after": ""
+    }
+  ],
+  "src/boss/java/com/liucodex/doggiesnewvehicle/boss/client/MothershipFxPass.java": [
+    {
+      "before": "private static MultiBufferSource.BufferSource buffers;",
+      "after": "private static MultiBufferSource.BufferSource buffers;\n    private static com.mojang.blaze3d.vertex.ByteBufferBuilder storage;",
+      "count": 1
+    },
+    {
+      "before": "if (buffers == null) buffers = MultiBufferSource.immediate(new com.mojang.blaze3d.vertex.ByteBufferBuilder(128 * 1024));",
+      "after": "if (buffers == null) { storage = new com.mojang.blaze3d.vertex.ByteBufferBuilder(128 * 1024); buffers = MultiBufferSource.immediate(storage); }",
+      "count": 1
+    },
+    {
+      "before": "if (event.getLevel().isClientSide()) pending.clear();",
+      "after": "if (event.getLevel().isClientSide()) { pending.clear(); if (storage != null) storage.close(); buffers = null; storage = null; }",
+      "count": 1
+    }
+  ],
+  "src/boss/java/com/liucodex/doggiesnewvehicle/boss/client/MothershipFxPreview.java": [
+    {
+      "before": "private static MultiBufferSource.BufferSource buffers;",
+      "after": "private static MultiBufferSource.BufferSource buffers;\n    private static com.mojang.blaze3d.vertex.ByteBufferBuilder storage;",
+      "count": 1
+    },
+    {
+      "before": "buffers = MultiBufferSource.immediate(new com.mojang.blaze3d.vertex.ByteBufferBuilder(128 * 1024));",
+      "after": "storage = new com.mojang.blaze3d.vertex.ByteBufferBuilder(128 * 1024);\n        buffers = MultiBufferSource.immediate(storage);",
+      "count": 1
+    },
+    {
+      "before": "        buffers = null;",
+      "after": "        buffers = null;\n        if (storage != null) storage.close();\n        storage = null;",
+      "count": 1
+    }
+  ],
+  "src/boss/java/com/liucodex/doggiesnewvehicle/boss/MothershipPresence.java": [
+    {
+      "before": "MothershipPresence::load, MothershipPresence::new, DATA_NAME",
+      "after": "new SavedData.Factory<>(MothershipPresence::new, (tag, registries) -> load(tag), null), DATA_NAME",
+      "count": 1
+    },
+    {
+      "before": "save(CompoundTag tag)",
+      "after": "save(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries)",
+      "count": 1
+    }
+  ],
+  "src/boss/java/com/liucodex/doggiesnewvehicle/entity/DnvMothershipEntity.java": [
+    {
+      "before": "onAddedToWorld()",
+      "after": "onAddedToLevel()",
+      "count": 2
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/boss/NativeVehicleSupportTest.java": [
+    {
+      "before": "import com.liucodex.doggiesnewvehicle.compat.SbwTestDependency;",
+      "after": ""
+    },
+    {
+      "before": "SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))"
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/boss/ExactSbwDamageProbe.java": [
+    {
+      "before": "import com.liucodex.doggiesnewvehicle.compat.SbwTestDependency;",
+      "after": ""
+    },
+    {
+      "before": "SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))"
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/boss/MothershipDefenseExecutionTest.java": [
+    {
+      "before": "import com.liucodex.doggiesnewvehicle.compat.SbwTestDependency;",
+      "after": ""
+    },
+    {
+      "before": "SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 3
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/boss/MothershipNativeDamageBaselineTest.java": [
+    {
+      "before": "com.liucodex.doggiesnewvehicle.compat.SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 2
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/boss/MothershipDamageContractTest.java": [
+    {
+      "before": "com.liucodex.doggiesnewvehicle.compat.SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 2
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/ApocalypseAutonomousDriveExecutionTest.java": [
+    {
+      "before": "m.name.equals(\"m_146895_\")",
+      "after": "m.name.equals(\"getFirstPassenger\")",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/ExactM1ReloadSoundFixture.java": [
+    {
+      "before": "com.liucodex.doggiesnewvehicle.compat.SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))"
+    },
+    {
+      "before": "net/minecraftforge/eventbus/api/Event",
+      "after": "net/neoforged/bus/api/Event"
+    },
+    {
+      "before": "public static boolean postEvent(Event event) { return false; }",
+      "after": "public static Event postEvent(Event event) { return event; }"
+    },
+    {
+      "before": "m_20197_",
+      "after": "getPassengers"
+    },
+    {
+      "before": "m_9236_",
+      "after": "level"
+    },
+    {
+      "before": "m_20097_",
+      "after": "getOnPos"
+    },
+    {
+      "before": "m_245803_",
+      "after": "playSound"
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/ExactDriverlessGunFixture.java": [
+    {
+      "before": "SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 1
+    },
+    {
+      "before": "net/minecraftforge/eventbus/api/Event",
+      "after": "net/neoforged/bus/api/Event",
+      "count": 1
+    },
+    {
+      "before": "public static boolean postEvent(Event event) { if (event instanceof Pre) before.run(); return false; }",
+      "after": "public static Event postEvent(Event event) { if (event instanceof Pre) before.run(); return event; }",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/armored/DnvAlliedApocalypseEntity.java": [
+    {
+      "before": "onAddedToWorld()",
+      "after": "onAddedToLevel()",
+      "count": 2
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/entity/DnvCombatProxyEntity.java": [
+    {
+      "before": "public boolean ignoreExplosion()",
+      "after": "public boolean ignoreExplosion(net.minecraft.world.level.Explosion explosion)",
+      "count": 1
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/compat/mixin/VehicleQueuedShotMixin.java": [
+    {
+      "after": "vehicleShoot$lambda$26$lambda$25(",
+      "count": 1,
+      "before": "vehicleShoot$lambda$28$lambda$27("
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/armored/DnvBlizzardMissile.java": [
+    {
+      "before": "super.m_142687_(reason)",
+      "after": "super.remove(reason)",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/ExactSbwTransformFixture.java": [
+    {
+      "before": "com.liucodex.doggiesnewvehicle.compat.SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/ApocalypseShotHost.java": [
+    {
+      "before": "public static void sendPacketToAll(Object packet) { if (packet instanceof Feedback accepted) feedback.add(accepted); }",
+      "after": "public static void sendPacketToAll(Object packet) { if (packet instanceof Feedback accepted) feedback.add(accepted); }\n        public static void sendPacketToAll(net.minecraft.network.protocol.common.custom.CustomPacketPayload packet) { sendPacketToAll((Object) packet); }",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/BlizzardProjectileExecutionTest.java": [
+    {
+      "before": "assertEquals(31200, packet.getXa(), \"vanilla component clamp is 3.9, so native fast sync must remain active\");",
+      "after": "assertEquals(3.9, packet.getXa(), 1e-12, \"vanilla component clamp is 3.9, so native fast sync must remain active\");",
+      "count": 1
+    },
+    {
+      "before": "packet.getXa() / 8000d",
+      "after": "packet.getXa()",
+      "count": 2
+    },
+    {
+      "before": "packet.getYa() / 8000d",
+      "after": "packet.getYa()",
+      "count": 2
+    },
+    {
+      "before": "packet.getZa() / 8000d",
+      "after": "packet.getZa()",
+      "count": 2
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/ApocalypseAimCameraExecutionTest.java": [
+    {
+      "before": "SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 1
+    },
+    {
+      "before": "            for(String line:Files.readAllLines(Path.of(\"build/createSrgToMcp/output.srg\"))) {\n                String[] p=line.split(\" \");if(p[0].equals(\"MD:\"))methods.put(shortName(p[1]),shortName(p[3]));\n                if(p[0].equals(\"FD:\"))fields.put(shortName(p[1]),shortName(p[2]));\n            }",
+      "after": "            // Exact NeoForge SBW and Minecraft bytecode already use official names.",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearSiloStore.java": [
+    {
+      "before": "NuclearSiloStore::load, NuclearSiloStore::new, DATA_NAME",
+      "after": "new SavedData.Factory<>(NuclearSiloStore::new, (tag, registries) -> load(tag), null), DATA_NAME",
+      "count": 1
+    },
+    {
+      "before": "save(CompoundTag tag)",
+      "after": "save(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries)",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearSiloEntity.java": [
+    {
+      "before": "changeDimension(ServerLevel destination)",
+      "after": "changeDimension(net.minecraft.world.level.portal.DimensionTransition destination)",
+      "count": 1
+    },
+    {
+      "before": "onAddedToWorld",
+      "after": "onAddedToLevel",
+      "count": 2
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearMissileEntity.java": [
+    {
+      "before": "changeDimension(ServerLevel destination)",
+      "after": "changeDimension(net.minecraft.world.level.portal.DimensionTransition destination)",
+      "count": 1
+    },
+    {
+      "before": "onAddedToWorld",
+      "after": "onAddedToLevel",
+      "count": 2
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearSiloDeployerItem.java": [
+    {
+      "before": "ItemStack stack,Level level,List<Component> tooltip",
+      "after": "ItemStack stack,net.minecraft.world.item.Item.TooltipContext context,List<Component> tooltip",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearMissileItem.java": [
+    {
+      "before": "ItemStack stack,Level level,List<Component> tooltip",
+      "after": "ItemStack stack,net.minecraft.world.item.Item.TooltipContext context,List<Component> tooltip",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/NuclearRecipeContractTest.java": [
+    {
+      "before": "SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/NuclearNativeBoundaryTest.java": [
+    {
+      "before": "SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearEffects.java": [
+    {
+      "before": "RegistryObject<MobEffect>",
+      "after": "DeferredHolder<MobEffect, MobEffect>",
+      "count": 1
+    },
+    {
+      "before": "ForgeRegistries.MOB_EFFECTS",
+      "after": "BuiltInRegistries.MOB_EFFECT",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearRadiationEffect.java": [
+    {
+      "before": "isDurationEffectTick",
+      "after": "shouldApplyEffectTickThisTick",
+      "count": 1
+    },
+    {
+      "before": "void applyEffectTick",
+      "after": "boolean applyEffectTick",
+      "count": 1
+    },
+    {
+      "before": "entity.setHealth(Math.max(0,health-rules.radiationDamage()-max*rules.radiationFraction()));\n            }\n        }",
+      "after": "entity.setHealth(Math.max(0,health-rules.radiationDamage()-max*rules.radiationFraction()));\n            }\n        }\n        return true;",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearRadiationHandler.java": [
+    {
+      "before": "NuclearEffects.RADIATION.get()",
+      "after": "NuclearEffects.RADIATION",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/NuclearVehicleDamageBoundaryTest.java": [
+    {
+      "before": "SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 2
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearPayloadTest.java": [
+    {
+      "before": ".save(new CompoundTag())",
+      "after": ".save(new CompoundTag(), null)",
+      "count": 7
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/NuclearDestructionExecutionTest.java": [
+    {
+      "before": ".save(new CompoundTag())",
+      "after": ".save(new CompoundTag(), null)",
+      "count": 3
+    },
+    {
+      "before": "onAddedToWorld",
+      "after": "onAddedToLevel",
+      "count": 3
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/NuclearLeaseRecoveryExecutionTest.java": [
+    {
+      "before": ".save(new CompoundTag())",
+      "after": ".save(new CompoundTag(), null)",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/NuclearPlacementExecutionTest.java": [
+    {
+      "before": "SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/client/BlizzardBeamPass.java": [
+    {
+      "before": "private static MultiBufferSource.BufferSource buffers;",
+      "after": "private static MultiBufferSource.BufferSource buffers;\n    private static com.mojang.blaze3d.vertex.ByteBufferBuilder storage;",
+      "count": 1
+    },
+    {
+      "before": "if (buffers == null) buffers = MultiBufferSource.immediate(new com.mojang.blaze3d.vertex.ByteBufferBuilder(128 * 1024));",
+      "after": "if (buffers == null) { storage = new com.mojang.blaze3d.vertex.ByteBufferBuilder(128 * 1024); buffers = MultiBufferSource.immediate(storage); }",
+      "count": 1
+    },
+    {
+      "before": "if (event.getLevel().isClientSide()) pending.clear();",
+      "after": "if (event.getLevel().isClientSide()) { pending.clear(); if (storage != null) storage.close(); buffers = null; storage = null; }",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/BlizzardBeamPassExecutionTest.java": [
+    {
+      "before": "public float getPartialTick(){return .5F;}",
+      "after": "public Delta getPartialTick(){return new Delta(){};}",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/VacuumPayloadWorld.java": [
+    {
+      "before": "if(NeoForge.EVENT_BUS.post(event)||",
+      "after": "if(NeoForge.EVENT_BUS.post(event).isCanceled()||"
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/artillery/silo/VacuumPayloadTest.java": [
+    {
+      "before": ".save(new net.minecraft.nbt.CompoundTag())",
+      "after": ".save(new net.minecraft.nbt.CompoundTag(),null)",
+      "count": 10
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/Project612NativeUiSoundTest.java": [
+    {
+      "before": "com.liucodex.doggiesnewvehicle.compat.SbwTestDependency.path()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\"))",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/armored/BlizzardTerrainBlast.java": [
+    {
+      "before": "pickup.pickupBlock(level,pos,state)",
+      "after": "pickup.pickupBlock(null,level,pos,state)",
+      "count": 1
+    }
+  ],
+  "src/main/java/com/liucodex/doggiesnewvehicle/world/DnvControlledFire.java": [
+    {
+      "before": "BlockBehaviour.Properties.copy(Blocks.FIRE)",
+      "after": "BlockBehaviour.Properties.ofFullCopy(Blocks.FIRE)",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/armored/DnvBlizzardEntity.java": [
+    {
+      "before": "getLeftWheelMaxHealth()",
+      "after": "getWheelMaxHealth()",
+      "count": 1
+    },
+    {
+      "before": "getRightWheelMaxHealth()",
+      "after": "getWheelMaxHealth()",
+      "count": 1
+    },
+    {
+      "before": "getMainEngineMaxHealth()",
+      "after": "getEngineMaxHealth()",
+      "count": 1
+    },
+    {
+      "before": "getSubEngineMaxHealth()",
+      "after": "getEngineMaxHealth()",
+      "count": 1
+    }
+  ],
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/client/mixin/BlizzardCrosshairMixin.java": [
+    {
+      "before": "Lcom/atsuishio/superbwarfare/client/RenderHelper;blit(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/resources/ResourceLocation;FFFFFFFFI)V",
+      "after": "Lcom/atsuishio/superbwarfare/client/RenderHelper;preciseBlitWithColor(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/ResourceLocation;FFFFFFFFI)V",
+      "count": 1
+    },
+    {
+      "before": "private void dnv$placePlainReticle(com.mojang.blaze3d.vertex.PoseStack stack,",
+      "after": "private void dnv$placePlainReticle(net.minecraft.client.gui.GuiGraphics stack,",
+      "count": 1
+    },
+    {
+      "before": "com.atsuishio.superbwarfare.client.RenderHelper.blit(stack,texture,",
+      "after": "com.atsuishio.superbwarfare.client.RenderHelper.preciseBlitWithColor(stack,texture,",
+      "count": 1
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/BlizzardShotRenderExecutionTest.java": [
+    {
+      "before": "method.getName().equals(\"endVertex\")",
+      "after": "method.getName().equals(\"setNormal\")"
+    },
+    {
+      "before": "method.getName().equals(\"vertex\")",
+      "after": "method.getName().equals(\"addVertex\")"
+    },
+    {
+      "before": "method.getName().equals(\"color\")",
+      "after": "method.getName().equals(\"setColor\")"
+    }
+  ],
+  "src/test/java/com/liucodex/doggiesnewvehicle/compat/DnvAimReticleExecutionTest.java": [
+    {
+      "before": "type.getMethod(\"dnv$placePlainReticle\",com.mojang.blaze3d.vertex.PoseStack.class,",
+      "after": "type.getMethod(\"dnv$placePlainReticle\",Canvas.class,",
+      "count": 1
+    },
+    {
+      "before": "public static void blit(com.mojang.blaze3d.vertex.PoseStack stack,",
+      "after": "public static void preciseBlitWithColor(Canvas stack,",
+      "count": 1
+    },
+    {
+      "before": "SbwTestDependency.path().toFile()",
+      "after": "java.nio.file.Path.of(System.getProperty(\"dnv.sbw.jar\")).toFile()",
+      "count": 1
+    }
+  ]
+}

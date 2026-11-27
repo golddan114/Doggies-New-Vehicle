@@ -1,0 +1,15 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "defense",
+  "inputs": [
+    "12 #forge:storage_blocks/steel",
+    "#doggiesnewvehicle:blueprints/m1_yunlong",
+    "superbwarfare:cannon_core",
+    "2 superbwarfare:motor",
+    "2 superbwarfare:intelligent_chip",
+    "2 superbwarfare:large_battery_pack"
+  ],
+  "result": {
+    "entity": "doggievehicle:m1_yunlong"
+  }
+}

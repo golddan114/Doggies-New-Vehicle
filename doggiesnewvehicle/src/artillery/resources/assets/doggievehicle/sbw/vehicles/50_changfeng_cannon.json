@@ -1,0 +1,9 @@
+{
+  "ID": "doggievehicle:50_changfeng_cannon",
+  "Model": {
+    "Animation": "doggiesnewvehicle:animations/endfield_sniper_turret.animation.json",
+    "Model": "doggiesnewvehicle:geo/endfield_sniper_turret.geo.json",
+    "Texture": "doggiesnewvehicle:textures/entity/endfield_sniper_turret.png"
+  }
+}
+

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "adapterId": "sbw_0_8_9_1_hotfix:ztz_99a",
+  "revision": 1,
+  "vehicleTypeId": "superbwarfare:ztz_99a",
+  "expectedLayoutFingerprint": 1758646472,
+  "aiStationIds": ["seat_0", "seat_1"]
+}

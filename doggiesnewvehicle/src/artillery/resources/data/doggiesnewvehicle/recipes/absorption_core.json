@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "SBS",
+    "BRB"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:sponge"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "result": {
+    "item": "doggiesnewvehicle:absorption_core",
+    "count": 1
+  }
+}

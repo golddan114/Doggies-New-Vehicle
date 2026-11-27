@@ -1,0 +1,8 @@
+{
+  "type": "superbwarfare:researching",
+  "addition": {"item": "minecraft:lapis_lazuli"},
+  "base": {"item": "minecraft:paper"},
+  "input": {"item": "doggiesnewvehicle:jingzhe_turret_blueprint"},
+  "result": {"item": "doggiesnewvehicle:jingzhe_turret_blueprint", "count": 2},
+  "time": 600
+}

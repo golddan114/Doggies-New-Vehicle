@@ -1,0 +1,136 @@
+{
+  "yaw": [
+    0.0,
+    0.7397422790527344,
+    0.0
+  ],
+  "pitch": [
+    -8.58306884765625e-06,
+    2.103672504425049,
+    -0.5797133445739746
+  ],
+  "links": [],
+  "minimum": [
+    -2.845369577407837,
+    0.0,
+    -2.8457984924316406
+  ],
+  "maximum": [
+    2.845350503921509,
+    2.776874303817749,
+    4.242790222167969
+  ],
+  "groups": [
+    "base_static",
+    "recoil_barrel_01",
+    "pitch_assembly",
+    "yaw_assembly"
+  ],
+  "author": {
+    "path": "flak88.blend",
+    "sha256": "02c104811ce32c9ccf79ed1fa1b18d656a636c9cb51d35b97ed1a61053a8f49b"
+  },
+  "model": "flak88",
+  "entity": "dragon_flak88",
+  "hp": 300,
+  "seats": 0,
+  "servo": 8,
+  "recoil_ticks": 16,
+  "recoil_stroke": 0.2,
+  "cameras": {
+    "first_person": {
+      "role": "first_person",
+      "anchor": "flak88__camera_first_person",
+      "camera": "flak88__view_first_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "PITCH",
+      "game_deployment_position": [
+        -8.58306884765625e-06,
+        2.8036725521087646,
+        -1.2297134399414062
+      ],
+      "native_transform": "Barrel",
+      "native_position": [
+        0.0,
+        0.7000000476837158,
+        -0.6500000953674316
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "ads": {
+      "role": "ads",
+      "anchor": "flak88__camera_ads",
+      "camera": "flak88__view_ads",
+      "fov_degrees": 30,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "PITCH",
+      "game_deployment_position": [
+        -8.58306884765625e-06,
+        2.8036725521087646,
+        -1.2297134399414062
+      ],
+      "native_transform": "Barrel",
+      "native_position": [
+        0.0,
+        0.7000000476837158,
+        -0.6500000953674316
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "third_person": {
+      "role": "third_person",
+      "anchor": "flak88__camera_third_person",
+      "camera": "flak88__view_third_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "YAW",
+      "game_deployment_position": [
+        2.994920253753662,
+        3.9086408615112305,
+        -6.339191913604736
+      ],
+      "native_transform": "Turret",
+      "native_position": [
+        2.994920253753662,
+        3.168898582458496,
+        -6.339191913604736
+      ],
+      "direction": "look_at_camera_focus",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    }
+  },
+  "muzzles": [
+    [
+      9.5367431640625e-07,
+      0.12124180793762207,
+      4.822503566741943
+    ]
+  ],
+  "projectile_positions": [
+    [
+      9.5367431640625e-07,
+      0.12124180793762207,
+      4.852503776550293
+    ]
+  ],
+  "seat_positions": [],
+  "exit_positions": [],
+  "collision_width": 2.5,
+  "collision_height": 2.78,
+  "runtime_camera_position": [
+    -8.58306884765625e-06,
+    3.053672504425049,
+    1.4202866554260254
+  ],
+  "runtime_ads_position": [
+    -8.58306884765625e-06,
+    3.053672504425049,
+    1.4202866554260254
+  ]
+}

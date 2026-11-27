@@ -1,0 +1,125 @@
+{
+  "MaxHealth": 4000,
+  "RepairCooldown": 2147483647,
+  "RepairAmount": 0,
+  "SelfHurtPercent": 0,
+  "SelfHurtAmount": 0,
+  "MaxEnergy": 0,
+  "UpStep": 1.6,
+  "Mass": 300,
+  "Seats": [],
+  "DamageModifiers": [
+    "minecraft:arrow 0",
+    "minecraft:trident 0",
+    "minecraft:mob_attack 0",
+    "minecraft:mob_attack_no_aggro 0",
+    "minecraft:player_attack 0"
+  ],
+  "HasLowHealthWarning": true,
+  "VehicleContainerType": "Empty",
+  "HUDColor": "0xff2020",
+  "EngineType": "Track",
+  "EngineInfo": {
+    "Buoyancy": 0,
+    "EnergyCostRate": 0,
+    "WheelRotSpeed": 1.0,
+    "WheelDifferential": 0.55,
+    "TrackRotSpeed": 1.0,
+    "TrackDifferential": 0.6,
+    "MaxForwardSpeedRate": 0.55,
+    "MaxBackwardSpeedRate": 0.2,
+    "Increment": 0.012,
+    "Decrement": 0.028,
+    "SteeringSpeed": 0.08,
+    "EngineSoundVolume": 0.8
+  },
+  "EngineSound": "superbwarfare:plz_05_engine",
+  "Type": "Tank",
+  "RotateOffsetHeight": 1.4,
+  "InertiaRotateRate": 0.25,
+  "CollisionLevel": {
+    "Level": 4,
+    "PowerLimits": [
+      [
+        0,
+        0,
+        true
+      ],
+      [
+        0,
+        0,
+        true
+      ],
+      [
+        0.1,
+        0.05,
+        false
+      ],
+      [
+        1,
+        0.3,
+        false
+      ]
+    ]
+  },
+  "DestroyInfo": {
+    "ParticleType": "Giant",
+    "ExplosionDamage": 200,
+    "ExplosionRadius": 16,
+    "ExplodeBlocks": false,
+    "NoWreck": true
+  },
+  "OBB": [],
+  "TerrainCompat": [
+    [
+      1.7925,
+      0,
+      2.033866
+    ],
+    [
+      -1.7925,
+      0,
+      2.033866
+    ],
+    [
+      1.7925,
+      0,
+      1.0
+    ],
+    [
+      -1.7925,
+      0,
+      1.0
+    ],
+    [
+      1.7925,
+      0,
+      0
+    ],
+    [
+      -1.7925,
+      0,
+      0
+    ],
+    [
+      1.7925,
+      0,
+      -1.0
+    ],
+    [
+      -1.7925,
+      0,
+      -1.0
+    ],
+    [
+      1.7925,
+      0,
+      -2.33907
+    ],
+    [
+      -1.7925,
+      0,
+      -2.33907
+    ]
+  ]
+}

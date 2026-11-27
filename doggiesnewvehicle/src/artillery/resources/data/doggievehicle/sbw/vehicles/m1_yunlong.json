@@ -1,0 +1,165 @@
+{
+  "ID": "doggievehicle:m1_yunlong",
+  "MaxHealth": 450,
+  "MaxEnergy": 200000,
+  "Mass": 30,
+  "TurretPos": [
+    0.0,
+    0.699999988079071,
+    0.0
+  ],
+  "BarrelPos": [
+    0.0,
+    1.388015329837799,
+    -0.28173398971557617
+  ],
+  "TurretTurnSpeed": [
+    0.4,
+    0.6
+  ],
+  "TurretPitchRange": [
+    -5,
+    60
+  ],
+  "Weapons": {
+    "Main": {
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "ShellType": "HE",
+      "AmmoType": [
+        "superbwarfare:large_shell_he",
+        {
+          "Ammo": "superbwarfare:large_shell_ap",
+          "Override": {
+            "ShellType": "AP",
+            "Damage": 650,
+            "ApDurability": 60,
+            "BypassesArmor": 0.8,
+            "ExplosionDamage": 0,
+            "ExplosionRadius": 0,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_ap",
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png"
+          }
+        }
+      ],
+      "AmmoCostPerShoot": 1,
+      "Magazine": 1,
+      "EmptyReloadTime": 240,
+      "RPM": 60,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ProjectileLife": 200,
+      "Damage": 550,
+      "BypassesArmor": 0,
+      "ExplosionDamage": 280,
+      "ExplosionRadius": 12,
+      "ExplosionDestroy": true,
+      "Spread": 0,
+      "RecoilTime": 42,
+      "RecoilForce": 0,
+      "ShootAnimationTime": 42,
+      "ShootPos": {
+        "Transform": "Barrel",
+        "Positions": [
+          [
+            -0.013901442289352417,
+            0.1264033317565918,
+            5.934032917022705
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "SoundRadius": 64,
+      "SoundInfo": {
+        "Fire1P": "doggiesnewvehicle:m1_cannon_fire",
+        "Fire3P": "doggiesnewvehicle:m1_cannon_fire",
+        "Fire3PFar": "doggiesnewvehicle:dragon_m1_open_fire_far",
+        "Fire3PVeryFar": "doggiesnewvehicle:dragon_m1_open_fire_veryfar",
+        "VehicleReload3p": "doggiesnewvehicle:dragon_m1_open_reload",
+        "VehicleReloadSoundTime": 30,
+        "Change": "doggiesnewvehicle:dragon_m1_open_select"
+      },
+      "DefaultZoom": 2.5,
+      "ShootShake": [
+        12,
+        14,
+        80
+      ],
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "ApDurability": 0
+    }
+  },
+  "DamageModifiers": [
+    "minecraft:arrow * 0.1",
+    "minecraft:trident * 0.2",
+    "minecraft:mob_attack * 0.3",
+    "minecraft:mob_projectile * 0.4",
+    "minecraft:explosion * 1.5",
+    "minecraft:player_explosion * 1.5",
+    "superbwarfare:custom_explosion * 0.6",
+    "superbwarfare:projectile_explosion * 0.6",
+    "superbwarfare:projectile_hit * 0.7",
+    "#superbwarfare:projectile * 0.5",
+    "All - 1"
+  ],
+  "HasLowHealthWarning": true,
+  "SelfHurtPercent": 0,
+  "EngineType": "Fixed",
+  "VehicleContainerType": "Small",
+  "Type": "Defense",
+  "HudType": "@Artillery",
+  "VehicleIcon": "doggiesnewvehicle:textures/vehicle_icon/m1_yunlong_kill.png",
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/defense.png",
+  "ThirdPersonCameraPos": [
+    0,
+    2,
+    8
+  ],
+  "Seats": {
+    "HidePassenger": false,
+    "Transform": "Vehicle",
+    "Position": [
+      0,
+      0,
+      0
+    ],
+    "MinPitch": -5,
+    "MaxPitch": 60,
+    "Sensitivity": [
+      0.6,
+      0.8,
+      1
+    ],
+    "Weapons": [
+      "Main"
+    ],
+    "CameraPos": {
+      "Transform": "Barrel",
+      "UseFixedCameraPos": true,
+      "Position": [
+        0,
+        0.95,
+        2.4
+      ],
+      "ZoomPosition": [
+        0,
+        0.95,
+        2.4
+      ],
+      "Direction": "Passenger",
+      "ZoomDirection": "Passenger"
+    },
+    "CanRotateHead": true
+  },
+  "TurretYawRange": [
+    -60,
+    60
+  ]
+}

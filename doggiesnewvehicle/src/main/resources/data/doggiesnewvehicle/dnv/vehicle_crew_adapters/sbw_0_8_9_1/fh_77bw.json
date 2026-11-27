@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "adapterId": "sbw_0_8_9_1_hotfix:fh_77bw",
+  "revision": 1,
+  "vehicleTypeId": "superbwarfare:fh_77bw",
+  "expectedLayoutFingerprint": 655979491,
+  "aiStationIds": ["seat_1"]
+}

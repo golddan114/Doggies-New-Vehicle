@@ -1,0 +1,13 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "6 dnvcarriercube:main_turret",
+    "10 dnvcarriercube:secondary_234_turret",
+    "8 dnvcarriercube:secondary_127_turret",
+    "12 superbwarfare:light_armament_module"
+  ],
+  "result": {
+    "item": "dnvcarriercube:ship_armament"
+  }
+}

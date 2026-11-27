@@ -1,0 +1,192 @@
+{
+  "yaw": [
+    0.0,
+    0.699999988079071,
+    0.0
+  ],
+  "pitch": [
+    0.0,
+    2.0592073798179626,
+    -0.08395004272460938
+  ],
+  "links": [],
+  "minimum": [
+    -2.1170003414154053,
+    0.0,
+    -1.7935819625854492
+  ],
+  "maximum": [
+    2.1170003414154053,
+    2.737731695175171,
+    2.5249452590942383
+  ],
+  "groups": [
+    "base_static",
+    "yaw_assembly",
+    "pitch_assembly",
+    "recoil_barrel_01",
+    "recoil_barrel_02",
+    "recoil_barrel_03",
+    "recoil_barrel_04"
+  ],
+  "author": {
+    "path": "bofors_quad.blend",
+    "sha256": "cf169d5012d0d8b109fa26fa9e014235539f41bbbe28af5953dfd3632f36df49"
+  },
+  "model": "bofors_quad",
+  "entity": "dragon_bofors_quad",
+  "hp": 220,
+  "seats": 2,
+  "servo": 0,
+  "recoil_ticks": 4,
+  "recoil_stroke": 0.12,
+  "cameras": {
+    "first_person": {
+      "role": "first_person",
+      "anchor": "bofors_quad__camera_first_person",
+      "camera": "bofors_quad__view_first_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": false,
+      "transform_proposal": "YAW",
+      "game_deployment_position": [
+        1.652815341949463,
+        2.542328357696533,
+        -0.6732778549194336
+      ],
+      "native_transform": "Turret",
+      "native_position": [
+        1.652815341949463,
+        1.8423283696174622,
+        -0.6732778549194336
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "ads": {
+      "role": "ads",
+      "anchor": "bofors_quad__camera_ads",
+      "camera": "bofors_quad__view_ads",
+      "fov_degrees": 30,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "PITCH",
+      "game_deployment_position": [
+        1.3728153705596924,
+        2.542328357696533,
+        -0.6451452970504761
+      ],
+      "native_transform": "Barrel",
+      "native_position": [
+        1.3728153705596924,
+        0.4831209182739258,
+        -0.5611952543258667
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "third_person": {
+      "role": "third_person",
+      "anchor": "bofors_quad__camera_third_person",
+      "camera": "bofors_quad__view_third_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "YAW",
+      "game_deployment_position": [
+        1.824577808380127,
+        3.838732957839966,
+        -3.5927534103393555
+      ],
+      "native_transform": "Turret",
+      "native_position": [
+        1.824577808380127,
+        3.1387329697608948,
+        -3.5927534103393555
+      ],
+      "direction": "look_at_camera_focus",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    }
+  },
+  "muzzles": [
+    [
+      -0.5514883399009705,
+      0.004128694534301758,
+      2.608613967895508
+    ],
+    [
+      -0.2691892981529236,
+      0.004128694534301758,
+      2.608614921569824
+    ],
+    [
+      0.26851218938827515,
+      0.004128694534301758,
+      2.608613967895508
+    ],
+    [
+      0.550811231136322,
+      0.004128694534301758,
+      2.608614921569824
+    ]
+  ],
+  "projectile_positions": [
+    [
+      -0.5514883399009705,
+      0.004128694534301758,
+      2.6386139392852783
+    ],
+    [
+      -0.2691892981529236,
+      0.004128694534301758,
+      2.6386148929595947
+    ],
+    [
+      0.26851218938827515,
+      0.004128694534301758,
+      2.6386139392852783
+    ],
+    [
+      0.550811231136322,
+      0.004128694534301758,
+      2.6386148929595947
+    ]
+  ],
+  "runtime_seat_contacts": [[1.3700001239776611, 0.926555335521698, -1.119999647140503], [-1.3700001239776611, 0.926555335521698, -1.119999647140503]],
+  "seat_positions": [
+    [
+      1.3700001239776611,
+      0.6393119692802429,
+      -0.6732778549194336
+    ],
+    [
+      -1.3700001239776611,
+      0.6393119692802429,
+      -0.6732778549194336
+    ]
+  ],
+  "exit_positions": [
+    [
+      2.6670002937316895,
+      0.0,
+      -1.023277759552002
+    ],
+    [
+      -2.6670002937316895,
+      0.0,
+      -1.023277759552002
+    ]
+  ],
+  "collision_width": 3.2,
+  "collision_height": 2.74,
+  "runtime_camera_position": [
+    1.652815341949463,
+    2.542328357696533,
+    -0.6732778549194336
+  ],
+  "runtime_ads_position": [
+    1.3728154,
+    2.542328388079071,
+    -0.6451453
+  ]
+}

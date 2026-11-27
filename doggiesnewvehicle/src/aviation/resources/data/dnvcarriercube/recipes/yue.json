@@ -1,0 +1,14 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "aircraft",
+  "inputs": [
+    "24 dnvcarriercube:hull_section",
+    "4 dnvcarriercube:propulsion_section",
+    "8 dnvcarriercube:flight_deck_section",
+    "16 superbwarfare:intelligent_chip",
+    "dnvcarriercube:yue_blueprint"
+  ],
+  "result": {
+    "entity": "dnvcarriercube:carrier"
+  }
+}

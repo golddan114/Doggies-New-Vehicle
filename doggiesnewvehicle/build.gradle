@@ -1,0 +1,577 @@
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.38'
+}
+
+if (JavaVersion.current() != JavaVersion.VERSION_17) {
+    throw new GradleException(
+            "Doggie's New Vehicle for Minecraft 1.20.1 requires Java 17; "
+                    + "current Gradle JVM is ${JavaVersion.current()}."
+    )
+}
+
+group = 'com.liucodex.doggiesnewvehicle'
+version = '1.20hotfix'
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+// Opt-in, isolated full-mod AP validation. The default GameTest scope is active routing.
+def apGameTestEnabled = providers.gradleProperty('dnvApGameTest').map { it == 'true' }.getOrElse(false)
+def rwsGameTestEnabled = providers.gradleProperty('dnvRwsGameTest').map { it == 'true' }.getOrElse(false)
+def platformEnabled = providers.gradleProperty('dnvPlatform').map { it == 'true' }.getOrElse(true)
+def bossEnabled = providers.gradleProperty('dnvBoss').map { it == 'true' }.getOrElse(true)
+def artilleryEnabled = providers.gradleProperty('dnvArtillery').map { it == 'true' }.getOrElse(true)
+def navalEnabled = providers.gradleProperty('dnvNaval').map { it == 'true' }.getOrElse(true)
+// All active builds target the user-selected SBW 0.8.9.2 installation.
+def sbwProfile = providers.gradleProperty('dnvSbwProfile')
+        .orElse(providers.environmentVariable('DNV_SBW_PROFILE')).getOrElse('0.8.9.2')
+if (sbwProfile != '0.8.9.2') {
+    throw new GradleException('The active DNV build requires the selected SBW 0.8.9.2 installation.')
+}
+base.archivesName = "doggiesnewvehicle-forge-1.20.1-sbw${sbwProfile}"
+def sbwProfiles = [
+        '0.8.9.2': ['superbwarfare-0.8.9.2-mc1.20.1-65d985a64-all.jar',
+                    '559930003f638080de648a8621821d785158768c3f69a762094ef4c8d3c4cc12']
+]
+if (!sbwProfiles.containsKey(sbwProfile)) throw new GradleException("Unsupported SBW profile: $sbwProfile")
+def sbwJar = file('libs/' + sbwProfiles[sbwProfile][0])
+if (!sbwJar.isFile()) throw new GradleException("Missing exact SBW dependency: $sbwJar")
+def sbwSha256 = java.security.MessageDigest.getInstance('SHA-256').digest(sbwJar.bytes).encodeHex().toString()
+if (sbwSha256 != sbwProfiles[sbwProfile][1]) throw new GradleException("SBW dependency SHA-256 mismatch: $sbwJar")
+evaluationDependsOn(':route-core')
+ext.sbwGunDependencyJar = sbwJar
+apply from: 'gradle/sbw-gun-animation-dependency.gradle'
+
+if (apGameTestEnabled && (!artilleryEnabled || !platformEnabled || !bossEnabled)) {
+    throw new GradleException('The AP GameTests require -PdnvArtillery=true, -PdnvPlatform=true and -PdnvBoss=true.')
+}
+if (rwsGameTestEnabled && !artilleryEnabled) {
+    throw new GradleException('The RWS GameTests require -PdnvArtillery=true.')
+}
+if (apGameTestEnabled && rwsGameTestEnabled) {
+    throw new GradleException('AP and RWS are separate GameTest scopes. Enabling AP does not migrate or execute the RWS fixtures.')
+}
+
+sourceSets {
+    if (navalEnabled) main.java.srcDir 'src/navalCommon/java'
+    aviation {
+        java.setSrcDirs(navalEnabled ? ['src/aviation/java'] : [])
+        resources.setSrcDirs(navalEnabled ? ['src/aviation/resources'] : [])
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath.filter { it.name != sbwJar.name }
+    }
+    naval {
+        java.setSrcDirs(navalEnabled ? ['../libertad/src/main/java', '../libertad/src/sbw/java'] : [])
+        resources.setSrcDirs(navalEnabled ? ['../libertad/src/main/resources'] : [])
+        resources.exclude 'META-INF/**'
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath = output + compileClasspath
+    }
+    navalTest {
+        java.setSrcDirs(navalEnabled ? ['../libertad/src/test/java', '../libertad/src/sbwTest/java'] : [])
+        compileClasspath += sourceSets.naval.output + sourceSets.test.compileClasspath
+        runtimeClasspath = output + sourceSets.naval.output + sourceSets.test.runtimeClasspath
+    }
+    artillery {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath = output + sourceSets.main.output + compileClasspath
+    }
+    platform {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath = output + sourceSets.main.output + compileClasspath
+    }
+    boss {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath = output + sourceSets.main.output + compileClasspath
+    }
+    gameTestRuntimeMain {
+        java.setSrcDirs([])
+        resources.setSrcDirs([])
+    }
+    gameTest {
+        // Keep javac outputs separate from runtime-staged production bytecode.
+        java.destinationDirectory = layout.buildDirectory.dir('classes/java/gameTestOnly')
+        // The default route fixture must not register the opt-in RWS GameTests.
+        // RWS mode deliberately compiles both namespaces for its wider runtime gate.
+        if (!rwsGameTestEnabled) {
+            java.include 'com/liucodex/doggiesnewvehicle/route/**'
+            java.include 'com/liucodex/doggiesnewvehicle/compat/DnvIsolatedGameTestMod.java'
+        }
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath +
+                sourceSets.platform.output + sourceSets.artillery.output
+        runtimeClasspath = output + sourceSets.main.output.classesDirs +
+                configurations.gameTestRuntimeClasspath.filter {
+                    it.name != sbwJar.name
+                }
+    }
+    test {
+        compileClasspath += sourceSets.artillery.output
+        runtimeClasspath += sourceSets.artillery.output
+        compileClasspath += sourceSets.platform.output
+        runtimeClasspath += sourceSets.platform.output
+        compileClasspath += sourceSets.boss.output
+        runtimeClasspath += sourceSets.boss.output
+    }
+}
+
+apply from: 'gradle/apocalypse-ai-resources.gradle'
+
+if (apGameTestEnabled) {
+    apply from: 'gradle/ap-gametest.gradle'
+}
+
+configurations {
+    artilleryImplementation.extendsFrom implementation
+    artilleryCompileOnly.extendsFrom compileOnly
+    artilleryRuntimeOnly.extendsFrom runtimeOnly
+    platformImplementation.extendsFrom implementation
+    platformCompileOnly.extendsFrom compileOnly
+    platformRuntimeOnly.extendsFrom runtimeOnly
+    bossImplementation.extendsFrom implementation
+    bossCompileOnly.extendsFrom compileOnly
+    bossRuntimeOnly.extendsFrom runtimeOnly
+    gameTestImplementation.extendsFrom implementation
+    gameTestCompileOnly.extendsFrom compileOnly
+    gameTestRuntimeOnly.extendsFrom runtimeOnly
+}
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    copyIdeResources = true
+
+    runs {
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'info'
+            args '--nogui'
+
+            mods {
+                doggiesnewvehicle {
+                    source sourceSets.main
+                    if (artilleryEnabled) source sourceSets.artillery
+                    if (platformEnabled) source sourceSets.platform
+                    if (bossEnabled) source sourceSets.boss
+                    if (navalEnabled) { source sourceSets.naval; source sourceSets.aviation }
+                }
+            }
+        }
+
+        gameTestServer {
+            if (apGameTestEnabled) {
+                def nativeRun = providers.gradleProperty('dnvWithDragonrise').getOrElse('false') == 'true'
+                        ? 'build/run-m1-indicator-dragonrise-gametest' : 'build/run-m1-indicator-gametest'
+                workingDirectory project.file(nativeRun)
+                property 'dnv.withDragonrise', providers.gradleProperty('dnvWithDragonrise').getOrElse('false')
+                property 'forge.enabledGameTestNamespaces', 'dnvapgametest'
+                property 'forge.logging.console.level', 'info'
+                property 'mixin.env.remapRefMap', 'true'
+                property 'mixin.env.refMapRemappingFile', file('build/createSrgToMcp/output.srg').absolutePath
+                property 'dnv.apGameTest.report', file(nativeRun + '/ap-tests.xml').absolutePath
+                args '--mixin', 'mixins.doggiesnewvehicle.json', '--mixin', 'mixins.dnvartillery.json', '--mixin', 'mixins.dnvblizzard.json'
+                source sourceSets.apGameTest
+                mods {
+                    doggiesnewvehicle {
+                        source sourceSets.apRuntimeMain
+                        source sourceSets.apRuntimeArtillery
+                        source sourceSets.apRuntimePlatform
+                        source sourceSets.apRuntimeRouteCore
+                        source sourceSets.apRuntimeBoss
+                        source sourceSets.apStationGameTest
+                    }
+                    dnvapgametest { source sourceSets.apGameTest }
+                }
+            } else {
+                workingDirectory project.file(rwsGameTestEnabled ? 'build/run-rws-gametest' : 'build/run-route-gametest')
+                if (rwsGameTestEnabled) {
+                    property 'dnv.rwsGameTest.report', file('build/run-rws-gametest/rws-tests.xml').absolutePath
+                }
+                property 'forge.enabledGameTestNamespaces', rwsGameTestEnabled
+                        ? 'dnvrwsgametest,dnvroutegametest,minecraft' : 'dnvroutegametest,minecraft'
+                mods {
+                    dnvgametest {
+                        source sourceSets.gameTest
+                        source sourceSets.gameTestRuntimeMain
+                    }
+                }
+            }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    flatDir { dirs sbwJar.parentFile, file('build/ap-runtime-inputs') }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.22'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    artilleryAnnotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    platformAnnotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    platformImplementation files(project(':route-core').sourceSets.main.output)
+    gameTestImplementation files(project(':route-core').sourceSets.main.output)
+    testImplementation files(project(':route-core').sourceSets.main.output)
+    compileOnly 'org.jetbrains.kotlin:kotlin-stdlib:1.9.22'
+    // This is the exact public 0.8.9.1 hotfix commit installed in MineGO.
+    // Declaring the file directly preserves its compile names and makes the
+    // compatibility baseline reproducible without coupling DNV to the client.
+    // ForgeGradle's file-dependency deobfuscation warning is therefore expected:
+    // resolving this through flatDir transforms those names and breaks compilation.
+    implementation fg.deobf(files(sbwJar))
+    if (artilleryEnabled) artilleryCompileOnly files(tasks.named('extractSbwProjectileModelApi'))
+    if (navalEnabled) {
+        aviationImplementation fg.deobf("dnv.cube:${sbwJar.name - '.jar'}:exact")
+        aviationCompileOnly files('build/ap-runtime-inputs/kotlinforforge-exact.jar')
+        aviationCompileOnly files(tasks.named('extractSbwProjectileModelApi'))
+    }
+
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'com.tngtech.archunit:archunit:1.5.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Already cached runtime support for executing pinned SBW bytecode in bounded JVM fixtures.
+    testRuntimeOnly 'org.jetbrains.kotlin:kotlin-stdlib:1.9.22'
+}
+
+// MixinGradle adds each registered refmap and its compile dependency to the archive.
+def mixinRefmaps = [main: 'mixins.doggiesnewvehicle']
+if (artilleryEnabled) mixinRefmaps.artillery = 'mixins.dnvartillery'
+if (platformEnabled) mixinRefmaps.platform = 'mixins.dnvplatform'
+mixin {
+    mixinRefmaps.each { module, configName ->
+        add sourceSets.getByName(module), "${configName}.refmap.json"
+    }
+}
+
+// MixinGradle emits <compileTask>-refmap.json; the test/runtime config uses the source-set name.
+// Materialize that stable name from the real AP output as part of compilation, including cache invalidation.
+mixinRefmaps.each { module, configName ->
+    def taskName = sourceSets.getByName(module).compileJavaTaskName
+    tasks.named(taskName, JavaCompile).configure {
+        // The refmap aggregates every mixin in this owner. ABI-only incremental compilation can
+        // delete the AP output without processing a mixin, or leave an incomplete aggregate.
+        // Keep Gradle's whole-task cache/up-to-date checks; each real compile must process the owner.
+        options.incremental = false
+        def processorMap = layout.buildDirectory.file("tmp/${taskName}/${taskName}-refmap.json")
+        def configuredMap = layout.buildDirectory.file("tmp/${taskName}/${configName}.refmap.json")
+        outputs.files(processorMap, configuredMap)
+        doLast {
+            def generated = processorMap.get().asFile
+            if (!generated.isFile()) throw new GradleException("Missing actual Mixin AP output: ${generated}")
+            java.nio.file.Files.copy(generated.toPath(), configuredMap.get().asFile.toPath(),
+                    java.nio.file.StandardCopyOption.REPLACE_EXISTING)
+        }
+    }
+}
+
+sourceSets.test.java.srcDir file('../architecture-test-support/src/test/java')
+
+tasks.withType(Test).configureEach {
+    // Native-bytecode fixtures consume this generated mapping. A fresh build must
+    // regenerate it before tests, rather than depending on a previous reobf run.
+    dependsOn tasks.named('createSrgToMcp')
+    inputs.files(tasks.named('createSrgToMcp'))
+    systemProperty 'dnv.sbw.jar', sbwJar.absolutePath
+    systemProperty 'dnv.sbw.profile', sbwProfile
+    systemProperty 'dnv.sbw.sha256', sbwSha256
+    inputs.file(sbwJar)
+    def runtimeSrg = new File(gradle.gradleUserHomeDir,
+            'caches/forge_gradle/mcp_repo/net/minecraft/joined/1.20.1-20230612.114412/joined-1.20.1-20230612.114412-srg.jar')
+    systemProperty 'dnv.minecraft.srg', runtimeSrg.absolutePath
+    inputs.file(runtimeSrg)
+    // Forge's patched SRG contains getLightEmission(BlockGetter, BlockPos), unlike vanilla SRG.
+    def patchedSrg = new File(gradle.gradleUserHomeDir,
+            'caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22/forge-1.20.1-47.4.22-srg.jar')
+    systemProperty 'dnv.minecraft.forgeSrg', patchedSrg.absolutePath
+    inputs.file(patchedSrg)
+    if (providers.gradleProperty('dnvArtifact').isPresent()) {
+        def artifact = file(providers.gradleProperty('dnvArtifact').get())
+        systemProperty 'dnv.artifact', artifact.absolutePath
+        inputs.file(artifact)
+    }
+}
+
+tasks.named('test', Test).configure {
+    useJUnitPlatform()
+    // Exact third-party bytecode is a test input only; it never joins the runtime classpath.
+    def combinedArms = file(providers.gradleProperty('dnvCombinedArmsReference').getOrElse(
+            '../outputs/research/2026-10-06-combined-arms-crash/tacz_sewv-0.1.6a.jar'))
+    systemProperty 'dnv.combinedArms.reference', combinedArms.absolutePath
+    inputs.file(combinedArms)
+    systemProperty 'java.awt.headless', 'true'
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+    }
+}
+
+tasks.register('uiPreviewCheck', Test) {
+    group = 'verification'
+    description = 'Renders DNV UI PNG/HTML previews and rejects containment or overlap defects.'
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+    useJUnitPlatform {
+        includeTags 'ui-preview'
+    }
+    systemProperty 'java.awt.headless', 'true'
+    outputs.dir layout.buildDirectory.dir('reports/ui-preview')
+    shouldRunAfter tasks.named('test')
+}
+
+tasks.register('dnvGameTestCompileCheck') {
+    group = 'verification'
+    description = 'Compiles the DNV active route/RWS Forge GameTest source set without packaging a JAR.'
+    dependsOn tasks.named('compileGameTestJava')
+    dependsOn tasks.named('processGameTestResources')
+}
+
+tasks.named('processGameTestResources', ProcessResources).configure {
+    from('src/main/resources') {
+        include 'pack.mcmeta'
+        if (rwsGameTestEnabled) {
+            include 'data/doggiesnewvehicle/loot_tables/blocks/remote_weapon_station.json'
+        }
+    }
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    inputs.property('navalEnabled', navalEnabled)
+    if (navalEnabled) {
+        def navalMetadata = file('gradle/naval-mods.toml')
+        inputs.file(navalMetadata)
+        doLast {
+            new File(destinationDir, 'META-INF/mods.toml').append('\n' + navalMetadata.getText('UTF-8'), 'UTF-8')
+        }
+    }
+    def languageModules = []
+    if (artilleryEnabled) languageModules.add('artillery')
+    if (platformEnabled) languageModules.add('platform')
+    if (bossEnabled) languageModules.add('boss')
+    if (!languageModules.isEmpty()) {
+        languageModules.each { module ->
+            inputs.files fileTree("src/${module}/lang") { include '*.json' }
+        }
+        doLast {
+            ['en_us.json', 'zh_cn.json'].each { language ->
+                def outputFile = new File(destinationDir,
+                        "assets/doggiesnewvehicle/lang/${language}")
+                def parser = new groovy.json.JsonSlurper()
+                def baseLanguage = parser.parseText(outputFile.getText('UTF-8'))
+                languageModules.each { module ->
+                    def fragmentFile = file("src/${module}/lang/${language}")
+                    def moduleLanguage = parser.parseText(fragmentFile.getText('UTF-8'))
+                    if (!baseLanguage.keySet().intersect(moduleLanguage.keySet()).isEmpty()) {
+                        throw new GradleException("Duplicate DNV ${module} language keys: ${language}")
+                    }
+                    baseLanguage.putAll(moduleLanguage)
+                }
+                outputFile.setText(groovy.json.JsonOutput.prettyPrint(
+                        groovy.json.JsonOutput.toJson(baseLanguage)) + '\n', 'UTF-8')
+            }
+        }
+    }
+}
+
+tasks.register('prepareDnvGameTestStructures', Copy) {
+    group = 'verification'
+    description = 'Copies the test-only empty structure into the isolated GameTest run directory.'
+    from file('src/gameTest/resources/gameteststructures')
+    into layout.buildDirectory.dir(rwsGameTestEnabled ? 'run-rws-gametest/gameteststructures' : 'run-route-gametest/gameteststructures')
+}
+
+tasks.register('stageDnvGameTestMainClasses', Copy) {
+    group = 'verification'
+    description = 'Stages compiled route and station fixtures; native M1 runtime still requires SBW.'
+    dependsOn tasks.named('classes')
+    dependsOn tasks.named('gameTestClasses')
+    dependsOn tasks.named('artilleryClasses')
+    dependsOn tasks.named('platformClasses')
+    dependsOn project(':route-core').tasks.named('classes')
+    from(sourceSets.main.output.classesDirs) {
+        include 'com/liucodex/doggiesnewvehicle/core/DnvControlAuthority*.class'
+        include 'com/liucodex/doggiesnewvehicle/core/DnvTurretDefinition*.class'
+        include 'com/liucodex/doggiesnewvehicle/core/DnvPlatformCapabilities*.class'
+    }
+    from(sourceSets.artillery.output.classesDirs) {
+        include 'com/liucodex/doggiesnewvehicle/core/DnvRemoteWeaponLinks*.class'
+        include 'com/liucodex/doggiesnewvehicle/core/DnvRemoteManualTarget.class'
+        include 'com/liucodex/doggiesnewvehicle/compat/DnvRemoteWeapon*.class'
+        include 'com/liucodex/doggiesnewvehicle/compat/DnvM1RemoteCrew*.class'
+        include 'com/liucodex/doggiesnewvehicle/compat/DnvM1CrewSafety*.class'
+        include 'com/liucodex/doggiesnewvehicle/api/combat/DnvNativeCrewTarget.class'
+        include 'com/liucodex/doggiesnewvehicle/entity/DnvM1YunlongEntity.class'
+        include 'com/liucodex/doggiesnewvehicle/init/DnvM1Content.class'
+    }
+    from(project(':route-core').sourceSets.main.output.classesDirs)
+    from(sourceSets.platform.output.classesDirs) {
+        include 'com/liucodex/doggiesnewvehicle/compat/DnvAirRouteWorldValidation*.class'
+    }
+    into sourceSets.gameTestRuntimeMain.java.destinationDirectory
+}
+
+tasks.matching { it.name == 'runGameTestServer' }.configureEach {
+    if (apGameTestEnabled) {
+        dependsOn tasks.named('prepareApGameTestStructures')
+        dependsOn tasks.named('stageApRuntimeMain')
+        dependsOn tasks.named('stageApRouteCore')
+        dependsOn tasks.named('stageApRuntimePlatform')
+        dependsOn tasks.named('stageApRuntimeBoss')
+    } else {
+        dependsOn tasks.named('prepareDnvGameTestStructures')
+        dependsOn tasks.named('stageDnvGameTestMainClasses')
+        // The station fixture now loads native M1/GunData. This route-only
+        // runtime excludes SBW and cannot execute that fixture correctly.
+        // Keep compile-only checks available; require an explicit fixture
+        // migration to the exact full-mod AP runtime before starting RWS.
+        doFirst {
+            if (rwsGameTestEnabled) {
+                throw new GradleException('The isolated RWS runtime excludes SBW but its fixture requires native M1. '
+                        + 'Use dnvGameTestCompileCheck for compile-only evidence; migrate the RWS fixtures to the '
+                        + 'exact full-mod AP runtime before execution. The AP gate currently covers its own tests only.')
+            }
+        }
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    if (artilleryEnabled) {
+        from(sourceSets.artillery.output)
+    }
+    if (platformEnabled) {
+        dependsOn project(':route-core').tasks.named('classes')
+        from(project(':route-core').sourceSets.main.output)
+        from(sourceSets.platform.output)
+    }
+    if (bossEnabled) {
+        from(sourceSets.boss.output)
+    }
+    if (navalEnabled) {
+        from(sourceSets.aviation.output)
+        from(sourceSets.naval.output) { exclude 'pack.mcmeta' }
+    }
+    from(rootProject.file('../LICENSE')) {
+        rename { 'LICENSE_doggiesnewvehicle' }
+    }
+    manifest {
+        attributes([
+            'Specification-Title'     : "[SBW] Doggie's New Vehicle",
+            'Specification-Vendor'    : '所至皆青山（GoldenDoggieBall）',
+            'Specification-Version'   : '1',
+            'Implementation-Title'    : project.name,
+            'Implementation-Version'  : project.version,
+            'Implementation-Vendor'   : '所至皆青山（GoldenDoggieBall）',
+            'MixinConfigs'            : 'mixins.doggiesnewvehicle.json'
+                    + (artilleryEnabled ? ',mixins.dnvartillery.json,mixins.dnvblizzard.json' : '')
+                    + (platformEnabled ? ',mixins.dnvplatform.json' : '')
+                    + (navalEnabled ? ',libertad.mixins.json,mixins.dnvcarriercube.json' : '')
+        ])
+    }
+    finalizedBy 'reobfJar'
+}
+
+if (navalEnabled) {
+    tasks.named('processAviationResources') {
+        into('assets/dnvcarriercube/sounds') {
+            from('src/boss/resources/assets/dnv_mothership/sounds') { include 'idle.ogg', 'propulsion.ogg' }
+            from('src/artillery/resources/assets/doggiesnewvehicle/sounds') { include 'jingzhe_attack.ogg' }
+        }
+    }
+    apply from: 'gradle/naval-check.gradle'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs.add('-Xlint:deprecation')
+}
+
+def dnvProductionSources = files(
+        fileTree('src/main/java') { include '**/*.java' },
+        fileTree('src/artillery/java') { include '**/*.java' },
+        fileTree('src/platform/java') { include '**/*.java' },
+        fileTree('src/boss/java') { include '**/*.java' },
+        fileTree('route-core/src/main/java') { include '**/*.java' })
+
+def unusedRegularImports = { String text ->
+    def lines = text.readLines()
+    def body = lines.findAll { line ->
+        !line.trim().startsWith('import ')
+    }.join('\n')
+    lines.findResults { line ->
+        def matcher = line =~ /^\s*import\s+(?!static\s)([\w.]+);\s*$/
+        if (!matcher.matches()) return null
+        def importedType = matcher.group(1)
+        def simpleName = importedType.substring(
+                importedType.lastIndexOf('.') + 1)
+        def used = java.util.regex.Pattern.compile(
+                '\\b' + java.util.regex.Pattern.quote(simpleName) + '\\b'
+        ).matcher(body).find()
+        used ? null : importedType
+    }
+}
+
+tasks.register('verifyDnvSourceHygiene') {
+    group = 'verification'
+    description = 'Checks DNV production Java for copied, oversized, duplicated, or global-scan sources.'
+    inputs.files(dnvProductionSources)
+
+    doLast {
+        def violations = []
+        def forbiddenSegments = [
+                'archive', 'backup', 'copy', 'decompiled', 'old',
+                'snapshot', 'temp', 'tmp'
+        ] as Set
+        def hashes = [:].withDefault { [] }
+        dnvProductionSources.files.sort().each { sourceFile ->
+            def relative = project.relativePath(sourceFile).replace('\\', '/')
+            def text = sourceFile.getText('UTF-8')
+            def lines = text.readLines()
+            def segments = relative.toLowerCase(Locale.ROOT).split('/') as List
+            if (segments.any { forbiddenSegments.contains(it) }) {
+                violations << "${relative}: copied-source path segment is not allowed"
+            }
+            if (lines.size() > 900) {
+                violations << "${relative}: ${lines.size()} lines exceeds DNV source review budget 900"
+            }
+            def longLines = lines.count { it.length() > 180 }
+            if (longLines > 0) {
+                violations << "${relative}: ${longLines} lines exceed 180 characters"
+            }
+            unusedRegularImports(text).each { importedType ->
+                violations << "${relative}: unused import ${importedType}"
+            }
+            if (text.contains('getAllEntities()')) {
+                violations << "${relative}: DNV runtime may not scan every loaded entity"
+            }
+            def digest = java.security.MessageDigest.getInstance('SHA-256')
+                    .digest(sourceFile.bytes).encodeHex().toString()
+            hashes[digest] << relative
+        }
+        hashes.values().findAll { it.size() > 1 }.each { duplicates ->
+            violations << "exact duplicate DNV Java sources: ${duplicates.join(', ')}"
+        }
+        if (!violations.isEmpty()) {
+            throw new GradleException(
+                    "DNV source-hygiene verification failed:\n - "
+                            + violations.join('\n - '))
+        }
+    }
+}
+
+tasks.named('check').configure {
+    dependsOn tasks.named('verifyDnvSourceHygiene')
+    dependsOn tasks.named('uiPreviewCheck')
+}
+
+tasks.register('quickCheck') {
+    group = 'verification'
+    description = 'Runs DNV source governance and tests without packaging a release.'
+    dependsOn tasks.named('verifyDnvSourceHygiene')
+    dependsOn tasks.named('test')
+    dependsOn tasks.named('uiPreviewCheck')
+}
+
+apply from: 'gradle/damage-tag-assembly.gradle'
+apply from: 'gradle/runtime-art.gradle'

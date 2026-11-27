@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "doggiesnewvehicle:changfeng_blueprint",
+    "doggiesnewvehicle:storm_turret_blueprint",
+    "doggiesnewvehicle:jingzhe_turret_blueprint",
+    "doggiesnewvehicle:m1_yunlong_blueprint",
+    "doggiesnewvehicle:blizzard_blueprint"
+  ]
+}

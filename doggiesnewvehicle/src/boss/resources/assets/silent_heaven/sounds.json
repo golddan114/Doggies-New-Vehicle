@@ -1,0 +1,94 @@
+{
+  "storm_autocannon_fire": {
+    "sounds": [
+      {
+        "name": "superbwarfare:gun/m_2_hb/m_2_hb_fire_3p",
+        "attenuation_distance": 25
+      }
+    ]
+  },
+  "voice_ready_for_battle": {
+    "sounds": [{"name": "silent_heaven:voice/ready_for_battle", "attenuation_distance": 48}]
+  },
+  "voice_attack": {
+    "sounds": [{"name": "silent_heaven:voice/attack", "attenuation_distance": 48}]
+  },
+  "voice_destroy": {
+    "sounds": [{"name": "silent_heaven:voice/destroy", "attenuation_distance": 48}]
+  },
+  "voice_terminate": {
+    "sounds": [{"name": "silent_heaven:voice/terminate", "attenuation_distance": 48}]
+  },
+  "voice_focus_on_target": {
+    "sounds": [{"name": "silent_heaven:voice/focus_on_target", "attenuation_distance": 48}]
+  },
+  "voice_resetting": {
+    "sounds": [{"name": "silent_heaven:voice/resetting", "attenuation_distance": 48}]
+  },
+  "voice_moving": {
+    "sounds": [{"name": "silent_heaven:voice/moving", "attenuation_distance": 48}]
+  },
+  "voice_destination_set": {
+    "sounds": [{"name": "silent_heaven:voice/destination_set", "attenuation_distance": 48}]
+  },
+  "voice_i_move": {
+    "sounds": [{"name": "silent_heaven:voice/i_move", "attenuation_distance": 48}]
+  },
+  "voice_enemy_out_of_range": {
+    "sounds": [{"name": "silent_heaven:voice/enemy_out_of_range", "attenuation_distance": 48}]
+  },
+  "voice_target_acquired": {
+    "sounds": [{"name": "silent_heaven:voice/target_acquired", "attenuation_distance": 48}]
+  },
+  "voice_set_to_kill": {
+    "sounds": [{"name": "silent_heaven:voice/set_to_kill", "attenuation_distance": 48}]
+  },
+  "voice_enemy_engaged": {
+    "sounds": [{"name": "silent_heaven:voice/enemy_engaged", "attenuation_distance": 48}]
+  },
+  "voice_hello": {
+    "sounds": [{"name": "silent_heaven:voice/hello", "attenuation_distance": 48}]
+  },
+  "voice_i_am_ready": {
+    "sounds": [{"name": "silent_heaven:voice/i_am_ready", "attenuation_distance": 48}]
+  },
+  "voice_systems_online": {
+    "sounds": [{"name": "silent_heaven:voice/systems_online", "attenuation_distance": 48}]
+  },
+  "voice_receiving_damage": {
+    "sounds": [{"name": "silent_heaven:voice/receiving_damage", "attenuation_distance": 48}]
+  },
+  "voice_under_attack": {
+    "sounds": [{"name": "silent_heaven:voice/under_attack", "attenuation_distance": 48}]
+  },
+  "voice_systems_damaged": {
+    "sounds": [{"name": "silent_heaven:voice/systems_damaged", "attenuation_distance": 48}]
+  },
+  "idle_loop": {
+    "sounds": [
+      {
+        "name": "silent_heaven:idle",
+        "volume": 0.85,
+        "attenuation_distance": 25
+      }
+    ]
+  },
+  "engine_loop": {
+    "sounds": [
+      {
+        "name": "superbwarfare:vehicle/plz_05/plz_05_engine",
+        "stream": true,
+        "attenuation_distance": 25
+      }
+    ]
+  },
+  "track_loop": {
+    "sounds": [
+      {
+        "name": "superbwarfare:vehicle/common/track_vehicle_step",
+        "stream": true,
+        "attenuation_distance": 25
+      }
+    ]
+  }
+}

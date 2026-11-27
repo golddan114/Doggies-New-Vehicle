@@ -1,0 +1,226 @@
+{
+  "EngineSound": "doggiesnewvehicle:blizzard_hover",
+  "Type": "Tank",
+  "HudType": "@Land",
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/land.png",
+  "VehicleContainerType": "Medium",
+  "MaxHealth": 600,
+  "MaxEnergy": 2000000,
+  "HUDColor": "0xAFDEFF",
+  "Mass": 40.96,
+  "TurretPos": [
+    -0.0,
+    1.22095549,
+    -0.45572466
+  ],
+  "BarrelPos": [
+    0.00753129,
+    0.38138521000000014,
+    0.83569828
+  ],
+  "TurretTurnSpeed": [
+    1.5,
+    1.5
+  ],
+  "TurretPitchRange": [
+    -7.7,
+    50.8
+  ],
+  "TurretYawRange": [
+    -360,
+    360
+  ],
+  "UpStep": 1,
+  "RotateOffsetHeight": 0,
+  "Gravity": 0,
+  "EngineType": "Empty",
+  "EngineInfo": {},
+  "ThirdPersonCameraPos": [
+    0,
+    3,
+    8
+  ],
+  "Seats": [
+    {
+      "HidePassenger": true,
+      "Transform": "Turret",
+      "Position": [
+        0,
+        0.55,
+        0
+      ],
+      "CameraPos": {
+        "Transform": "Turret",
+        "UseFixedCameraPos": true,
+        "Position": [
+          0,
+          1.3,
+          0
+        ],
+        "ZoomPosition": [
+          0,
+          1.3,
+          0.9
+        ],
+        "Direction": "Passenger",
+        "ZoomDirection": "Passenger"
+      },
+      "Weapons": [
+        "ColdBeam",
+        "ClearingMissile"
+      ],
+      "CanRotateHead": true,
+      "MinPitch": -85,
+      "MaxPitch": 85,
+      "Sensitivity": [
+        0.55,
+        0.7,
+        0.85
+      ],
+      "HasThermalImaging": true,
+      "DismountInfo": {
+        "Transform": "Vehicle",
+        "Position": [
+          3,
+          0.3,
+          0
+        ]
+      }
+    }
+  ],
+  "OBB": [
+    {
+      "Part": "Collision",
+      "Position": [
+        0.0,
+        0.6598526835441589,
+        -0.09557461738586426
+      ],
+      "Size": [
+        2.1000001430511475,
+        0.6598526835441589,
+        3.3962743282318115
+      ]
+    },
+    {
+      "Part": "Turret",
+      "Transform": "BlizzardTurret",
+      "Rotation": "BlizzardTurret",
+      "Position": [
+        -3.5762786865234375e-07,
+        2.1375226974487305,
+        -0.7318741083145142
+      ],
+      "Size": [
+        1.5017169713974,
+        0.879235029220581,
+        2.0456491708755493
+      ]
+    },
+    {
+      "Part": "Body",
+      "Transform": "BlizzardBody",
+      "Rotation": "BlizzardBody",
+      "Position": [
+        0.0,
+        0.6598526835441589,
+        -0.09557461738586426
+      ],
+      "Size": [
+        2.1000001430511475,
+        0.6598526835441589,
+        3.3962743282318115
+      ]
+    },
+    {
+      "Part": "Turret",
+      "Transform": "BlizzardBarrel",
+      "Rotation": "BlizzardBarrel",
+      "Position": [
+        0.007531300187110901,
+        1.6143912076950073,
+        2.2664855495095253
+      ],
+      "Size": [
+        0.45980311930179596,
+        0.29391181468963623,
+        2.03238358348608
+      ]
+    }
+  ],
+  "TerrainCompat": [],
+  "Weapons": {
+    "ColdBeam": {
+      "Name": "weapon.doggievehicle.blizzard_cold",
+      "Projectile": "ray",
+      "DefaultFireMode": "Auto",
+      "AvailableFireModes": "Auto",
+      "Range": 256,
+      "RPM": 120,
+      "DefaultZoom": 3,
+      "Damage": 0,
+      "Spread": 0,
+      "AmmoType": "FE",
+      "AmmoCostPerShoot": 3000,
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/laser.png",
+      "Crosshair": "@VehicleCommonCannon",
+      "CrosshairColor": "0xAFDEFF",
+      "ShootPos": {
+        "Transform": "BlizzardBarrel",
+        "Positions": [
+          [
+            -1.4e-07,
+            1.59961355,
+            4.29886913
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      }
+    },
+    "ClearingMissile": {
+      "Name": "weapon.doggievehicle.blizzard_missile",
+      "Projectile": "doggievehicle:blizzard_missile",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "RPM": 120,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "NormalReloadTime": 400,
+      "AmmoType": "doggiesnewvehicle:cryo_missile",
+      "Velocity": 0.6,
+      "Gravity": 0,
+      "ProjectileLife": 400,
+      "Damage": 0,
+      "ExplosionDamage": 50,
+      "ExplosionRadius": 8,
+      "ExplosionDestroy": false,
+      "Spread": 0,
+      "DefaultZoom": 3,
+      "Crosshair": "@VehicleCommonCannon",
+      "CrosshairColor": "0xAFDEFF",
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/agm_65.png",
+      "ShootPos": {
+        "Transform": "BlizzardTurret",
+        "Positions": [
+          [
+            0.48545977,
+            2.74571347,
+            -0.77500236
+          ],
+          [
+            -0.4540925,
+            2.74571347,
+            -0.77500236
+          ]
+        ],
+        "Directions": [
+          "Barrel",
+          "Barrel"
+        ]
+      },
+      "WithdrawAmmoWhenChangeSlot": false
+    }
+  }
+}

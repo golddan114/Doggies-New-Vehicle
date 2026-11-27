@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "defaultMaximumEdge": 1024,
+  "maximumEdgeOverrides": {
+    "src/artillery/resources/assets/doggiesnewvehicle/textures/entity/nuclear/v20_body.png": 2048,
+    "src/artillery/resources/assets/doggiesnewvehicle/textures/entity/dogegg/silo_base.png": 2048
+  },
+  "resourceRoots": [
+    "src/main/resources",
+    "src/artillery/resources",
+    "src/boss/resources",
+    "src/platform/resources"
+  ]
+}

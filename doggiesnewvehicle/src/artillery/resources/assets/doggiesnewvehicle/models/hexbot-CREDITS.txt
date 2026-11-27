@@ -1,0 +1,15 @@
+HexBot model reference and procedural walking inspiration:
+TheCymaera / Heledron — minecraft-spider
+https://github.com/TheCymaera/minecraft-spider
+Pinned revision: 56a3f2116c18c70fbddb7afbc9cd0eeb6c95e871
+Original video: https://www.youtube.com/shorts/A219gd82GQw
+
+The default hexBot(4, 1.0) FLAT torso and BASE/FEMUR/TIBIA/TIP block-model
+declarations are translated to the adjacent hexbot.json, retaining source matrices,
+vanilla block states, cloak material substitutions and the cyan eye.
+Minecraft block geometry and textures are provided by Minecraft at runtime.
+DNV's player vehicle, server motion, foot snapshots and client rendering are adaptations.
+
+The upstream README permits commercial and noncommercial use of the plugin/source,
+appreciates attribution, and restricts resale without substantial changes.
+See the upstream README License section for the original terms.

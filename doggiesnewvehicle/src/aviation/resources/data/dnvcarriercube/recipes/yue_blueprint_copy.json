@@ -1,0 +1,17 @@
+{
+  "type": "superbwarfare:researching",
+  "base": {
+    "item": "minecraft:paper"
+  },
+  "input": {
+    "item": "dnvcarriercube:yue_blueprint"
+  },
+  "addition": {
+    "item": "minecraft:lapis_lazuli"
+  },
+  "result": {
+    "item": "dnvcarriercube:yue_blueprint",
+    "count": 2
+  },
+  "time": 600
+}

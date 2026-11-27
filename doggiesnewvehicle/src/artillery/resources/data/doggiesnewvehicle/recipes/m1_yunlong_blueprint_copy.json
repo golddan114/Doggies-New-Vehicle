@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["ABA", "ACA", "AAA"],
+  "key": {
+    "A": {"item": "minecraft:lapis_lazuli"},
+    "B": {"item": "minecraft:paper"},
+    "C": {"item": "doggiesnewvehicle:m1_yunlong_blueprint"}
+  },
+  "result": {"item": "doggiesnewvehicle:m1_yunlong_blueprint", "count": 2},
+  "show_notification": true
+}

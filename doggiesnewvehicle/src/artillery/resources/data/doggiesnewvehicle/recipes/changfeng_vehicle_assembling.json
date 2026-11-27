@@ -1,0 +1,15 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "defense",
+  "inputs": [
+    "8 #forge:storage_blocks/steel",
+    "doggiesnewvehicle:changfeng_blueprint",
+    "superbwarfare:cannon_core",
+    "2 superbwarfare:motor",
+    "superbwarfare:intelligent_chip",
+    "superbwarfare:medium_battery_pack"
+  ],
+  "result": {
+    "entity": "doggievehicle:50_changfeng_cannon"
+  }
+}

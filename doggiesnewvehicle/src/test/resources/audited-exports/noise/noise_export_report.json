@@ -1,0 +1,1485 @@
+{
+  "source_blend": "231_Noise_Rigged_v04_Runtime_UV.blend",
+  "format": "SHM1",
+  "objects": {
+    "SilentHeaven_Autocannon_L_Pitch_Mesh": {
+      "group": "autocannon_l_pitch",
+      "triangles": {
+        "body": 44,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_Autocannon_L_Yaw_Mesh": {
+      "group": "autocannon_l_yaw",
+      "triangles": {
+        "body": 36,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_Autocannon_R_Pitch_Mesh": {
+      "group": "autocannon_r_pitch",
+      "triangles": {
+        "body": 44,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_Autocannon_R_Yaw_Mesh": {
+      "group": "autocannon_r_yaw",
+      "triangles": {
+        "body": 36,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_Chassis_Static_Mesh": {
+      "group": "chassis",
+      "triangles": {
+        "body": 512,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_Core_Static_Mesh": {
+      "group": "core",
+      "triangles": {
+        "body": 1688,
+        "track": 0,
+        "track_inner": 0,
+        "light": 82
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_HaloNeedle_00_FL_Mesh": {
+      "group": "halo_needle_0",
+      "triangles": {
+        "body": 44,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_HaloNeedle_01_L_Mesh": {
+      "group": "halo_needle_1",
+      "triangles": {
+        "body": 44,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_HaloNeedle_02_RL_Mesh": {
+      "group": "halo_needle_2",
+      "triangles": {
+        "body": 44,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_HaloNeedle_03_RR_Mesh": {
+      "group": "halo_needle_3",
+      "triangles": {
+        "body": 44,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_HaloNeedle_04_R_Mesh": {
+      "group": "halo_needle_4",
+      "triangles": {
+        "body": 44,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_HaloNeedle_05_FR_Mesh": {
+      "group": "halo_needle_5",
+      "triangles": {
+        "body": 44,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_Halo_Ring_Glow_Mesh": {
+      "group": "halo_ring",
+      "triangles": {
+        "body": 0,
+        "track": 0,
+        "track_inner": 0,
+        "light": 48
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_LaunchBay_L_Hatch_Mesh": {
+      "group": "launch_hatch_l",
+      "triangles": {
+        "body": 38,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_LaunchBay_R_Hatch_Mesh": {
+      "group": "launch_hatch_r",
+      "triangles": {
+        "body": 38,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_MainGun_L_Barrel_Mesh": {
+      "group": "main_gun_l",
+      "triangles": {
+        "body": 58,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv"
+      ]
+    },
+    "SilentHeaven_MainGun_L_Housing_Mesh": {
+      "group": "main_gun_l",
+      "triangles": {
+        "body": 134,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_MainGun_R_Barrel_Mesh": {
+      "group": "main_gun_r",
+      "triangles": {
+        "body": 58,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv"
+      ]
+    },
+    "SilentHeaven_MainGun_R_Housing_Mesh": {
+      "group": "main_gun_r",
+      "triangles": {
+        "body": 134,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_MissilePod_L_Pitch_Mesh": {
+      "group": "missile_pod_l_pitch",
+      "triangles": {
+        "body": 48,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_MissilePod_L_Yaw_Mesh": {
+      "group": "missile_pod_l_yaw",
+      "triangles": {
+        "body": 36,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_MissilePod_R_Pitch_Mesh": {
+      "group": "missile_pod_r_pitch",
+      "triangles": {
+        "body": 48,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_MissilePod_R_Yaw_Mesh": {
+      "group": "missile_pod_r_yaw",
+      "triangles": {
+        "body": 36,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_RoadWheel_L_00_Mesh": {
+      "group": "road_wheel_l_0",
+      "triangles": {
+        "body": 28,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_RoadWheel_L_01_Mesh": {
+      "group": "road_wheel_l_1",
+      "triangles": {
+        "body": 28,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_RoadWheel_L_02_Mesh": {
+      "group": "road_wheel_l_2",
+      "triangles": {
+        "body": 28,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_RoadWheel_L_03_Mesh": {
+      "group": "road_wheel_l_3",
+      "triangles": {
+        "body": 28,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_RoadWheel_R_00_Mesh": {
+      "group": "road_wheel_r_0",
+      "triangles": {
+        "body": 28,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_RoadWheel_R_01_Mesh": {
+      "group": "road_wheel_r_1",
+      "triangles": {
+        "body": 28,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_RoadWheel_R_02_Mesh": {
+      "group": "road_wheel_r_2",
+      "triangles": {
+        "body": 28,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_RoadWheel_R_03_Mesh": {
+      "group": "road_wheel_r_3",
+      "triangles": {
+        "body": 28,
+        "track": 0,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "uv",
+        "Light"
+      ]
+    },
+    "SilentHeaven_TrackInner_L_Mesh": {
+      "group": "chassis",
+      "triangles": {
+        "body": 0,
+        "track": 0,
+        "track_inner": 112,
+        "light": 0
+      },
+      "source_materials": [
+        "track_inner"
+      ]
+    },
+    "SilentHeaven_TrackInner_R_Mesh": {
+      "group": "chassis",
+      "triangles": {
+        "body": 0,
+        "track": 0,
+        "track_inner": 112,
+        "light": 0
+      },
+      "source_materials": [
+        "track_inner"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_00_Preview": {
+      "group": "track_shoe_l_0",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_01_Preview": {
+      "group": "track_shoe_l_1",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_02_Preview": {
+      "group": "track_shoe_l_2",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_03_Preview": {
+      "group": "track_shoe_l_3",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_04_Preview": {
+      "group": "track_shoe_l_4",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_05_Preview": {
+      "group": "track_shoe_l_5",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_06_Preview": {
+      "group": "track_shoe_l_6",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_07_Preview": {
+      "group": "track_shoe_l_7",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_08_Preview": {
+      "group": "track_shoe_l_8",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_09_Preview": {
+      "group": "track_shoe_l_9",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_10_Preview": {
+      "group": "track_shoe_l_10",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_11_Preview": {
+      "group": "track_shoe_l_11",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_12_Preview": {
+      "group": "track_shoe_l_12",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_13_Preview": {
+      "group": "track_shoe_l_13",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_14_Preview": {
+      "group": "track_shoe_l_14",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_15_Preview": {
+      "group": "track_shoe_l_15",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_16_Preview": {
+      "group": "track_shoe_l_16",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_17_Preview": {
+      "group": "track_shoe_l_17",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_18_Preview": {
+      "group": "track_shoe_l_18",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_19_Preview": {
+      "group": "track_shoe_l_19",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_20_Preview": {
+      "group": "track_shoe_l_20",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_21_Preview": {
+      "group": "track_shoe_l_21",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_22_Preview": {
+      "group": "track_shoe_l_22",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_23_Preview": {
+      "group": "track_shoe_l_23",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_24_Preview": {
+      "group": "track_shoe_l_24",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_25_Preview": {
+      "group": "track_shoe_l_25",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_26_Preview": {
+      "group": "track_shoe_l_26",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_27_Preview": {
+      "group": "track_shoe_l_27",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_L_28_Preview": {
+      "group": "track_shoe_l_28",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_00_Preview": {
+      "group": "track_shoe_r_0",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_01_Preview": {
+      "group": "track_shoe_r_1",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_02_Preview": {
+      "group": "track_shoe_r_2",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_03_Preview": {
+      "group": "track_shoe_r_3",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_04_Preview": {
+      "group": "track_shoe_r_4",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_05_Preview": {
+      "group": "track_shoe_r_5",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_06_Preview": {
+      "group": "track_shoe_r_6",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_07_Preview": {
+      "group": "track_shoe_r_7",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_08_Preview": {
+      "group": "track_shoe_r_8",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_09_Preview": {
+      "group": "track_shoe_r_9",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_10_Preview": {
+      "group": "track_shoe_r_10",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_11_Preview": {
+      "group": "track_shoe_r_11",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_12_Preview": {
+      "group": "track_shoe_r_12",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_13_Preview": {
+      "group": "track_shoe_r_13",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_14_Preview": {
+      "group": "track_shoe_r_14",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_15_Preview": {
+      "group": "track_shoe_r_15",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_16_Preview": {
+      "group": "track_shoe_r_16",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_17_Preview": {
+      "group": "track_shoe_r_17",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_18_Preview": {
+      "group": "track_shoe_r_18",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_19_Preview": {
+      "group": "track_shoe_r_19",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_20_Preview": {
+      "group": "track_shoe_r_20",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_21_Preview": {
+      "group": "track_shoe_r_21",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_22_Preview": {
+      "group": "track_shoe_r_22",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_23_Preview": {
+      "group": "track_shoe_r_23",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_24_Preview": {
+      "group": "track_shoe_r_24",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_25_Preview": {
+      "group": "track_shoe_r_25",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_26_Preview": {
+      "group": "track_shoe_r_26",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_27_Preview": {
+      "group": "track_shoe_r_27",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    },
+    "SilentHeaven_TrackShoe_R_28_Preview": {
+      "group": "track_shoe_r_28",
+      "triangles": {
+        "body": 0,
+        "track": 12,
+        "track_inner": 0,
+        "light": 0
+      },
+      "source_materials": [
+        "track"
+      ]
+    }
+  },
+  "mesh_object_count": 91,
+  "part_count": 147,
+  "triangles": {
+    "chassis/body": 512,
+    "chassis/track_inner": 224,
+    "core/body": 1688,
+    "core/light": 82,
+    "main_gun_l/body": 192,
+    "main_gun_r/body": 192,
+    "autocannon_l_yaw/body": 36,
+    "autocannon_l_pitch/body": 44,
+    "autocannon_r_yaw/body": 36,
+    "autocannon_r_pitch/body": 44,
+    "missile_pod_l_yaw/body": 36,
+    "missile_pod_l_pitch/body": 48,
+    "missile_pod_r_yaw/body": 36,
+    "missile_pod_r_pitch/body": 48,
+    "launch_hatch_l/body": 38,
+    "launch_hatch_r/body": 38,
+    "halo_ring/light": 48,
+    "halo_needle_0/body": 44,
+    "halo_needle_1/body": 44,
+    "halo_needle_2/body": 44,
+    "halo_needle_3/body": 44,
+    "halo_needle_4/body": 44,
+    "halo_needle_5/body": 44,
+    "road_wheel_l_0/body": 28,
+    "road_wheel_l_1/body": 28,
+    "road_wheel_l_2/body": 28,
+    "road_wheel_l_3/body": 28,
+    "road_wheel_r_0/body": 28,
+    "road_wheel_r_1/body": 28,
+    "road_wheel_r_2/body": 28,
+    "road_wheel_r_3/body": 28,
+    "track_shoe_l_0/track": 12,
+    "track_shoe_l_1/track": 12,
+    "track_shoe_l_2/track": 12,
+    "track_shoe_l_3/track": 12,
+    "track_shoe_l_4/track": 12,
+    "track_shoe_l_5/track": 12,
+    "track_shoe_l_6/track": 12,
+    "track_shoe_l_7/track": 12,
+    "track_shoe_l_8/track": 12,
+    "track_shoe_l_9/track": 12,
+    "track_shoe_l_10/track": 12,
+    "track_shoe_l_11/track": 12,
+    "track_shoe_l_12/track": 12,
+    "track_shoe_l_13/track": 12,
+    "track_shoe_l_14/track": 12,
+    "track_shoe_l_15/track": 12,
+    "track_shoe_l_16/track": 12,
+    "track_shoe_l_17/track": 12,
+    "track_shoe_l_18/track": 12,
+    "track_shoe_l_19/track": 12,
+    "track_shoe_l_20/track": 12,
+    "track_shoe_l_21/track": 12,
+    "track_shoe_l_22/track": 12,
+    "track_shoe_l_23/track": 12,
+    "track_shoe_l_24/track": 12,
+    "track_shoe_l_25/track": 12,
+    "track_shoe_l_26/track": 12,
+    "track_shoe_l_27/track": 12,
+    "track_shoe_l_28/track": 12,
+    "track_shoe_r_0/track": 12,
+    "track_shoe_r_1/track": 12,
+    "track_shoe_r_2/track": 12,
+    "track_shoe_r_3/track": 12,
+    "track_shoe_r_4/track": 12,
+    "track_shoe_r_5/track": 12,
+    "track_shoe_r_6/track": 12,
+    "track_shoe_r_7/track": 12,
+    "track_shoe_r_8/track": 12,
+    "track_shoe_r_9/track": 12,
+    "track_shoe_r_10/track": 12,
+    "track_shoe_r_11/track": 12,
+    "track_shoe_r_12/track": 12,
+    "track_shoe_r_13/track": 12,
+    "track_shoe_r_14/track": 12,
+    "track_shoe_r_15/track": 12,
+    "track_shoe_r_16/track": 12,
+    "track_shoe_r_17/track": 12,
+    "track_shoe_r_18/track": 12,
+    "track_shoe_r_19/track": 12,
+    "track_shoe_r_20/track": 12,
+    "track_shoe_r_21/track": 12,
+    "track_shoe_r_22/track": 12,
+    "track_shoe_r_23/track": 12,
+    "track_shoe_r_24/track": 12,
+    "track_shoe_r_25/track": 12,
+    "track_shoe_r_26/track": 12,
+    "track_shoe_r_27/track": 12,
+    "track_shoe_r_28/track": 12
+  },
+  "triangle_total": 5402,
+  "bounds_min_mc": [
+    -3.23498797416687,
+    0.016554981470108032,
+    -3.040818691253662
+  ],
+  "bounds_max_mc": [
+    3.234988212585449,
+    8.91862964630127,
+    2.735614776611328
+  ],
+  "markers_mc": {
+    "core_yaw": [
+      0.0,
+      2.304092,
+      -0.0
+    ],
+    "main_gun_l_pitch": [
+      1.88055,
+      3.574424,
+      -1.085218
+    ],
+    "main_gun_r_pitch": [
+      -1.88055,
+      3.574424,
+      -1.085219
+    ],
+    "main_gun_l_muzzle": [
+      2.273122,
+      3.574424,
+      2.219845
+    ],
+    "main_gun_r_muzzle": [
+      -2.273121,
+      3.574424,
+      2.219844
+    ],
+    "autocannon_l_yaw": [
+      1.705207,
+      1.555138,
+      1.05061
+    ],
+    "autocannon_l_pitch": [
+      1.705206,
+      1.901002,
+      1.050822
+    ],
+    "autocannon_l_muzzle": [
+      1.705207,
+      1.901002,
+      1.926614
+    ],
+    "autocannon_r_yaw": [
+      -1.70581,
+      1.555138,
+      1.05061
+    ],
+    "autocannon_r_pitch": [
+      -1.70581,
+      1.901002,
+      1.050822
+    ],
+    "autocannon_r_muzzle": [
+      -1.70581,
+      1.901002,
+      1.926614
+    ],
+    "missile_pod_l_yaw": [
+      1.345815,
+      4.678438,
+      -0.797716
+    ],
+    "missile_pod_l_pitch": [
+      1.349663,
+      4.890142,
+      -0.799954
+    ],
+    "missile_pod_l_launch": [
+      1.349663,
+      4.910265,
+      -0.588821
+    ],
+    "missile_pod_r_yaw": [
+      -1.325815,
+      4.678438,
+      -0.797716
+    ],
+    "missile_pod_r_pitch": [
+      -1.329664,
+      4.890142,
+      -0.799954
+    ],
+    "missile_pod_r_launch": [
+      -1.329664,
+      4.910265,
+      -0.588821
+    ],
+    "vls_l_launch": [
+      1.410375,
+      4.5525,
+      -2.11119
+    ],
+    "vls_r_launch": [
+      -1.410375,
+      4.5525,
+      -2.11119
+    ],
+    "launch_hatch_l": [
+      2.968506,
+      3.574424,
+      -1.570013
+    ],
+    "launch_hatch_r": [
+      -2.968506,
+      3.574424,
+      -1.570013
+    ],
+    "launch_socket_l": [
+      3.324988,
+      3.574424,
+      -1.11711
+    ],
+    "launch_socket_r": [
+      -3.324988,
+      3.574424,
+      -1.11711
+    ],
+    "halo_needle_0": [
+      1.403068,
+      7.882872,
+      2.363633
+    ],
+    "halo_needle_1": [
+      2.7485,
+      7.882872,
+      -0.033277
+    ],
+    "halo_needle_2": [
+      1.345431,
+      7.882872,
+      -2.396909
+    ],
+    "halo_needle_3": [
+      -1.403069,
+      7.882872,
+      -2.363632
+    ],
+    "halo_needle_4": [
+      -2.7485,
+      7.882872,
+      0.033276
+    ],
+    "halo_needle_5": [
+      -1.345432,
+      7.882872,
+      2.396909
+    ],
+    "halo": [
+      0.0,
+      7.840268,
+      -0.0
+    ]
+  },
+  "output_mesh": "noise.shm",
+  "track_upgrade": {
+    "date": "2026-09-30",
+    "baseline_shm_sha256": "ddaed55b97ddb0e1dd8c73d8f2c91b0a4b69ebf8ea4f6decfd90a627ee21f00b",
+    "source_object_report_scope": "Original Blender export; track-only postprocessing documented here",
+    "donor": "SBW 0.8.9.1 T-90A trackRotL0; UV uses installed SBW atlas",
+    "shoe_count_per_side": 58,
+    "inner_belt": "removed to eliminate overlap with wheels",
+    "protected_stream_sha256": {
+      "core/body": "63ff6aed10291dfd2808e112b7113da71b55a950642e0d610e29bef2a26a704e",
+      "core/light": "d6187f5ee54f5c44275a4af9d7c61658960668fdb2f81bb9b30d275b6abd7f5c",
+      "main_gun_l/body": "95ba172dd6a429c10a9479fc06c0904eec5970a4b9ad4049bdf9f1fb4375254c",
+      "main_gun_r/body": "0012fcadebad25981b30cdb4afb22f6b60cd763b353f676573e0ae33e6c6446d",
+      "autocannon_l_yaw/body": "e70ab66aacf0a7671fe1d73fbb1cc3e6df893975963eca8a57406116f0537dcc",
+      "autocannon_l_pitch/body": "dcddc5b9a28de60581ae091aff0bf6eb189a354a48b0f0405606d004a4c3e5f4",
+      "autocannon_r_yaw/body": "1133c9ce88ac05018e9575392cd3861e5c0731fb8ccf90d99069ae03117d4bef",
+      "autocannon_r_pitch/body": "827369305e9876c00fbcdd04f3c0394db00216169439365aba949bb68d824584",
+      "missile_pod_l_yaw/body": "4a28a7e7525e3936084de95330cd03a8510a5423faf95deb981b1be4cf3186b1",
+      "missile_pod_l_pitch/body": "391d3c80713c5d0b05a115af998cd29daca30657d080c0d4f16b63277e4d5c47",
+      "missile_pod_r_yaw/body": "e04af7e8916445856d4000f59617a4656ff405e42eef0c684f6e4f2285173b15",
+      "missile_pod_r_pitch/body": "97d79594a7ee65c7f8987160a261595f267279c50517769a6681e4b5a12f9500",
+      "launch_hatch_l/body": "876d8a6a7dec917feb548875b8abbb8aeeeb2ee6eba7e8bae4fe67c41d4f1643",
+      "launch_hatch_r/body": "37660a0efa4c1f8e222b9ef85796fd05961c622f20dc6bc1c54d5d1b174bed3c",
+      "halo_ring/light": "686a2f6e8ac7adedae2c4ee4c75b3a08f9c364d2755a39f0fbfa0f3511229f96",
+      "halo_needle_0/body": "f05d6e1c12a0edb60034a875da14c5778975e076886c0ec092d8f5edbf44720a",
+      "halo_needle_1/body": "38a9701dba3a2e683b61e594b3ff01e120ba0d45f168c3e8516be3145ab1004b",
+      "halo_needle_2/body": "095fcb8016a91c8292bb397b2cf772b18e641d6083a21d8be5e50570db7243fa",
+      "halo_needle_3/body": "10a4360ac15d8c939803328bc37b0ca7c46870430acb88bdca4ab90b504058e1",
+      "halo_needle_4/body": "5a8d919ef145d0f7cc064712bd77d9572ab069465d6d71189db67784b2936c76",
+      "halo_needle_5/body": "8f1ab4a31e5c5ed85dc522184da21a9e53c5c76b995365229c28b2efb0095876",
+      "road_wheel_l_0/body": "38477ce7333fdf502e21f3813c8c2a2c5a3354cadb2bed3add6305ebec9e781e",
+      "road_wheel_l_1/body": "e0af1e4adc8045af3695d1fd165dbfda8be7cbc705de4f5f414af5c94e997c52",
+      "road_wheel_l_2/body": "0580e98c14b2e3247137db5a66b37512a9de87b873470ad6836b68fea8c8ea09",
+      "road_wheel_l_3/body": "3faaef9d2a24c5288e4bba466245ac1ae3ffdef930b30bbc47bb3f0462276630",
+      "road_wheel_r_0/body": "f5f64c6d18557422eea9728c46e91b3bcf09d48956de20707b7dcddb68c578eb",
+      "road_wheel_r_1/body": "e8558281916bd561d0b1c31ccf8d1f153491b227bf43a70b1b801e56d905c3c7",
+      "road_wheel_r_2/body": "cb9fccea6609789937e5cef9205c8cb3b6d8245cd4d668cda9d00de9a227ba1a",
+      "road_wheel_r_3/body": "4f58de11ea6f9d592d2c85f74636d3ab8a4b23032c1404e1a8e33b124c6ab031"
+    },
+    "chassis_clearance": {
+      "method": "Capsule envelope subtraction from intersecting inner fender/support shells only",
+      "radius": 0.711261468579729,
+      "half_width": 0.35200000000000004,
+      "edited_shells": [
+        {
+          "component": 6,
+          "old_triangles": 48,
+          "new_triangles": 200
+        },
+        {
+          "component": 8,
+          "old_triangles": 48,
+          "new_triangles": 200
+        },
+        {
+          "component": 13,
+          "old_triangles": 20,
+          "new_triangles": 36
+        },
+        {
+          "component": 14,
+          "old_triangles": 20,
+          "new_triangles": 36
+        },
+        {
+          "component": 15,
+          "old_triangles": 20,
+          "new_triangles": 36
+        },
+        {
+          "component": 16,
+          "old_triangles": 20,
+          "new_triangles": 36
+        },
+        {
+          "component": 17,
+          "old_triangles": 10,
+          "new_triangles": 22
+        },
+        {
+          "component": 18,
+          "old_triangles": 10,
+          "new_triangles": 16
+        },
+        {
+          "component": 19,
+          "old_triangles": 10,
+          "new_triangles": 22
+        },
+        {
+          "component": 20,
+          "old_triangles": 10,
+          "new_triangles": 16
+        }
+      ],
+      "outer_bounds_unchanged": true,
+      "before_sha256": "48ff419bdfe1bacb7fce4e8dd0f28566aabeb5cd54730768969075e8cc7bb38a",
+      "after_sha256": "6058d2c0e61cc6be71e9ea3bed0e74e9fc8fd05e70ad240947d59abf5680827b"
+    },
+    "shoe_width": 0.68,
+    "path_radius": 0.675
+  }
+}

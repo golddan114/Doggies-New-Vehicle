@@ -1,0 +1,5 @@
+{
+  "warp_lock": { "sounds": [{ "name": "dnvcarriercube:jingzhe_attack", "attenuation_distance": 192 }] },
+  "idle": { "sounds": [{ "name": "dnvcarriercube:idle", "attenuation_distance": 160 }] },
+  "propulsion": { "sounds": [{ "name": "dnvcarriercube:propulsion", "attenuation_distance": 160 }] }
+}

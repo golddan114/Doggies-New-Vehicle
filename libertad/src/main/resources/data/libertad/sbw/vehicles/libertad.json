@@ -1,0 +1,2667 @@
+{
+  "MaxHealth": 20000,
+  "MaxEnergy": 80000000,
+  "Mass": 45000,
+  "Type": "Boat",
+  "KeepChunkLoaded": false,
+  "VehicleContainerType": "Large",
+  "HudType": "@Artillery",
+  "EngineSound": "superbwarfare:speedboat_engine",
+  "EngineType": "Ship",
+  "Gravity": 0.06,
+  "EngineInfo": {
+    "Buoyancy": 0.016735,
+    "EnergyCostRate": 24,
+    "MaxForwardSpeedRate": 2.259,
+    "MaxBackwardSpeedRate": 0.18,
+    "Increment": 0.008,
+    "Decrement": 0.014,
+    "SteeringSpeed": 0.048,
+    "BodyPitchRate": 0.2
+  },
+  "Seats": [
+    {
+      "HidePassenger": true,
+      "RotateWithVehicle": false,
+      "CanRotateHead": true,
+      "Transform": "Vehicle",
+      "Position": [
+        0,
+        8,
+        12
+      ],
+      "MinPitch": -80,
+      "MaxPitch": 80,
+      "Weapons": [
+        "main_01_l"
+      ],
+      "CameraPos": {
+        "Transform": "Vehicle",
+        "UseFixedCameraPos": true,
+        "Position": [
+          0,
+          10.25,
+          25.1
+        ],
+        "ZoomPosition": [
+          0,
+          22,
+          0
+        ],
+        "Direction": "Passenger",
+        "ZoomDirection": "Passenger"
+      },
+      "DismountInfo": {
+        "Transform": "Vehicle",
+        "Position": [
+          8,
+          5,
+          12
+        ]
+      }
+    },
+    {
+      "HidePassenger": true,
+      "RotateWithVehicle": false,
+      "CanRotateHead": true,
+      "BanHand": true,
+      "Transform": "Vehicle",
+      "Position": [
+        1.4,
+        6.5,
+        19.4
+      ],
+      "MinPitch": -80,
+      "MaxPitch": 80,
+      "Weapons": [],
+      "DismountInfo": {
+        "Transform": "Vehicle",
+        "Position": [
+          7.2,
+          5,
+          18
+        ]
+      }
+    },
+    {
+      "HidePassenger": true,
+      "RotateWithVehicle": false,
+      "CanRotateHead": true,
+      "BanHand": true,
+      "Transform": "Vehicle",
+      "Position": [
+        -1.4,
+        6.5,
+        19.4
+      ],
+      "MinPitch": -80,
+      "MaxPitch": 80,
+      "Weapons": [],
+      "DismountInfo": {
+        "Transform": "Vehicle",
+        "Position": [
+          -7.2,
+          5,
+          18
+        ]
+      }
+    }
+  ],
+  "ThirdPersonCameraPos": [
+    0,
+    29,
+    108
+  ],
+  "Weapons": {
+    "main_01_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_01_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_02_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_02_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_03_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_03_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_04_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_04_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_05_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_05_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_06_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "main_06_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 400,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 1800,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.10,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "SoundInfo": {
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+            "ShellType": "HE",
+            "Damage": 800,
+            "ExplosionDamage": 500,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he"
+          }
+        }
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false
+    },
+    "secondary_234_01_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_01_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_02_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_02_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_03_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_03_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_04_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_04_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_05_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_05_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_06_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_06_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_07_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_07_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_08_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_08_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_09_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_09_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_10_l": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_234_10_r": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 110,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 300,
+      "ExplosionDamage": 200,
+      "ExplosionRadius": 3,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_127_01": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 80,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 250,
+      "ExplosionDamage": 160,
+      "ExplosionRadius": 1,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_127_02": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 80,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 250,
+      "ExplosionDamage": 160,
+      "ExplosionRadius": 1,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_127_03": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 80,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 250,
+      "ExplosionDamage": 160,
+      "ExplosionRadius": 1,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_127_04": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 80,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 250,
+      "ExplosionDamage": 160,
+      "ExplosionRadius": 1,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_127_05": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 80,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 250,
+      "ExplosionDamage": 160,
+      "ExplosionRadius": 1,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_127_06": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 80,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 250,
+      "ExplosionDamage": 160,
+      "ExplosionRadius": 1,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_127_07": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 80,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 250,
+      "ExplosionDamage": 160,
+      "ExplosionRadius": 1,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    },
+    "secondary_127_08": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 60,
+      "Magazine": 1,
+      "EmptyReloadTime": 80,
+      "DefaultZoom": 5,
+      "Velocity": 15,
+      "Gravity": 0.06,
+      "ApDurability": 100,
+      "Damage": 250,
+      "ExplosionDamage": 160,
+      "ExplosionRadius": 1,
+      "RecoilTime": 0,
+      "RecoilForce": 0.0,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.12,
+      "ProjectileLife": 200,
+      "ShootAnimationTime": 30,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Name": "weapon.superbwarfare.cannon_he",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:bl_132_fire_1p",
+        "Fire3P": "superbwarfare:bl_132_fire_3p",
+        "Fire3PFar": "superbwarfare:mk_42_far",
+        "Fire3PVeryFar": "superbwarfare:mk_42_veryfar",
+        "VehicleReload3p": "superbwarfare:bl_132_reload",
+        "VehicleReloadSoundTime": 22,
+        "Change": "superbwarfare:into_cannon"
+      },
+      "SoundRadius": 32,
+      "AmmoType": [
+        "superbwarfare:large_shell_he"
+      ],
+      "ShootPos": {
+        "Transform": "Vehicle",
+        "Positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "ProjectileAmount": 1,
+      "AddShooterDeltaMovement": false,
+      "ShellType": "HE"
+    }
+  },
+  "OBB": [
+    {
+      "Part": "Collision",
+      "Size": [
+        9.1,
+        4.0,
+        25.0
+      ],
+      "Position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Size": [
+        9.1,
+        4.0,
+        25.0
+      ],
+      "Position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Part": "Collision",
+      "Size": [
+        7.4,
+        3.8,
+        18.0
+      ],
+      "Position": [
+        0,
+        0,
+        43
+      ]
+    },
+    {
+      "Size": [
+        7.4,
+        3.8,
+        18.0
+      ],
+      "Position": [
+        0,
+        0,
+        43
+      ]
+    },
+    {
+      "Part": "Collision",
+      "Size": [
+        7.4,
+        3.8,
+        18.0
+      ],
+      "Position": [
+        0,
+        0,
+        -43
+      ]
+    },
+    {
+      "Size": [
+        7.4,
+        3.8,
+        18.0
+      ],
+      "Position": [
+        0,
+        0,
+        -43
+      ]
+    },
+    {
+      "Part": "Collision",
+      "Size": [
+        3.9,
+        3.2,
+        7.0
+      ],
+      "Position": [
+        0,
+        0,
+        68
+      ]
+    },
+    {
+      "Size": [
+        3.9,
+        3.2,
+        7.0
+      ],
+      "Position": [
+        0,
+        0,
+        68
+      ]
+    },
+    {
+      "Part": "Collision",
+      "Size": [
+        3.9,
+        3.2,
+        7.0
+      ],
+      "Position": [
+        0,
+        0,
+        -68
+      ]
+    },
+    {
+      "Size": [
+        3.9,
+        3.2,
+        7.0
+      ],
+      "Position": [
+        0,
+        0,
+        -68
+      ]
+    },
+    {
+      "Size": [
+        5.9,
+        5.0,
+        29.0
+      ],
+      "Position": [
+        0,
+        8,
+        0
+      ]
+    }
+  ],
+  "UpStep": 0,
+  "DamageModifiers": [],
+  "DestroyInfo": {
+    "ExplosionDamage": 160,
+    "ExplosionRadius": 8
+  },
+  "VehicleIcon": "superbwarfare:textures/vehicle_icon/speedboat_icon.png"
+}

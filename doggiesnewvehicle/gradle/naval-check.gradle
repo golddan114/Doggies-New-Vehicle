@@ -1,0 +1,23 @@
+// The ship's existing behavior checks execute the same sources consumed by the one DNV archive.
+def navalChecks = [
+        navalFireControlCheck: 'naval.FireControlCheck',
+        navalGeometryCheck: 'ship.RuntimeGeometryCheck',
+        navalRenderCheck: 'client.RuntimeRenderCheck',
+        navalInputCheck: 'client.RuntimeInputCheck',
+        navalSoundCheck: 'ship.RuntimeSoundCheck',
+        navalPackCheck: 'ship.RuntimePackCheck',
+        navalPhysicsCheck: 'ship.RuntimePhysicsCheck',
+        navalAirDefenseCheck: 'ship.RuntimeAirDefenseCheck'
+]
+def archive = providers.gradleProperty('dnvNavalVerifyArchive')
+navalChecks.each { name, className ->
+    def checkTask = tasks.register(name, JavaExec) {
+        dependsOn tasks.named('navalTestClasses')
+        classpath = sourceSets.navalTest.runtimeClasspath
+        mainClass = "com.liucodex.libertad.${className}"
+        if (name == 'navalPackCheck') args archive.getOrElse(sourceSets.naval.output.resourcesDir.absolutePath)
+        if (archive.isPresent() && name == 'navalInputCheck') systemProperty 'libertad.input.archive', archive.get()
+        if (archive.isPresent() && name == 'navalSoundCheck') systemProperty 'libertad.sound.archive', archive.get()
+    }
+    tasks.named('check') { dependsOn checkTask }
+}

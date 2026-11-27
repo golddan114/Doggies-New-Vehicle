@@ -1,0 +1,865 @@
+{
+  "source": "outputs\\design-concepts\\2026-10-03-dnv-mothership-surface-v11-r1\\DNV_Mothership_PaintSource_v11.blend",
+  "source_sha256": "b4fb37d04f2d4be113c1818928bbef91388f10f9ece3a12ed8f9d7910a0d2740",
+  "coordinate_system": "Blender +Y front / +Z up; MC (-x,z,y); entity origin is bottom-center",
+  "root": "MOTHERSHIP_ROOT",
+  "body": "body_static",
+  "stations": [
+    {
+      "id": "front_port",
+      "kind": "MACHINE_GUN",
+      "index": 0,
+      "yaw_pivot": [
+        1.6091660857200623,
+        -1.0939796268939972,
+        16.20091438293457
+      ],
+      "pitch_offset": [
+        -0.004122400539927185,
+        -0.49026569724082947,
+        0.10339712351560593
+      ],
+      "muzzle_offsets": [
+        [
+          4.540835675470589e-06,
+          1.7881393432617188e-07,
+          1.5895317792892456
+        ]
+      ],
+      "center_yaw": -90.0,
+      "rest_elevation": 0.0,
+      "yaw_limits": [
+        -100,
+        100
+      ],
+      "elevation_limits": [
+        -80,
+        0
+      ],
+      "rocket_muzzles": null
+    },
+    {
+      "id": "front_starboard",
+      "kind": "MACHINE_GUN",
+      "index": 1,
+      "yaw_pivot": [
+        -1.6091660857200623,
+        -1.0939796268939972,
+        16.20091438293457
+      ],
+      "pitch_offset": [
+        0.004122604848816991,
+        -0.49026569724082947,
+        0.10339715704321861
+      ],
+      "muzzle_offsets": [
+        [
+          -4.147195227233169e-06,
+          1.7881393432617188e-07,
+          1.5895317792892456
+        ]
+      ],
+      "center_yaw": 90.0,
+      "rest_elevation": 0.0,
+      "yaw_limits": [
+        -100,
+        100
+      ],
+      "elevation_limits": [
+        -80,
+        0
+      ],
+      "rocket_muzzles": null
+    },
+    {
+      "id": "middle_port",
+      "kind": "HE_ROCKET",
+      "index": 2,
+      "yaw_pivot": [
+        1.6091660857200623,
+        -1.0939796268939972,
+        12.034236431121826
+      ],
+      "pitch_offset": [
+        3.750661562662572e-05,
+        -0.5715586245059967,
+        1.4490753983409377e-06
+      ],
+      "muzzle_offsets": [
+        [
+          -0.5546634793281555,
+          -0.3255677819252014,
+          0.9074781239032745
+        ],
+        [
+          0.5546624064445496,
+          -0.3255677819252014,
+          0.907478392124176
+        ]
+      ],
+      "center_yaw": -90.0,
+      "rest_elevation": 0.0,
+      "yaw_limits": [
+        -100,
+        100
+      ],
+      "elevation_limits": [
+        -70,
+        -5
+      ],
+      "rocket_muzzles": "alternate one tube per shot; not an extra projectile"
+    },
+    {
+      "id": "middle_starboard",
+      "kind": "HE_ROCKET",
+      "index": 3,
+      "yaw_pivot": [
+        -1.6091660857200623,
+        -1.0939796268939972,
+        12.034236431121826
+      ],
+      "pitch_offset": [
+        -3.7314786823117174e-05,
+        -0.571558266878128,
+        1.4449987020270783e-06
+      ],
+      "muzzle_offsets": [
+        [
+          0.554663747549057,
+          -0.32556813955307007,
+          0.9074780344963074
+        ],
+        [
+          -0.5546592772006989,
+          -0.32556813955307007,
+          0.907478392124176
+        ]
+      ],
+      "center_yaw": 90.0,
+      "rest_elevation": 0.0,
+      "yaw_limits": [
+        -100,
+        100
+      ],
+      "elevation_limits": [
+        -70,
+        -5
+      ],
+      "rocket_muzzles": "alternate one tube per shot; not an extra projectile"
+    },
+    {
+      "id": "rear_forward",
+      "kind": "TWIN_LASER",
+      "index": 4,
+      "yaw_pivot": [
+        -0.0,
+        -5.863566756248474,
+        -7.6963019371032715
+      ],
+      "pitch_offset": [
+        -1.1175870895385742e-08,
+        -0.8985375165939331,
+        0.8655974864959717
+      ],
+      "muzzle_offsets": [
+        [
+          -0.379234716296196,
+          3.5762786865234375e-07,
+          2.5109442472457886
+        ],
+        [
+          0.3049915283918381,
+          0.0,
+          2.510944962501526
+        ]
+      ],
+      "center_yaw": 0.0,
+      "rest_elevation": -49.61588845753871,
+      "yaw_limits": [
+        -150,
+        150
+      ],
+      "elevation_limits": [
+        -80,
+        0
+      ],
+      "rocket_muzzles": null
+    },
+    {
+      "id": "rear_aft",
+      "kind": "TWIN_LASER",
+      "index": 5,
+      "yaw_pivot": [
+        -0.0,
+        -5.863566756248474,
+        -12.486707210540771
+      ],
+      "pitch_offset": [
+        -1.1175870895385742e-08,
+        -0.8985375165939331,
+        0.865598201751709
+      ],
+      "muzzle_offsets": [
+        [
+          -0.379234716296196,
+          -7.152557373046875e-07,
+          2.5109442472457886
+        ],
+        [
+          0.3049914836883545,
+          -3.5762786865234375e-07,
+          2.510944962501526
+        ]
+      ],
+      "center_yaw": 0.0,
+      "rest_elevation": -49.61588776049281,
+      "yaw_limits": [
+        -150,
+        150
+      ],
+      "elevation_limits": [
+        -80,
+        0
+      ],
+      "rocket_muzzles": null
+    }
+  ],
+  "engines": [
+    {
+      "position": [
+        1.847033143043518,
+        1.3931104838848114,
+        -45.07500171661377
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "radius": 1.2461534142494202
+    },
+    {
+      "position": [
+        -1.8470327854156494,
+        1.3931105732917786,
+        -45.07499599456787
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "radius": 1.2461531460285187
+    },
+    {
+      "position": [
+        1.8646042943000793,
+        -3.805710554122925,
+        -45.07500171661377
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "radius": 1.246153324842453
+    },
+    {
+      "position": [
+        -1.8646044731140137,
+        -3.805710554122925,
+        -45.07499599456787
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "radius": 1.2461534142494202
+    },
+    {
+      "position": [
+        4.4569315910339355,
+        -1.1967042088508606,
+        -45.07500171661377
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "radius": 1.2461531460285187
+    },
+    {
+      "position": [
+        -4.456931948661804,
+        -1.196704477071762,
+        -45.07500171661377
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "radius": 1.2461529672145844
+    },
+    {
+      "position": [
+        15.60508918762207,
+        -0.37172866612672806,
+        -42.91460609436035
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "radius": 0.6391848027706146
+    },
+    {
+      "position": [
+        15.60508918762207,
+        -2.9247670769691467,
+        -42.91460609436035
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "radius": 0.6391848027706146
+    },
+    {
+      "position": [
+        -15.60508918762207,
+        -2.9247670769691467,
+        -42.91460609436035
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "radius": 0.6391848027706146
+    },
+    {
+      "position": [
+        -15.60508918762207,
+        -0.37172864377498627,
+        -42.91460609436035
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "radius": 0.6391848027706146
+    }
+  ],
+  "doomsday_muzzle": [
+    -0.0,
+    1.89904134,
+    45.12
+  ],
+  "drop_anchors": [
+    [
+      2.34,
+      -6.66,
+      -19.62
+    ],
+    [
+      -2.34,
+      -6.66,
+      -19.62
+    ]
+  ],
+  "origin_lift": 10.058948278427124,
+  "bounds_blender": [
+    [
+      -18.032197952270508,
+      18.032197952270508
+    ],
+    [
+      -45.00000286102295,
+      45.00000286102295
+    ],
+    [
+      -10.058948278427124,
+      7.250938653945923
+    ]
+  ],
+  "dimensions_mc": [
+    36.064395904541016,
+    17.309886932373047,
+    90.0000057220459
+  ],
+  "base_polygons": 2721,
+  "base_triangles": 6326,
+  "meshes": 13,
+  "naming_reference": "M1 final model: base_static/yaw_assembly/pitch_assembly and pivot_yaw/pivot_pitch/muzzle_main; station suffixes disambiguate six mounts",
+  "collision_boxes": [
+    {
+      "attachment": "body_static",
+      "region": "aft_engine_core",
+      "center": [
+        -3.5762786865234375e-07,
+        -0.8213315606117249,
+        -34.01890969276428
+      ],
+      "half": [
+        9.404197096824646,
+        5.134166657924652,
+        10.981093168258667
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sources": [
+        "圆环",
+        "圆环.001",
+        "圆环.002",
+        "05 Aft engine body / 后动力舱主体 01",
+        "05 Aft engine body / 后动力舱主体 01.001",
+        "05 Aft engine body / 后动力舱主体 01.002",
+        "05 Starboard flat strut / 右平面连梁 01",
+        "05 Raised roof spine 18 / 独立顶面加强条 01"
+      ]
+    },
+    {
+      "attachment": "body_static",
+      "region": "forward_core",
+      "center": [
+        -3.3974647521972656e-06,
+        -0.8227178156375885,
+        13.106716990470886
+      ],
+      "half": [
+        5.12288635969162,
+        3.651149958372116,
+        20.164559483528137
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sources": [
+        "01 Keel core / 中央龙骨实体 01",
+        "01 Mid junction foundation / 中央接合底座 01",
+        "01 Port longitudinal beam / 左纵梁 01",
+        "01 Starboard longitudinal beam / 右纵梁 01",
+        "01 Ventral bay floor / 腹舱底板 01",
+        "01 Ventral bay walls / 腹舱侧壁 01",
+        "01 Ventral pod / 腹舱支座 01",
+        "01 Bow base / 舰首底座 01",
+        "01 Bow upper shell / 舰首上盖 01",
+        "01 Forward ventral spine / 前腹部脊梁 01",
+        "01 Frame 2A / 独立横框 01",
+        "01 Frame 2B / 独立横框 01",
+        "01 Frame 3A / 独立横框 01",
+        "01 Frame 3B / 独立横框 01",
+        "01 group layer / 独立板层 60 01",
+        "01 group layer / 独立板层 66 01",
+        "01 group layer / 独立板层 66 02",
+        "01 group layer / 独立板层 70 01",
+        "01 group layer / 独立板层 80 01",
+        "01 group layer / 独立板层 102 01",
+        "15 group91 layer / 独立板层 5 01",
+        "01 Frame 2A / 独立横框 01.001",
+        "01 Frame 2B / 独立横框 01.001",
+        "01 Frame 3A / 独立横框 01.001",
+        "01 Frame 3B / 独立横框 01.001"
+      ]
+    },
+    {
+      "attachment": "body_static",
+      "region": "forward_port_armor",
+      "center": [
+        5.0385754108428955,
+        1.709284633398056,
+        15.919221460819244
+      ],
+      "half": [
+        1.8699417114257812,
+        1.9089169800281525,
+        21.062567174434662
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sources": [
+        "02 Main armor / 连续主装甲板 01",
+        "02 Backing / 独立承力底板 01",
+        "02 group15 layer / 独立板层 6 01",
+        "02 group15 layer / 独立板层 6 02"
+      ]
+    },
+    {
+      "attachment": "body_static",
+      "region": "forward_starboard_armor",
+      "center": [
+        -5.0385754108428955,
+        1.7092948704957962,
+        15.919223427772522
+      ],
+      "half": [
+        1.8699417114257812,
+        1.9089067429304123,
+        21.062568068504333
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sources": [
+        "03 Main armor / 连续主装甲板 01",
+        "03 Backing / 独立承力底板 01"
+      ]
+    },
+    {
+      "attachment": "body_static",
+      "region": "port_wing",
+      "center": [
+        11.5594602227211,
+        -1.9208314418792725,
+        -31.51757526397705
+      ],
+      "half": [
+        6.109153211116791,
+        8.138116836547852,
+        11.32203197479248
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sources": [
+        "06 Upper outer plate / 上侧主装甲板 01",
+        "06 Upper edge layer / 上侧独立封边 01",
+        "06 Lower outer plate / 下侧主装甲板 01",
+        "06 Lower edge layer / 下侧独立封边 01",
+        "06 Outer folded wall / 外侧折面壁 01",
+        "06 group45 layer / 独立板层 24 01",
+        "06 Upper independent motif 1",
+        "06 Upper independent motif 2",
+        "06 Upper independent motif 3",
+        "06 Lower independent motif 1",
+        "06 Lower independent motif 2",
+        "06 Lower independent motif 3",
+        "09 Continuous engine nozzles / 独立连续喷管 01",
+        "09 Continuous engine nozzles / 独立连续喷管 02"
+      ]
+    },
+    {
+      "attachment": "body_static",
+      "region": "starboard_wing",
+      "center": [
+        -11.5594602227211,
+        -1.920827865600586,
+        -31.51757526397705
+      ],
+      "half": [
+        6.109153211116791,
+        8.138120412826538,
+        11.32203197479248
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sources": [
+        "07 Upper outer plate / 上侧主装甲板 01",
+        "07 Upper edge layer / 上侧独立封边 01",
+        "07 Lower outer plate / 下侧主装甲板 01",
+        "07 Lower edge layer / 下侧独立封边 01",
+        "07 Outer folded wall / 外侧折面壁 01",
+        "07 group50 layer / 独立板层 45 01",
+        "07 Upper independent motif 1",
+        "07 Upper independent motif 2",
+        "07 Upper independent motif 3",
+        "07 Lower independent motif 1",
+        "07 Lower independent motif 2",
+        "07 Lower independent motif 3",
+        "10 Continuous engine nozzles / 独立连续喷管 01",
+        "10 Continuous engine nozzles / 独立连续喷管 02"
+      ]
+    },
+    {
+      "attachment": "body_static",
+      "region": "midship",
+      "center": [
+        -3.5762786865234375e-07,
+        -1.4266195893287659,
+        -18.676197946071625
+      ],
+      "half": [
+        9.971253275871277,
+        5.123964965343475,
+        13.901200354099274
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sources": [
+        "04_Midship_Continuous_Shell / 中段连续折面船壳",
+        "04_Midship_Continuous_Shell / 中段连续折面船壳.001",
+        "04_Midship_Continuous_Shell / 中段连续折面船壳.003",
+        "04_Midship_Continuous_Shell / 中段连续折面船壳.002",
+        "04_Midship_Continuous_Shell / 中段连续折面船壳.005",
+        "04_Midship_Continuous_Shell / 中段连续折面船壳.004",
+        "04_Midship_Continuous_Shell / 中段连续折面船壳.006"
+      ]
+    },
+    {
+      "attachment": "yaw_assembly_front_port",
+      "region": "yaw_assembly_front_port",
+      "center": [
+        -0.004119358956813812,
+        -0.39700256288051605,
+        3.084540367126465e-06
+      ],
+      "half": [
+        0.6940328702330589,
+        0.3576221913099289,
+        0.6307633817195892
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "attachment": "yaw_assembly_front_starboard",
+      "region": "yaw_assembly_front_starboard",
+      "center": [
+        0.004119560122489929,
+        -0.39700256288051605,
+        3.2186508178710938e-06
+      ],
+      "half": [
+        0.6940328031778336,
+        0.3576221913099289,
+        0.6307633817195892
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "attachment": "yaw_assembly_middle_starboard",
+      "region": "yaw_assembly_middle_starboard",
+      "center": [
+        -3.536045551300049e-05,
+        -0.5756725519895554,
+        1.4081597328186035e-06
+      ],
+      "half": [
+        0.6464145630598068,
+        0.46761564910411835,
+        0.6464146301150322
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "attachment": "pitch_assembly_middle_starboard",
+      "region": "pitch_assembly_middle_starboard",
+      "center": [
+        2.034008502960205e-06,
+        -0.32556840777397156,
+        0.0722842812538147
+      ],
+      "half": [
+        0.5546615794301033,
+        0.22335389256477356,
+        0.8351955413818359
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "attachment": "pitch_assembly_middle_port",
+      "region": "pitch_assembly_middle_port",
+      "center": [
+        -3.7997961044311523e-07,
+        -0.3255680501461029,
+        0.0722842812538147
+      ],
+      "half": [
+        0.5546630993485451,
+        0.22335389256477356,
+        0.8351954519748688
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "attachment": "yaw_assembly_middle_port",
+      "region": "yaw_assembly_middle_port",
+      "center": [
+        3.553926944732666e-05,
+        -0.5756726861000061,
+        1.3634562492370605e-06
+      ],
+      "half": [
+        0.6464146077632904,
+        0.46761569380760193,
+        0.6464146748185158
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "attachment": "yaw_assembly_rear_forward",
+      "region": "yaw_assembly_rear_forward",
+      "center": [
+        -2.682209014892578e-07,
+        -0.4932176470756531,
+        0.0
+      ],
+      "half": [
+        1.5398525297641754,
+        0.8457085490226746,
+        1.5398526191711426
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "attachment": "yaw_assembly_rear_aft",
+      "region": "yaw_assembly_rear_aft",
+      "center": [
+        -8.940696716308594e-08,
+        -0.4932176470756531,
+        0.0
+      ],
+      "half": [
+        1.5398525297641754,
+        0.8457085490226746,
+        1.5398526191711426
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "collision_method": "local major-region boxes; six turret hubs and two rocket pods follow renderer pivots; thin barrels, antennae and minor trims excluded",
+  "scale": 3.0,
+  "export_parts": [
+    {
+      "name": "body_static/body",
+      "material": 0,
+      "triangles": 5570
+    },
+    {
+      "name": "body_static/light",
+      "material": 1,
+      "triangles": 269
+    },
+    {
+      "name": "yaw_assembly_front_port/body",
+      "material": 0,
+      "triangles": 36
+    },
+    {
+      "name": "yaw_assembly_front_starboard/body",
+      "material": 0,
+      "triangles": 36
+    },
+    {
+      "name": "yaw_assembly_middle_starboard/body",
+      "material": 0,
+      "triangles": 48
+    },
+    {
+      "name": "pitch_assembly_middle_starboard/body",
+      "material": 0,
+      "triangles": 56
+    },
+    {
+      "name": "pitch_assembly_middle_port/body",
+      "material": 0,
+      "triangles": 56
+    },
+    {
+      "name": "yaw_assembly_middle_port/body",
+      "material": 0,
+      "triangles": 48
+    },
+    {
+      "name": "yaw_assembly_rear_forward/body",
+      "material": 0,
+      "triangles": 68
+    },
+    {
+      "name": "pitch_assembly_rear_forward/body",
+      "material": 0,
+      "triangles": 60
+    },
+    {
+      "name": "yaw_assembly_rear_aft/body",
+      "material": 0,
+      "triangles": 68
+    },
+    {
+      "name": "pitch_assembly_rear_aft/body",
+      "material": 0,
+      "triangles": 60
+    },
+    {
+      "name": "pitch_assembly_front_port/body",
+      "material": 0,
+      "triangles": 110
+    },
+    {
+      "name": "pitch_assembly_front_starboard/body",
+      "material": 0,
+      "triangles": 110
+    }
+  ],
+  "mesh_sha256": "14b59efb8e43030761dee4153ca5572b58079319b37cf74827ecc55616a72f4c"
+}

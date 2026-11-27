@@ -1,0 +1,14 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "defense",
+  "inputs": [
+    "8 #forge:storage_blocks/steel",
+    "doggiesnewvehicle:storm_turret_blueprint",
+    "superbwarfare:cannon_core",
+    "4 superbwarfare:motor",
+    "2 superbwarfare:empty_perk"
+  ],
+  "result": {
+    "entity": "doggievehicle:storm_turret"
+  }
+}

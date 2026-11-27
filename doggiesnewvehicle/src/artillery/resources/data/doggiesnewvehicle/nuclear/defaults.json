@@ -1,0 +1,15 @@
+{
+  "shotFE": 20000000,
+  "reloadTicks": 6000,
+  "openTicks": 88,
+  "departureTicks": 100,
+  "closeTicks": 374,
+  "exitTicks": 40,
+  "exitRise": 11.2,
+  "coordinateRange": 200000,
+  "lifeTicks": 48000,
+  "cruiseAltitude": 1024,
+  "terminalDistance": 1400,
+  "maxSpeed": 8.5,
+  "accelerationRate": 0.06
+}

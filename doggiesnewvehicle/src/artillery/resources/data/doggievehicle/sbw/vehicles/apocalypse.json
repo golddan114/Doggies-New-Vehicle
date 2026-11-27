@@ -1,0 +1,783 @@
+{
+  "EngineSound": "superbwarfare:yx_100_engine",
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/land.png",
+  "VehicleContainerType": "Medium",
+  "HudType": "@Land",
+  "Type": "Tank",
+  "MaxHealth": 1800,
+  "MaxEnergy": 5000000,
+  "HUDColor": "0xFFC700",
+  "Mass": 80,
+  "TurretPos": [
+    0.0,
+    2.1951592,
+    0.29835212
+  ],
+  "BarrelPos": [
+    0,
+    0.44314288999999984,
+    1.53000868
+  ],
+  "TurretTurnSpeed": [
+    0.9,
+    0.9
+  ],
+  "TurretPitchRange": [
+    -5,
+    25
+  ],
+  "TurretYawRange": [
+    -360,
+    360
+  ],
+  "UpStep": 1.2,
+  "RotateOffsetHeight": 1.1,
+  "InertiaRotateRate": 0.65,
+  "EngineType": "Track",
+  "ThirdPersonCameraPos": [
+    0,
+    3.5,
+    9
+  ],
+  "VehicleIcon": "doggiesnewvehicle:textures/vehicle_icon/apocalypse_icon.png",
+  "EngineInfo": {
+    "Buoyancy": 0,
+    "EnergyCostRate": 128,
+    "WheelRotSpeed": 1,
+    "WheelDifferential": 0.75,
+    "TrackRotSpeed": 1,
+    "TrackDifferential": 0.6,
+    "MaxForwardSpeedRate": 0.341,
+    "MaxBackwardSpeedRate": 0.1705,
+    "Increment": 0.0196,
+    "Decrement": 0.0196,
+    "SteeringSpeed": 0.0195,
+    "EngineSoundVolume": 0.6
+  },
+  "Seats": [
+    {
+      "HidePassenger": true,
+      "Transform": "Turret",
+      "Position": [
+        0,
+        0.55,
+        0
+      ],
+      "CameraPos": {
+        "Transform": "Turret",
+        "UseFixedCameraPos": true,
+        "Position": [
+          0,
+          1.4,
+          0
+        ],
+        "ZoomPosition": [
+          0,
+          1.4,
+          0.9
+        ],
+        "Direction": "Passenger",
+        "ZoomDirection": "Passenger"
+      },
+      "Weapons": [
+        "MainL",
+        "RocketL",
+        "Missiles"
+      ],
+      "CanRotateHead": true,
+      "MinPitch": -85,
+      "MaxPitch": 85,
+      "Sensitivity": [
+        0.35,
+        0.45,
+        0.65
+      ],
+      "DismountInfo": {
+        "Transform": "Vehicle",
+        "Position": [
+          3.5,
+          0.3,
+          0
+        ]
+      },
+      "HasThermalImaging": true
+    }
+  ],
+  "OBB": [
+    {
+      "Part": "Collision",
+      "Position": [
+        0.0,
+        1.0698039531707764,
+        0.32962608337402344
+      ],
+      "Size": [
+        2.625,
+        1.0698039531707764,
+        4.323314666748047
+      ]
+    },
+    {
+      "Part": "Body",
+      "Position": [
+        0.0,
+        1.2815787345170975,
+        0.32962608337402344
+      ],
+      "Size": [
+        1.4962972402572632,
+        0.8580291718244553,
+        4.323314666748047
+      ],
+      "Transform": "ApocalypseBody",
+      "Rotation": "ApocalypseBody"
+    },
+    {
+      "Part": "Body",
+      "Position": [
+        0.0,
+        0.9135118871927261,
+        4.992431282997131
+      ],
+      "Size": [
+        1.324623703956604,
+        0.7817340940237045,
+        1.6105345487594604
+      ],
+      "Transform": "ApocalypseBody",
+      "Rotation": "ApocalypseBody"
+    },
+    {
+      "Part": "Body",
+      "Position": [
+        -2.094992995262146,
+        1.3082327842712402,
+        0.06983447074890137
+      ],
+      "Size": [
+        0.6857689619064331,
+        0.6172629594802856,
+        4.09909462928772
+      ],
+      "Transform": "ApocalypseBody",
+      "Rotation": "ApocalypseBody"
+    },
+    {
+      "Part": "Turret",
+      "Position": [
+        -2.046509027481079,
+        2.6138222217559814,
+        0.19079357385635376
+      ],
+      "Size": [
+        0.5776200294494629,
+        0.40941357612609863,
+        0.7947173714637756
+      ],
+      "Transform": "ApocalypseRocket",
+      "Rotation": "ApocalypseRocket"
+    },
+    {
+      "Part": "Turret",
+      "Position": [
+        -0.6413657963275909,
+        3.3506829738616943,
+        -1.5326564311981201
+      ],
+      "Size": [
+        0.6295618712902069,
+        1.0279462337493896,
+        0.9240014553070068
+      ],
+      "Transform": "ApocalypseTurret",
+      "Rotation": "ApocalypseTurret"
+    },
+    {
+      "Part": "Body",
+      "Position": [
+        2.0949928164482117,
+        1.3082327842712402,
+        0.06983447074890137
+      ],
+      "Size": [
+        0.6857689023017883,
+        0.6172629594802856,
+        4.09909462928772
+      ],
+      "Transform": "ApocalypseBody",
+      "Rotation": "ApocalypseBody"
+    },
+    {
+      "Part": "Turret",
+      "Position": [
+        2.0465089678764343,
+        2.613822340965271,
+        0.19079357385635376
+      ],
+      "Size": [
+        0.5776198506355286,
+        0.4094136953353882,
+        0.7947173714637756
+      ],
+      "Transform": "ApocalypseRocket",
+      "Rotation": "ApocalypseRocket"
+    },
+    {
+      "Part": "Turret",
+      "Position": [
+        0.6413658857345581,
+        3.350683093070984,
+        -1.5326560735702515
+      ],
+      "Size": [
+        0.6295619010925293,
+        1.0279461145401,
+        0.9240013360977173
+      ],
+      "Transform": "ApocalypseTurret",
+      "Rotation": "ApocalypseTurret"
+    },
+    {
+      "Part": "WheelLeft",
+      "Position": [
+        -2.075000047683716,
+        0.4705355167388916,
+        2.115000218153
+      ],
+      "Size": [
+        0.5499999523162842,
+        0.4705355167388916,
+        1.7052002251148224
+      ],
+      "Transform": "ApocalypseBody",
+      "Rotation": "ApocalypseBody"
+    },
+    {
+      "Part": "WheelLeft",
+      "Position": [
+        -2.075000047683716,
+        0.4705355167388916,
+        -2.115000009536743
+      ],
+      "Size": [
+        0.5499999523162842,
+        0.4705355167388916,
+        1.705200433731079
+      ],
+      "Transform": "ApocalypseBody",
+      "Rotation": "ApocalypseBody"
+    },
+    {
+      "Part": "WheelRight",
+      "Position": [
+        2.075000047683716,
+        0.4705355167388916,
+        2.115000218153
+      ],
+      "Size": [
+        0.5499999523162842,
+        0.4705355167388916,
+        1.7052002251148224
+      ],
+      "Transform": "ApocalypseBody",
+      "Rotation": "ApocalypseBody"
+    },
+    {
+      "Part": "WheelRight",
+      "Position": [
+        2.075000047683716,
+        0.4705355167388916,
+        -2.115000009536743
+      ],
+      "Size": [
+        0.5499999523162842,
+        0.4705355167388916,
+        1.705200433731079
+      ],
+      "Transform": "ApocalypseBody",
+      "Rotation": "ApocalypseBody"
+    },
+    {
+      "Part": "Turret",
+      "Position": [
+        0.0,
+        2.82503604888916,
+        0.29777681827545166
+      ],
+      "Size": [
+        1.8126976490020752,
+        0.7587788105010986,
+        1.9483522176742554
+      ],
+      "Transform": "ApocalypseTurret",
+      "Rotation": "ApocalypseTurret"
+    }
+  ],
+  "TerrainCompat": [
+    [
+      -2.075000047683716,
+      0,
+      3.3450002670288086
+    ],
+    [
+      -2.075000047683716,
+      0,
+      2.115000218153
+    ],
+    [
+      -2.075000047683716,
+      0,
+      0.8850001692771912
+    ],
+    [
+      -2.075000047683716,
+      0,
+      -0.8849997520446777
+    ],
+    [
+      -2.075000047683716,
+      0,
+      -2.114999771118164
+    ],
+    [
+      -2.075000047683716,
+      0,
+      -3.3449997901916504
+    ],
+    [
+      2.075000047683716,
+      0,
+      3.3450002670288086
+    ],
+    [
+      2.075000047683716,
+      0,
+      2.115000218153
+    ],
+    [
+      2.075000047683716,
+      0,
+      0.8850001692771912
+    ],
+    [
+      2.075000047683716,
+      0,
+      -0.8849997520446777
+    ],
+    [
+      2.075000047683716,
+      0,
+      -2.114999771118164
+    ],
+    [
+      2.075000047683716,
+      0,
+      -3.3449997901916504
+    ]
+  ],
+  "PartHealth": {
+    "Turret": 600,
+    "LeftWheel": 300,
+    "RightWheel": 300,
+    "MainEngine": 450,
+    "SubEngine": 450
+  },
+  "DestroyInfo": {
+    "ExplosionDamage": 120,
+    "ExplosionRadius": 4,
+    "SympatheticDetonation": false
+  },
+  "DamageModifiers": [
+    "minecraft:arrow 0",
+    "minecraft:trident 0",
+    "minecraft:mob_attack 0",
+    "minecraft:mob_attack_no_aggro 0",
+    "minecraft:mob_projectile 0",
+    "minecraft:player_attack 0",
+    "#superbwarfare:projectile 0",
+    "All - 50",
+    "@minecraft:tnt * 2",
+    "@#superbwarfare:aerial_bomb * 2",
+    "All * 0.1",
+    "superbwarfare:vehicle_strike * 2.5",
+    "superbwarfare:custom_explosion * 0.25",
+    "superbwarfare:projectile_explosion * 0.25",
+    "superbwarfare:mine * 0.2",
+    "superbwarfare:lunge_mine * 0.2",
+    "superbwarfare:projectile_hit * 1.1",
+    "superbwarfare:grapeshot_hit * 0.1",
+    "superbwarfare:laser * 0.15",
+    "#superbwarfare:projectile_absolute * 0.15",
+    "@#superbwarfare:aa_missile * 0.3",
+    "@superbwarfare:small_cannon_shell * 0.25",
+    "@superbwarfare:c4 * 6",
+    "@#superbwarfare:at_rocket * 0.9",
+    "@superbwarfare:gun_grenade * 0.25",
+    "@superbwarfare:mortar_shell * 0.25",
+    "@superbwarfare:tm_62 * 1.5",
+    "$entity.getSourceAngle(source, 0.3) * damage"
+  ],
+  "Weapons": {
+    "MainL": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "ShellType": "HE",
+      "DefaultZoom": 3,
+      "Magazine": 1,
+      "EmptyReloadTime": 160,
+      "Velocity": 18,
+      "ProjectileLife": 50,
+      "Gravity": 0.03,
+      "ApDurability": 100,
+      "Damage": 225,
+      "ExplosionDamage": 160,
+      "ExplosionRadius": 8,
+      "ExplosionDestroy": true,
+      "RecoilTime": 14,
+      "RecoilForce": 0.15,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.02,
+      "ShootAnimationTime": 14,
+      "Crosshair": "@VehicleRuApc",
+      "CrosshairColor": "0xFFC700",
+      "Name": "weapon.doggievehicle.apocalypse_main",
+      "AmmoType": [
+        "superbwarfare:large_shell_he",
+        {
+          "Ammo": "superbwarfare:large_shell_ap",
+          "Override": {
+            "ShellType": "AP",
+            "Damage": 360,
+            "ExplosionDamage": 0,
+            "ExplosionRadius": 0,
+            "ExplosionDestroy": true,
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png"
+          }
+        }
+      ],
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:t_90a_fire_1p",
+        "Fire3P": "superbwarfare:t_90a_fire_3p",
+        "Fire3PFar": "superbwarfare:t_90a_far",
+        "Fire3PVeryFar": "superbwarfare:t_90a_veryfar",
+        "VehicleReload": "superbwarfare:t_90a_reload",
+        "Change": "superbwarfare:into_cannon",
+        "CancellableSounds": [
+          "superbwarfare:t_90a_reload"
+        ]
+      },
+      "SoundRadius": 32,
+      "ShootPos": {
+        "Transform": "ApocalypseMainL",
+        "Positions": [
+          [
+            -0.59450483,
+            2.63830161,
+            6.05345964
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "RPM": 120,
+      "NormalReloadTime": 160,
+      "Headshot": 1,
+      "ShootDelayTime": 0,
+      "WithdrawAmmoWhenChangeSlot": false
+    },
+    "RocketL": {
+      "DefaultFireMode": "Auto",
+      "AvailableFireModes": "Auto",
+      "RPM": 180,
+      "Magazine": 4,
+      "EmptyReloadTime": 300,
+      "NormalReloadTime": 300,
+      "AmmoType": "superbwarfare:small_rocket",
+      "Projectile": "superbwarfare:small_rocket",
+      "Damage": 40,
+      "ExplosionDamage": 40,
+      "ExplosionRadius": 6,
+      "ExplosionDestroy": true,
+      "Headshot": 1,
+      "Velocity": 3,
+      "Gravity": 0.005,
+      "ProjectileLife": 160,
+      "Spread": 0.1,
+      "ShootAnimationTime": 4,
+      "Crosshair": "@VehicleCommonGun",
+      "CrosshairColor": "0xFFC700",
+      "DefaultZoom": 3,
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+      "Name": "weapon.doggievehicle.apocalypse_rocket",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:javelin_fire_1p",
+        "Fire3P": "superbwarfare:javelin_fire_3p",
+        "Fire3PFar": "superbwarfare:javelin_far"
+      },
+      "SoundRadius": 24,
+      "WithdrawAmmoWhenChangeSlot": false,
+      "ShootPos": {
+        "Transform": "ApocalypseRocket",
+        "Positions": [
+          [
+            -2.07893181,
+            2.79382825,
+            0.98551095
+          ],
+          [
+            -2.41401482,
+            2.79382825,
+            0.98551095
+          ],
+          [
+            -2.07893181,
+            2.410882,
+            0.98551095
+          ],
+          [
+            -2.41401482,
+            2.410882,
+            0.98551095
+          ]
+        ],
+        "Directions": [
+          "Barrel",
+          "Barrel",
+          "Barrel",
+          "Barrel"
+        ]
+      }
+    },
+    "MainR": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "ShellType": "HE",
+      "DefaultZoom": 3,
+      "Magazine": 1,
+      "EmptyReloadTime": 160,
+      "Velocity": 18,
+      "ProjectileLife": 50,
+      "Gravity": 0.03,
+      "ApDurability": 100,
+      "Damage": 225,
+      "ExplosionDamage": 160,
+      "ExplosionRadius": 8,
+      "ExplosionDestroy": true,
+      "RecoilTime": 14,
+      "RecoilForce": 0.15,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.02,
+      "ShootAnimationTime": 14,
+      "Crosshair": "@VehicleRuApc",
+      "CrosshairColor": "0xFFC700",
+      "Name": "weapon.doggievehicle.apocalypse_main",
+      "AmmoType": [
+        "superbwarfare:large_shell_he",
+        {
+          "Ammo": "superbwarfare:large_shell_ap",
+          "Override": {
+            "ShellType": "AP",
+            "Damage": 360,
+            "ExplosionDamage": 0,
+            "ExplosionRadius": 0,
+            "ExplosionDestroy": true,
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png"
+          }
+        }
+      ],
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:t_90a_fire_1p",
+        "Fire3P": "superbwarfare:t_90a_fire_3p",
+        "Fire3PFar": "superbwarfare:t_90a_far",
+        "Fire3PVeryFar": "superbwarfare:t_90a_veryfar",
+        "VehicleReload": "superbwarfare:t_90a_reload",
+        "Change": "superbwarfare:into_cannon",
+        "CancellableSounds": [
+          "superbwarfare:t_90a_reload"
+        ]
+      },
+      "SoundRadius": 32,
+      "ShootPos": {
+        "Transform": "ApocalypseMainR",
+        "Positions": [
+          [
+            0.59450501,
+            2.63830185,
+            6.05346012
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "RPM": 120,
+      "NormalReloadTime": 160,
+      "Headshot": 1,
+      "ShootDelayTime": 0,
+      "WithdrawAmmoWhenChangeSlot": false
+    },
+    "RocketR": {
+      "DefaultFireMode": "Auto",
+      "AvailableFireModes": "Auto",
+      "RPM": 180,
+      "Magazine": 4,
+      "EmptyReloadTime": 300,
+      "NormalReloadTime": 300,
+      "AmmoType": "superbwarfare:small_rocket",
+      "Projectile": "superbwarfare:small_rocket",
+      "Damage": 40,
+      "ExplosionDamage": 40,
+      "ExplosionRadius": 6,
+      "ExplosionDestroy": true,
+      "Headshot": 1,
+      "Velocity": 3,
+      "Gravity": 0.005,
+      "ProjectileLife": 160,
+      "Spread": 0.1,
+      "ShootAnimationTime": 4,
+      "Crosshair": "@VehicleCommonGun",
+      "CrosshairColor": "0xFFC700",
+      "DefaultZoom": 3,
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png",
+      "Name": "weapon.doggievehicle.apocalypse_rocket",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:javelin_fire_1p",
+        "Fire3P": "superbwarfare:javelin_fire_3p",
+        "Fire3PFar": "superbwarfare:javelin_far"
+      },
+      "SoundRadius": 24,
+      "WithdrawAmmoWhenChangeSlot": false,
+      "ShootPos": {
+        "Transform": "ApocalypseRocket",
+        "Positions": [
+          [
+            2.07893181,
+            2.79382825,
+            0.98551095
+          ],
+          [
+            2.41401505,
+            2.79382825,
+            0.98551095
+          ],
+          [
+            2.07893181,
+            2.410882,
+            0.98551095
+          ],
+          [
+            2.41401505,
+            2.410882,
+            0.98551095
+          ]
+        ],
+        "Directions": [
+          "Barrel",
+          "Barrel",
+          "Barrel",
+          "Barrel"
+        ]
+      }
+    },
+    "Missiles": {
+      "DefaultZoom": 3,
+      "Spread": 0,
+      "Magazine": 4,
+      "Weight": 10,
+      "EmptyReloadTime": 400,
+      "Damage": 240,
+      "ExplosionDamage": 40,
+      "ExplosionRadius": 3,
+      "ExplosionDestroy": true,
+      "Headshot": 1,
+      "ZoomReload": false,
+      "CanGuidedByRadar": false,
+      "AffectedByStealthTarget": false,
+      "MaxTargetHeight": 64,
+      "GunType": "DirectLauncher",
+      "Projectile": "doggievehicle:apocalypse_missile",
+      "ProjectileLife": 300,
+      "AvailableFireModes": "Auto",
+      "AmmoType": "superbwarfare:javelin_missile",
+      "Icon": "superbwarfare:textures/gun_icon/javelin_icon.png",
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:javelin_fire_1p",
+        "Fire3P": "superbwarfare:javelin_fire_3p",
+        "Fire3PFar": "superbwarfare:javelin_far",
+        "ReloadEmpty": "superbwarfare:javelin_reload_empty",
+        "Locking": "superbwarfare:javelin_locking",
+        "Locked": "superbwarfare:javelin_locked",
+        "CancellableSounds": [
+          "superbwarfare:javelin_reload_empty",
+          "superbwarfare:javelin_locking",
+          "superbwarfare:javelin_locked"
+        ]
+      },
+      "NormalReloadTime": 400,
+      "RPM": 60,
+      "Velocity": 3,
+      "Gravity": 0,
+      "DefaultFireMode": "Auto",
+      "SeekWeaponInfo": {
+        "SeekDirection": "Passenger",
+        "SeekTime": 20,
+        "SeekAngle": 10,
+        "SeekRange": 256,
+        "MaxGuidedRange": 256,
+        "OnlyLockEntity": true,
+        "CanGuidedByRadar": false,
+        "AffectedByStealthTarget": false
+      },
+      "Name": "weapon.doggievehicle.apocalypse_missile",
+      "Crosshair": "@VehicleCommonSeekMissile",
+      "CrosshairColor": "0xFFC700",
+      "ShootAnimationTime": 4,
+      "SoundRadius": 32,
+      "WithdrawAmmoWhenChangeSlot": false,
+      "ShootPos": {
+        "Transform": "ApocalypseTurret",
+        "Positions": [
+          [
+            -0.40255582,
+            4.17279196,
+            -0.81104398
+          ],
+          [
+            -0.87898356,
+            4.17279196,
+            -0.81104398
+          ],
+          [
+            0.40255582,
+            4.17279196,
+            -0.81104374
+          ],
+          [
+            0.87898356,
+            4.17279196,
+            -0.81104374
+          ]
+        ],
+        "Directions": [
+          "Barrel",
+          "Barrel",
+          "Barrel",
+          "Barrel"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1112 @@
+{
+  "sourceSha256": "5f4614dfa9576d7cac4f33193eb92780449c07f708fb97a379ee1010269931b7",
+  "axis": "Blender (x,y,z) -> game (x,z,-y)",
+  "groups": [
+    {
+      "name": "fixed",
+      "radar": false
+    },
+    {
+      "name": "CTRL_井口翻盖_1",
+      "radar": false
+    },
+    {
+      "name": "CTRL_井口翻盖_2",
+      "radar": false
+    },
+    {
+      "name": "CTRL_井口翻盖_3",
+      "radar": false
+    },
+    {
+      "name": "CTRL_井口翻盖_4",
+      "radar": false
+    },
+    {
+      "name": "CTRL_前置雷达_连续旋转",
+      "radar": true
+    },
+    {
+      "name": "CTRL_右罩_弧轨台车",
+      "radar": false
+    },
+    {
+      "name": "CTRL_右罩机械手_伸出",
+      "radar": false
+    },
+    {
+      "name": "CTRL_圆环转台_Z轴",
+      "radar": false
+    },
+    {
+      "name": "CTRL_圆轨滚轮_1.92_0",
+      "radar": false
+    },
+    {
+      "name": "CTRL_圆轨滚轮_1.92_3",
+      "radar": false
+    },
+    {
+      "name": "CTRL_圆轨滚轮_1.92_6",
+      "radar": false
+    },
+    {
+      "name": "CTRL_圆轨滚轮_1.92_9",
+      "radar": false
+    },
+    {
+      "name": "CTRL_圆轨滚轮_2.43_0",
+      "radar": false
+    },
+    {
+      "name": "CTRL_圆轨滚轮_2.43_3",
+      "radar": false
+    },
+    {
+      "name": "CTRL_圆轨滚轮_2.43_6",
+      "radar": false
+    },
+    {
+      "name": "CTRL_圆轨滚轮_2.43_9",
+      "radar": false
+    },
+    {
+      "name": "CTRL_展示弹_独立飞出",
+      "radar": false
+    },
+    {
+      "name": "CTRL_左罩_弧轨台车",
+      "radar": false
+    },
+    {
+      "name": "CTRL_左罩机械手_伸出",
+      "radar": false
+    },
+    {
+      "name": "CTRL_托架_竖直升降",
+      "radar": false
+    },
+    {
+      "name": "右前转向架_滚动轮_0",
+      "radar": false
+    },
+    {
+      "name": "右前转向架_滚动轮_1",
+      "radar": false
+    },
+    {
+      "name": "右前转向架_滚动轮_2",
+      "radar": false
+    },
+    {
+      "name": "右后转向架_滚动轮_0",
+      "radar": false
+    },
+    {
+      "name": "右后转向架_滚动轮_1",
+      "radar": false
+    },
+    {
+      "name": "右后转向架_滚动轮_2",
+      "radar": false
+    },
+    {
+      "name": "右罩机械手_伸出臂",
+      "radar": false
+    },
+    {
+      "name": "右罩机械手_托爪滑座",
+      "radar": false
+    },
+    {
+      "name": "左前转向架_滚动轮_0",
+      "radar": false
+    },
+    {
+      "name": "左前转向架_滚动轮_1",
+      "radar": false
+    },
+    {
+      "name": "左前转向架_滚动轮_2",
+      "radar": false
+    },
+    {
+      "name": "左后转向架_滚动轮_0",
+      "radar": false
+    },
+    {
+      "name": "左后转向架_滚动轮_1",
+      "radar": false
+    },
+    {
+      "name": "左后转向架_滚动轮_2",
+      "radar": false
+    },
+    {
+      "name": "左罩机械手_伸出臂",
+      "radar": false
+    },
+    {
+      "name": "左罩机械手_托爪滑座",
+      "radar": false
+    }
+  ],
+  "siloParts": [
+    {
+      "name": "p000",
+      "group": 0,
+      "rocket": false,
+      "lightProbe": [
+        0.15770983695983887,
+        4.685655689239502,
+        0.023678302764892578
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "tint": "FFFFFF",
+      "statusLamp": true
+    },
+    {
+      "name": "p001",
+      "group": 0,
+      "rocket": false,
+      "lightProbe": [
+        0.3863403797149658,
+        11.00481948852539,
+        0.01327824592590332
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p002",
+      "group": 8,
+      "rocket": false,
+      "lightProbe": [
+        0.0,
+        1.230000114440918,
+        0.0
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p003",
+      "group": 1,
+      "rocket": false,
+      "lightProbe": [
+        0.7922485172748566,
+        1.126397466659546,
+        -0.8532363176345825
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p004",
+      "group": 2,
+      "rocket": false,
+      "lightProbe": [
+        -0.8532362580299377,
+        1.126397466659546,
+        -0.7922484576702118
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p005",
+      "group": 3,
+      "rocket": false,
+      "lightProbe": [
+        -0.7922484278678894,
+        1.126397466659546,
+        0.8532363101840019
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p006",
+      "group": 4,
+      "rocket": false,
+      "lightProbe": [
+        0.853236585855484,
+        1.126397466659546,
+        0.7922482192516327
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p007",
+      "group": 5,
+      "rocket": false,
+      "lightProbe": [
+        -0.056487202644348145,
+        3.448611354827881,
+        5.005072593688965
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p008",
+      "group": 20,
+      "rocket": false,
+      "lightProbe": [
+        0.0,
+        -6.301267051696778,
+        0.0
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p009",
+      "group": 21,
+      "rocket": false,
+      "lightProbe": [
+        0.45920059084892273,
+        1.2399524211883546,
+        2.0890603065490723
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p010",
+      "group": 22,
+      "rocket": false,
+      "lightProbe": [
+        0.6263128221035004,
+        1.2399524211883546,
+        2.1794315576553345
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p011",
+      "group": 23,
+      "rocket": false,
+      "lightProbe": [
+        0.797480434179306,
+        1.2399524211883546,
+        2.261863112449646
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p012",
+      "group": 24,
+      "rocket": false,
+      "lightProbe": [
+        2.3425689935684204,
+        1.2399524211883546,
+        0.7063291370868683
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p013",
+      "group": 25,
+      "rocket": false,
+      "lightProbe": [
+        2.532487154006958,
+        1.2399524211883546,
+        0.7090401649475098
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p014",
+      "group": 26,
+      "rocket": false,
+      "lightProbe": [
+        2.7218949794769287,
+        1.2399524211883546,
+        0.6948678195476532
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p015",
+      "group": 6,
+      "rocket": false,
+      "lightProbe": [
+        1.153856098651886,
+        8.427314376831054,
+        1.0659903287887573
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p016",
+      "group": 6,
+      "rocket": false,
+      "lightProbe": [
+        1.9452105164527893,
+        4.952637767791748,
+        1.7560896277427673
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "tint": "FFFFFF",
+      "statusLamp": true
+    },
+    {
+      "name": "p017",
+      "group": 27,
+      "rocket": false,
+      "lightProbe": [
+        1.7433749437332153,
+        6.46162519454956,
+        0.11159288696944714
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p018",
+      "group": 7,
+      "rocket": false,
+      "lightProbe": [
+        1.9251664876937866,
+        6.632000064849853,
+        0.2842621020972729
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p019",
+      "group": 28,
+      "rocket": false,
+      "lightProbe": [
+        1.4898266792297363,
+        6.508750057220459,
+        0.029549777507781982
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p020",
+      "group": 9,
+      "rocket": false,
+      "lightProbe": [
+        1.4877759218215942,
+        0.7299926042556762,
+        1.3395994901657104
+      ],
+      "mechanismPaint": "field_wheel_steel",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "68756C",
+      "statusLamp": false
+    },
+    {
+      "name": "p021",
+      "group": 10,
+      "rocket": false,
+      "lightProbe": [
+        1.3395994901657104,
+        0.7299926042556762,
+        -1.4877759218215942
+      ],
+      "mechanismPaint": "field_wheel_steel",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "68756C",
+      "statusLamp": false
+    },
+    {
+      "name": "p022",
+      "group": 11,
+      "rocket": false,
+      "lightProbe": [
+        -1.4877759218215942,
+        0.7299926042556762,
+        -1.3395994901657104
+      ],
+      "mechanismPaint": "field_wheel_steel",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "68756C",
+      "statusLamp": false
+    },
+    {
+      "name": "p023",
+      "group": 12,
+      "rocket": false,
+      "lightProbe": [
+        -1.3395994901657104,
+        0.7299926042556762,
+        1.4877759218215942
+      ],
+      "mechanismPaint": "field_wheel_steel",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "68756C",
+      "statusLamp": false
+    },
+    {
+      "name": "p024",
+      "group": 13,
+      "rocket": false,
+      "lightProbe": [
+        1.7478766441345215,
+        0.7299926042556762,
+        1.573795199394226
+      ],
+      "mechanismPaint": "field_wheel_steel",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "68756C",
+      "statusLamp": false
+    },
+    {
+      "name": "p025",
+      "group": 14,
+      "rocket": false,
+      "lightProbe": [
+        1.573795199394226,
+        0.7299926042556762,
+        -1.7478766441345215
+      ],
+      "mechanismPaint": "field_wheel_steel",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "68756C",
+      "statusLamp": false
+    },
+    {
+      "name": "p026",
+      "group": 15,
+      "rocket": false,
+      "lightProbe": [
+        -1.7478766441345215,
+        0.7299926042556762,
+        -1.573795199394226
+      ],
+      "mechanismPaint": "field_wheel_steel",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "68756C",
+      "statusLamp": false
+    },
+    {
+      "name": "p027",
+      "group": 16,
+      "rocket": false,
+      "lightProbe": [
+        -1.573795199394226,
+        0.7299926042556762,
+        1.7478766441345215
+      ],
+      "mechanismPaint": "field_wheel_steel",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "68756C",
+      "statusLamp": false
+    },
+    {
+      "name": "p028",
+      "group": 9,
+      "rocket": false,
+      "lightProbe": [
+        1.5457412004470825,
+        0.7226314306259155,
+        1.3917917013168335
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p029",
+      "group": 10,
+      "rocket": false,
+      "lightProbe": [
+        1.3917917013168335,
+        0.7226314306259155,
+        -1.5457412004470825
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p030",
+      "group": 11,
+      "rocket": false,
+      "lightProbe": [
+        -1.5457412004470825,
+        0.7226314306259155,
+        -1.3917917013168335
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p031",
+      "group": 12,
+      "rocket": false,
+      "lightProbe": [
+        -1.3917917013168335,
+        0.7226314306259155,
+        1.5457412004470825
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p032",
+      "group": 13,
+      "rocket": false,
+      "lightProbe": [
+        1.8058419227600098,
+        0.7226314306259155,
+        1.6259874105453491
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p033",
+      "group": 14,
+      "rocket": false,
+      "lightProbe": [
+        1.6259874105453491,
+        0.7226314306259155,
+        -1.8058419227600098
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p034",
+      "group": 15,
+      "rocket": false,
+      "lightProbe": [
+        -1.8058419227600098,
+        0.7226314306259155,
+        -1.6259874105453491
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p035",
+      "group": 16,
+      "rocket": false,
+      "lightProbe": [
+        -1.6259874105453491,
+        0.7226314306259155,
+        1.8058419227600098
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p036",
+      "group": 17,
+      "rocket": true,
+      "lightProbe": [
+        0.0,
+        0.8800006866455078,
+        0.0
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_rocket.png",
+      "emission": null,
+      "tint": "E7EAE3",
+      "statusLamp": false
+    },
+    {
+      "name": "p037",
+      "group": 29,
+      "rocket": false,
+      "lightProbe": [
+        -2.332831859588623,
+        1.2399524211883546,
+        -0.5566824078559875
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p038",
+      "group": 29,
+      "rocket": false,
+      "lightProbe": [
+        -2.2682539224624634,
+        1.1971323251724244,
+        -0.5945251286029816
+      ],
+      "mechanismPaint": "field_wheel_axle",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "A59462",
+      "statusLamp": false
+    },
+    {
+      "name": "p039",
+      "group": 30,
+      "rocket": false,
+      "lightProbe": [
+        -2.2329591512680054,
+        1.2399524211883546,
+        -0.3950689435005188
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p040",
+      "group": 30,
+      "rocket": false,
+      "lightProbe": [
+        -2.1702277660369873,
+        1.1971323251724244,
+        -0.43589967489242554
+      ],
+      "mechanismPaint": "field_wheel_axle",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "A59462",
+      "statusLamp": false
+    },
+    {
+      "name": "p041",
+      "group": 31,
+      "rocket": false,
+      "lightProbe": [
+        -2.1256154775619507,
+        1.2399524211883546,
+        -0.23831874132156372
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p042",
+      "group": 31,
+      "rocket": false,
+      "lightProbe": [
+        -2.064868688583374,
+        1.1971323251724244,
+        -0.2820475399494171
+      ],
+      "mechanismPaint": "field_wheel_axle",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "A59462",
+      "statusLamp": false
+    },
+    {
+      "name": "p043",
+      "group": 32,
+      "rocket": false,
+      "lightProbe": [
+        -0.9755762815475464,
+        1.2399524211883546,
+        -2.6343501806259155
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p044",
+      "group": 32,
+      "rocket": false,
+      "lightProbe": [
+        -0.900735080242157,
+        1.1971323251724244,
+        -2.633269190788269
+      ],
+      "mechanismPaint": "field_wheel_axle",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "A59462",
+      "statusLamp": false
+    },
+    {
+      "name": "p045",
+      "group": 33,
+      "rocket": false,
+      "lightProbe": [
+        -0.9698723256587982,
+        1.2399524211883546,
+        -2.4444985389709473
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p046",
+      "group": 33,
+      "rocket": false,
+      "lightProbe": [
+        -0.8952310383319855,
+        1.1971323251724244,
+        -2.450070858001709
+      ],
+      "mechanismPaint": "field_wheel_axle",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "A59462",
+      "statusLamp": false
+    },
+    {
+      "name": "p047",
+      "group": 34,
+      "rocket": false,
+      "lightProbe": [
+        -0.9473248422145844,
+        1.2399524211883546,
+        -2.2559043169021606
+      ],
+      "mechanismPaint": "field_wheel_tread",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "303A36",
+      "statusLamp": false
+    },
+    {
+      "name": "p048",
+      "group": 34,
+      "rocket": false,
+      "lightProbe": [
+        -0.873473733663559,
+        1.1971323251724244,
+        -2.2680857181549072
+      ],
+      "mechanismPaint": "field_wheel_axle",
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_white.png",
+      "emission": null,
+      "tint": "A59462",
+      "statusLamp": false
+    },
+    {
+      "name": "p049",
+      "group": 18,
+      "rocket": false,
+      "lightProbe": [
+        -1.1840910911560059,
+        8.427314376831054,
+        -1.032410740852356
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p050",
+      "group": 35,
+      "rocket": false,
+      "lightProbe": [
+        -0.2932136058807373,
+        6.46162519454956,
+        -1.722159743309021
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p051",
+      "group": 19,
+      "rocket": false,
+      "lightProbe": [
+        -0.4750051349401474,
+        6.632000064849853,
+        -1.8948289155960083
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    },
+    {
+      "name": "p052",
+      "group": 36,
+      "rocket": false,
+      "lightProbe": [
+        -0.17047671973705292,
+        6.508750057220459,
+        -1.4793435335159302
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_body.png",
+      "emission": null,
+      "tint": "FFFFFF",
+      "statusLamp": false
+    }
+  ],
+  "missileParts": [
+    {
+      "name": "p000",
+      "group": 0,
+      "rocket": true,
+      "lightProbe": [
+        0.0,
+        7.275052642822265,
+        0.0
+      ],
+      "mechanismPaint": null,
+      "texture": "doggiesnewvehicle:textures/entity/nuclear/v20_rocket.png",
+      "emission": null,
+      "tint": "E7EAE3",
+      "statusLamp": false
+    }
+  ],
+  "nozzles": [
+    [
+      0.0,
+      2.384185791015625e-07,
+      0.0
+    ],
+    [
+      0.846526563167572,
+      0.14858019351959229,
+      0.0
+    ],
+    [
+      0.0,
+      0.14858019351959229,
+      -0.846526563167572
+    ],
+    [
+      0.0,
+      0.14858019351959229,
+      0.846526563167572
+    ],
+    [
+      -0.846526563167572,
+      0.14858019351959229,
+      0.0
+    ]
+  ],
+  "motionFrames": 2944,
+  "authoredEndFrame": 2944,
+  "readyFrame": 1903,
+  "readyTailHeight": 1.5572144985198975,
+  "rocketHeight": 7.175052881240845,
+  "rocketWidth": 2.990778684616089,
+  "paint": {
+    "source": "V20 native Base Color and UV贴图; multiply converted to vertex tint",
+    "texturePixelsChanged": true,
+    "runtimeResize": {
+      "method": "Lanczos; authored UV and mesh unchanged",
+      "v20_body.png": {
+        "authoredSha256": "41234f8019773349345d54ea3285f00fee6aa775494c0da4c25ccea29d444bb0",
+        "runtimeSha256": "8023b9dbdba4f5ab431606ceab0e063c4d10e70150f4d683f042145b1b3351ed",
+        "width": 2048,
+        "height": 2048
+      },
+      "v20_rocket.png": {
+        "authoredSha256": "b8c1aea4f29def48b20537b734052d55752c1bdddf6601106aa138a26f498a16",
+        "runtimeSha256": "c9e206bc1c49936de55c09fb36afeb30c8af39d32114f2028a0182339a3e963f",
+        "width": 1024,
+        "height": 1024
+      }
+    }
+  },
+  "closingMappingRepair": {
+    "actionStartBefore": 425,
+    "actionStartAfter": 2384,
+    "objects": [
+      "CTRL_圆环转台_Z轴",
+      "CTRL_左罩_弧轨台车",
+      "CTRL_右罩_弧轨台车",
+      "CTRL_托架_竖直升降",
+      "CTRL_圆轨滚轮_1.92_0",
+      "CTRL_圆轨滚轮_1.92_3",
+      "CTRL_圆轨滚轮_1.92_6",
+      "CTRL_圆轨滚轮_1.92_9",
+      "CTRL_圆轨滚轮_2.43_0",
+      "CTRL_圆轨滚轮_2.43_3",
+      "CTRL_圆轨滚轮_2.43_6",
+      "CTRL_圆轨滚轮_2.43_9",
+      "CTRL_井壁检修臂退让_0",
+      "CTRL_井壁检修臂退让_1",
+      "CTRL_井壁检修臂退让_2",
+      "CTRL_井壁检修臂退让_3",
+      "CTRL_井口翻盖_1",
+      "CTRL_井口翻盖_2",
+      "CTRL_井口翻盖_3",
+      "CTRL_井口翻盖_4",
+      "CTRL_左罩机械手_伸出",
+      "CTRL_右罩机械手_伸出"
+    ]
+  },
+  "fieldRepairs": {
+    "inwardLampShells": [
+      "DNV_StatusLamp_0",
+      "DNV_StatusLamp_2",
+      "DNV_StatusLamp_4",
+      "DNV_StatusLamp_5",
+      "DNV_StatusLamp_6",
+      "DNV_StatusLamp_7"
+    ],
+    "paintedWheelObjects": [
+      "右前转向架_滚动轮_0_踏面_-0.08899028986495655",
+      "右前转向架_滚动轮_1_踏面_-0.08899028986495655",
+      "右前转向架_滚动轮_2_踏面_-0.08899028986495655",
+      "右后转向架_滚动轮_0_踏面_-0.08899028986495655",
+      "右后转向架_滚动轮_1_踏面_-0.08899028986495655",
+      "右后转向架_滚动轮_2_踏面_-0.08899028986495655",
+      "圆轨轮_内轮缘_1.92_0",
+      "圆轨轮_内轮缘_1.92_3",
+      "圆轨轮_内轮缘_1.92_6",
+      "圆轨轮_内轮缘_1.92_9",
+      "圆轨轮_内轮缘_2.43_0",
+      "圆轨轮_内轮缘_2.43_3",
+      "圆轨轮_内轮缘_2.43_6",
+      "圆轨轮_内轮缘_2.43_9",
+      "圆轨轮_踏面_1.92_0",
+      "圆轨轮_踏面_1.92_3",
+      "圆轨轮_踏面_1.92_6",
+      "圆轨轮_踏面_1.92_9",
+      "圆轨轮_踏面_2.43_0",
+      "圆轨轮_踏面_2.43_3",
+      "圆轨轮_踏面_2.43_6",
+      "圆轨轮_踏面_2.43_9",
+      "左前转向架_滚动轮_0_踏面_-0.08899028986495655",
+      "左前转向架_滚动轮_0_轴头_-0.08899028986495655_0.059",
+      "左前转向架_滚动轮_1_踏面_-0.08899028986495655",
+      "左前转向架_滚动轮_1_轴头_-0.08899028986495655_0.059",
+      "左前转向架_滚动轮_2_踏面_-0.08899028986495655",
+      "左前转向架_滚动轮_2_轴头_-0.08899028986495655_0.059",
+      "左后转向架_滚动轮_0_踏面_-0.08899028986495655",
+      "左后转向架_滚动轮_0_轴头_-0.08899028986495655_0.059",
+      "左后转向架_滚动轮_1_踏面_-0.08899028986495655",
+      "左后转向架_滚动轮_1_轴头_-0.08899028986495655_0.059",
+      "左后转向架_滚动轮_2_踏面_-0.08899028986495655",
+      "左后转向架_滚动轮_2_轴头_-0.08899028986495655_0.059"
+    ],
+    "retimedArmControllers": [
+      "CTRL_左罩机械手_伸出",
+      "CTRL_右罩机械手_伸出"
+    ],
+    "armExtensionFramesBefore": [
+      1411,
+      1591
+    ],
+    "armExtensionFramesAfter": [
+      1411,
+      1501
+    ],
+    "wheelPalette": {
+      "tread": "303A36",
+      "steel": "68756C",
+      "axle": "A59462"
+    },
+    "sourceSaved": false
+  }
+}

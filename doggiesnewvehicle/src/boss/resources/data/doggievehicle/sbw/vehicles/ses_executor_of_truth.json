@@ -1,0 +1,20 @@
+{
+  "MaxHealth": 8000,
+  "RepairCooldown": 2147483647,
+  "RepairAmount": 0,
+  "SelfHurtPercent": 0,
+  "SelfHurtAmount": 0,
+  "MaxEnergy": 0,
+  "Mass": 10000,
+  "Seats": [],
+  "DamageModifiers": [],
+  "VehicleContainerType": "Empty",
+  "HasLowHealthWarning": false,
+  "KeepChunkLoaded": false,
+  "Type": "AirShip",
+  "EngineType": "Empty",
+  "EngineInfo": {"Buoyancy": 0, "EnergyCostRate": 0},
+  "RotateOffsetHeight": 0,
+  "DestroyInfo": {"ExplosionDamage": 0, "ExplosionRadius": 0, "ExplodeBlocks": false, "NoWreck": false},
+  "OBB": []
+}

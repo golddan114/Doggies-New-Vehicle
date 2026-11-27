@@ -1,0 +1,161 @@
+{
+  "ID": "doggievehicle:dragon_flak88",
+  "MaxHealth": 300,
+  "MaxEnergy": 200000,
+  "Mass": 16,
+  "TurretPos": [
+    0.0,
+    0.7397422790527344,
+    0.0
+  ],
+  "BarrelPos": [
+    -8.58306884765625e-06,
+    1.3639302253723145,
+    -0.5797133445739746
+  ],
+  "TurretTurnSpeed": [
+    0.7,
+    0.9
+  ],
+  "TurretPitchRange": [
+    -5,
+    80
+  ],
+  "Weapons": {
+    "Main": {
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "Projectile": "superbwarfare:cannon_shell",
+      "ShellType": "AP",
+      "AmmoType": [
+        "superbwarfare:large_shell_ap",
+        {
+          "Ammo": "superbwarfare:large_shell_he",
+          "Override": {
+            "ShellType": "HE",
+            "Damage": 160,
+            "ApDurability": 0,
+            "BypassesArmor": 0,
+            "ExplosionDamage": 110,
+            "ExplosionRadius": 6,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he",
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png"
+          }
+        }
+      ],
+      "AmmoCostPerShoot": 1,
+      "Magazine": 1,
+      "EmptyReloadTime": 120,
+      "RPM": 60,
+      "Velocity": 28,
+      "Gravity": 0.04,
+      "ProjectileLife": 200,
+      "Damage": 260,
+      "BypassesArmor": 0.65,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "ExplosionDestroy": true,
+      "Spread": 0.05,
+      "RecoilTime": 16,
+      "RecoilForce": 0,
+      "ShootAnimationTime": 16,
+      "ShootPos": {
+        "Transform": "Barrel",
+        "Positions": [
+          [
+            9.5367431640625e-07,
+            0.12124180793762207,
+            4.852503776550293
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "SoundRadius": 64,
+      "SoundInfo": {
+        "Fire1P": "doggiesnewvehicle:dragon_flak88_fire_1p",
+        "Fire3P": "doggiesnewvehicle:dragon_flak88_fire_3p",
+        "Fire3PFar": "doggiesnewvehicle:dragon_flak88_fire_far",
+        "Fire3PVeryFar": "doggiesnewvehicle:dragon_flak88_fire_veryfar",
+        "VehicleReload3p": "doggiesnewvehicle:dragon_flak88_reload",
+        "VehicleReloadSoundTime": 30,
+        "Change": "doggiesnewvehicle:dragon_flak88_select"
+      },
+      "DefaultZoom": 2.5,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "Name": "weapon.superbwarfare.cannon_ap",
+      "ApDurability": 30
+    }
+  },
+  "DamageModifiers": [
+    "minecraft:arrow * 0.1",
+    "minecraft:trident * 0.2",
+    "minecraft:mob_attack * 0.3",
+    "minecraft:mob_projectile * 0.4",
+    "minecraft:explosion * 1.5",
+    "minecraft:player_explosion * 1.5",
+    "superbwarfare:custom_explosion * 0.6",
+    "superbwarfare:projectile_explosion * 0.6",
+    "superbwarfare:projectile_hit * 0.7",
+    "#superbwarfare:projectile * 0.5",
+    "All - 1"
+  ],
+  "HasLowHealthWarning": true,
+  "SelfHurtPercent": 0,
+  "EngineType": "Fixed",
+  "VehicleContainerType": "Small",
+  "Type": "Defense",
+  "HudType": "@Artillery",
+  "VehicleIcon": "doggiesnewvehicle:textures/vehicle_icon/dragon_flak88_kill.png",
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/defense.png",
+  "ThirdPersonCameraPos": [
+    0,
+    1.5,
+    7
+  ],
+  "Seats": {
+    "HidePassenger": false,
+    "Transform": "Vehicle",
+    "Position": [
+      0,
+      0,
+      0
+    ],
+    "MinPitch": -5,
+    "MaxPitch": 80,
+    "Sensitivity": [
+      0.6,
+      0.8,
+      1
+    ],
+    "Weapons": [
+      "Main"
+    ],
+    "CameraPos": {
+      "Transform": "Barrel",
+      "UseFixedCameraPos": true,
+      "Position": [
+        0,
+        0.95,
+        2.0
+      ],
+      "ZoomPosition": [
+        0,
+        0.95,
+        2.0
+      ],
+      "Direction": "Passenger",
+      "ZoomDirection": "Passenger"
+    },
+    "CanRotateHead": true
+  }
+}

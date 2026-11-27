@@ -1,0 +1,77 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
+// Build-only composition. Each optional module keeps ownership of its authored tags.
+def tagModules = ['main'] + ['artillery', 'boss', 'platform'].findAll {
+    providers.gradleProperty('dnv' + it.capitalize()).getOrElse('true') == 'true'
+}
+def blockTagDirectory = providers.gradleProperty('dnvMinecraft').getOrElse('1.20.1') == '1.21.1' ? 'block' : 'blocks'
+def sharedTags = [
+    'data/minecraft/tags/damage_type/bypasses_armor.json',
+    'data/minecraft/tags/damage_type/bypasses_cooldown.json',
+    'data/minecraft/tags/damage_type/bypasses_enchantments.json',
+    'data/minecraft/tags/damage_type/is_explosion.json',
+    'data/doggiesnewvehicle/tags/damage_type/armor_special.json',
+    'data/superbwarfare/tags/damage_type/bypasses_vehicle.json',
+    'data/minecraft/tags/' + blockTagDirectory + '/fire.json'
+]
+def mergedRoot = layout.buildDirectory.dir('generated/damage-tags/' + tagModules.join('-'))
+def mergeTags = tasks.register('mergeDnvDamageTags') {
+    group = 'build'
+    description = 'Unions overlapping damage and fire tags from the selected content modules.'
+    tagModules.each { dependsOn sourceSets.getByName(it).processResourcesTaskName }
+    inputs.property('modules', tagModules)
+    inputs.files(provider {
+        tagModules.collectMany { module -> sharedTags.collect { relative ->
+            new File(sourceSets.getByName(module).output.resourcesDir, relative)
+        }.findAll { it.isFile() } }
+    })
+    outputs.dir(mergedRoot)
+    doLast {
+        def root = mergedRoot.get().asFile
+        sharedTags.each { relative ->
+            def sources = tagModules.collect { module ->
+                new File(sourceSets.getByName(module).output.resourcesDir, relative)
+            }.findAll { it.isFile() }
+            def target = new File(root, relative)
+            if (sources.isEmpty()) {
+                // Only a known generated leaf may be removed; never source directories.
+                if (target.isFile() && !target.delete()) {
+                    throw new GradleException("Cannot remove stale generated tag: $target")
+                }
+                return
+            }
+            def values = []
+            sources.each { source ->
+                def data = new JsonSlurper().parse(source, 'UTF-8')
+                if (!(data instanceof Map) || data.keySet().any { !(it in ['replace', 'values']) }
+                        || (data.containsKey('replace') && data.replace != false)
+                        || !(data.values instanceof List)) {
+                    throw new GradleException("Unsupported additive shared tag: $source")
+                }
+                data.values.each { value ->
+                    def valid = value instanceof String && !value.isBlank()
+                    if (value instanceof Map) {
+                        valid = value.id instanceof String && !value.id.isBlank()
+                                && value.keySet().every { it in ['id', 'required'] }
+                                && (!value.containsKey('required') || value.required instanceof Boolean)
+                    }
+                    if (!valid) throw new GradleException("Invalid shared tag entry: $source")
+                    if (!values.contains(value)) values.add(value)
+                }
+            }
+            target.parentFile.mkdirs()
+            target.setText(JsonOutput.prettyPrint(JsonOutput.toJson([replace: false, values: values])) + '\n', 'UTF-8')
+        }
+    }
+}
+tasks.named('jar', Jar) {
+    dependsOn mergeTags
+    from(mergedRoot)
+    eachFile { entry ->
+        if (sharedTags.contains(entry.relativePath.pathString)) {
+            def merged = new File(mergedRoot.get().asFile, entry.relativePath.pathString)
+            if (entry.file.canonicalFile != merged.canonicalFile) entry.exclude()
+        }
+    }
+}

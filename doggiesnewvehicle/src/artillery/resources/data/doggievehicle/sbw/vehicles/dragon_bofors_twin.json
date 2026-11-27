@@ -1,0 +1,210 @@
+{
+  "ID": "doggievehicle:dragon_bofors_twin",
+  "MaxHealth": 150,
+  "MaxEnergy": 0,
+  "Mass": 9,
+  "TurretPos": [
+    0.0,
+    0.699999988079071,
+    0.0
+  ],
+  "BarrelPos": [
+    0.0,
+    1.3592074513435364,
+    -0.08395004272460938
+  ],
+  "TurretTurnSpeed": [
+    1.68,
+    2.16
+  ],
+  "TurretPitchRange": [
+    -10,
+    70
+  ],
+  "Weapons": {
+    "Main": {
+      "DefaultFireMode": "Auto",
+      "AvailableFireModes": "Auto",
+      "Projectile": "superbwarfare:small_cannon_shell",
+      "ShellType": "AP",
+      "AmmoType": [
+        "superbwarfare:small_shell_ap",
+        {
+          "Ammo": "superbwarfare:small_shell_he",
+          "Override": {
+            "ShellType": "HE",
+            "Damage": 0,
+            "ApDurability": 0,
+            "BypassesArmor": 0,
+            "ExplosionDamage": 52,
+            "ExplosionRadius": 1,
+            "ExplosionDestroy": true,
+            "Name": "weapon.superbwarfare.cannon_he",
+            "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/he_shell.png"
+          }
+        }
+      ],
+      "AmmoCostPerShoot": 1,
+      "Magazine": 32,
+      "EmptyReloadTime": 60,
+      "RPM": 240,
+      "Velocity": 28,
+      "Gravity": 0.025,
+      "ProjectileLife": 200,
+      "Damage": 52,
+      "BypassesArmor": 0.35,
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "ExplosionDestroy": false,
+      "Spread": 0.22,
+      "RecoilTime": 4,
+      "RecoilForce": 0,
+      "ShootAnimationTime": 4,
+      "ShootPos": {
+        "Transform": "Barrel",
+        "Positions": [
+          [
+            -0.14148902893066406,
+            0.004128456115722656,
+            2.638615846633911
+          ],
+          [
+            0.1408100128173828,
+            0.004128456115722656,
+            2.638615846633911
+          ]
+        ],
+        "Directions": [
+          "Barrel",
+          "Barrel"
+        ]
+      },
+      "SoundRadius": 48,
+      "SoundInfo": {
+        "Fire1P": "doggiesnewvehicle:dragon_bofors_twin_fire_1p",
+        "Fire3P": "doggiesnewvehicle:dragon_bofors_twin_fire_3p",
+        "Fire3PFar": "doggiesnewvehicle:dragon_bofors_twin_fire_far",
+        "Fire3PVeryFar": "doggiesnewvehicle:dragon_bofors_twin_fire_veryfar",
+        "VehicleReload3p": "doggiesnewvehicle:dragon_bofors_twin_reload",
+        "VehicleReloadSoundTime": 10,
+        "Change": "doggiesnewvehicle:dragon_bofors_twin_select"
+      },
+      "DefaultZoom": 2.5,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonCannonZooming",
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "Name": "weapon.superbwarfare.cannon_ap"
+    }
+  },
+  "DamageModifiers": [
+    "minecraft:arrow * 0.1",
+    "minecraft:trident * 0.2",
+    "minecraft:mob_attack * 0.3",
+    "minecraft:mob_projectile * 0.4",
+    "minecraft:explosion * 1.5",
+    "minecraft:player_explosion * 1.5",
+    "superbwarfare:custom_explosion * 0.6",
+    "superbwarfare:projectile_explosion * 0.6",
+    "superbwarfare:projectile_hit * 0.7",
+    "#superbwarfare:projectile * 0.5",
+    "All - 1"
+  ],
+  "HasLowHealthWarning": true,
+  "SelfHurtPercent": 0,
+  "EngineType": "Fixed",
+  "VehicleContainerType": "Small",
+  "Type": "Defense",
+  "HudType": "@Artillery",
+  "VehicleIcon": "doggiesnewvehicle:textures/vehicle_icon/dragon_bofors_twin_kill.png",
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/defense.png",
+  "ThirdPersonCameraPos": [
+    0,
+    1.1,
+    4.6
+  ],
+  "Seats": [
+    {
+      "HidePassenger": false,
+      "Transform": "Turret",
+      "Position": [-0.9599990844726562, 0.33832522743689764, -1.1200003921985626],
+      "CanRotateHead": true,
+      "MinPitch": -10,
+      "MaxPitch": 70,
+      "CameraPos": {
+        "Transform": "Turret",
+        "UseFixedCameraPos": true,
+        "Position": [
+          -1.2434933185577393,
+          1.8423286080360413,
+          -0.67327880859375
+        ],
+        "ZoomPosition": [
+          -0.9634936,
+          1.8423286,
+          -0.6451448
+        ],
+        "Direction": "Passenger",
+        "ZoomDirection": "Passenger"
+      },
+      "Weapons": [
+        "Main"
+      ],
+      "Sensitivity": [
+        0.6,
+        0.8,
+        1
+      ],
+      "DismountInfo": {
+        "Transform": "Vehicle",
+        "Position": [
+          -2.2570009231567383,
+          0.0,
+          -1.0232787132263184
+        ]
+      }
+    },
+    {
+      "HidePassenger": false,
+      "Transform": "Turret",
+      "Position": [0.9600000381469727, 0.33832522743689764, -1.1200003921985626],
+      "CanRotateHead": true,
+      "MinPitch": -10,
+      "MaxPitch": 70,
+      "CameraPos": {
+        "Transform": "Turret",
+        "UseFixedCameraPos": true,
+        "Position": [
+          0.9600000381469727,
+          1.842329,
+          -0.67327880859375
+        ],
+        "ZoomPosition": [
+          0.9600000381469727,
+          1.842329,
+          -0.42327880859375
+        ],
+        "Direction": "Passenger",
+        "ZoomDirection": "Passenger"
+      },
+      "Weapons": [],
+      "Sensitivity": [
+        0.6,
+        0.8,
+        1
+      ],
+      "DismountInfo": {
+        "Transform": "Vehicle",
+        "Position": [
+          2.2570009231567383,
+          0.0,
+          -1.0232787132263184
+        ]
+      }
+    }
+  ]
+}

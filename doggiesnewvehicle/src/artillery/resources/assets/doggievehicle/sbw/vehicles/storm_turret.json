@@ -1,0 +1,8 @@
+{
+  "ID": "doggievehicle:storm_turret",
+  "Model": {
+    "Animation": "doggiesnewvehicle:animations/storm_turret.animation.json",
+    "Model": "doggiesnewvehicle:geo/storm_turret.geo.json",
+    "Texture": "doggiesnewvehicle:textures/entity/storm_turret.png"
+  }
+}

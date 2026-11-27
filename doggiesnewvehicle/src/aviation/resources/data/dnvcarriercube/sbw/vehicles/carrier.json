@@ -1,0 +1,122 @@
+{
+  "Type": "AirShip",
+  "HudType": "@Empty",
+  "MaxHealth": 6000,
+  "MaxEnergy": 160000000,
+  "Mass": 10000,
+  "Gravity": 0,
+  "EngineType": "AirShip",
+  "EngineInfo": {
+    "Buoyancy": 0,
+    "EnergyCostRate": 0,
+    "MaxForwardSpeedRate": 0.35,
+    "MaxBackwardSpeedRate": 0.24,
+    "MaxUpSpeedRate": 0.15,
+    "MaxDownSpeedRate": 0.15,
+    "Increment": 0.28,
+    "Decrement": 0.23,
+    "SteeringSpeed": 0.19
+  },
+  "ThirdPersonCameraPos": [
+    0,
+    23.8,
+    66.3
+  ],
+  "Weapons": {},
+  "OBB": [
+    {
+      "Part": "Collision",
+      "Size": [
+        17.6885,
+        8.4575,
+        53.7923
+      ],
+      "Position": [
+        0,
+        8.4575,
+        2.80075
+      ]
+    },
+    { "Part": "Body", "Size": [8.8825, 0.68, 30.3875], "Position": [0, 16.235, 20.74] },
+    { "Part": "Body", "Size": [7.395, 0.68, 2.6775], "Position": [0, 16.235, 53.805] },
+    { "Part": "Body", "Size": [8.7125, 0.68, 11.8575], "Position": [0, 16.235, -38.199] },
+    { "Part": "Body", "Size": [0.918, 0.612, 8.347], "Position": [7.973, 16.303, -18.003] },
+    { "Part": "Body", "Size": [0.918, 0.612, 8.347], "Position": [-7.973, 16.303, -18.003] },
+    { "Part": "Body", "Transform": "ShanyueLift", "Rotation": "Vehicle", "Size": [7.0465, 0.1615, 8.3385], "Position": [0, 16.7535, -17.9945] },
+    { "Part": "Body", "Size": [3.145, 1.785, 6.46], "Position": [12.8775, 19.125, -37.825] },
+    { "Part": "Body", "Size": [2.975, 1.105, 7.0125], "Position": [-12.835, 16.048, -37.57] },
+    { "Part": "Body", "Size": [7.072, 2.0145, 37.825], "Position": [0, 7.8795, -8.925] },
+    { "Part": "Body", "Size": [0.45475, 5.083, 16.74925], "Position": [7.53525, 11.203, -9.64325] },
+    { "Part": "Body", "Size": [0.45475, 5.083, 16.74925], "Position": [-7.53525, 11.203, -9.64325] },
+    { "Part": "Body", "Size": [7.82, 5.168, 11.7215], "Position": [0, 11.118, -38.0885] },
+    { "Part": "Body", "Size": [7.14, 5.1255, 11.968], "Position": [0, 11.1605, 19.057] },
+    { "Part": "Body", "Size": [6.29, 0.72675, 5.7375], "Position": [0, 15.55925, 36.7625] },
+    { "Part": "Body", "Size": [2.38, 1.53, 4.93], "Position": [13.43, 13.26, -10.2] },
+    { "Part": "Body", "Size": [2.38, 1.53, 4.93], "Position": [-13.43, 13.26, -10.2] }
+  ],
+  "Seats": [
+    {
+      "Transform": "Vehicle",
+      "Position": [
+        12.8775,
+        20.9525,
+        -35.8275
+      ],
+      "CanRotateHead": true,
+      "HidePassenger": true,
+      "Weapons": [],
+      "CameraPos": {
+        "Transform": "Vehicle",
+        "UseFixedCameraPos": true,
+        "Position": [
+          12.8775,
+          23.732,
+          -35.8275
+        ],
+        "Direction": "Passenger"
+      }
+    },
+    {
+      "Transform": "Vehicle",
+      "Position": [
+        1.7,
+        10.37,
+        -3.4
+      ],
+      "CanRotateHead": true,
+      "HidePassenger": true,
+      "Weapons": [],
+      "CameraPos": {
+        "Transform": "Vehicle",
+        "UseFixedCameraPos": true,
+        "Position": [
+          1.7,
+          11.815,
+          -3.4
+        ],
+        "Direction": "Passenger"
+      }
+    },
+    {
+      "Transform": "Vehicle",
+      "Position": [
+        -1.7,
+        10.37,
+        -3.4
+      ],
+      "CanRotateHead": true,
+      "HidePassenger": true,
+      "Weapons": [],
+      "CameraPos": {
+        "Transform": "Vehicle",
+        "UseFixedCameraPos": true,
+        "Position": [
+          -1.7,
+          11.815,
+          -3.4
+        ],
+        "Direction": "Passenger"
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "ID": "doggievehicle:storm_turret",
+  "MaxHealth": 150,
+  "MaxEnergy": 2000000,
+  "Mass": 1.4,
+  "TurretPos": [
+    0.0,
+    0.672574,
+    0.0
+  ],
+  "TurretTurnSpeed": [
+    18.0,
+    14.0
+  ],
+  "TurretPitchRange": [
+    -15,
+    85
+  ],
+  "BarrelPos": [
+    0.0,
+    1.430106,
+    0.0
+  ],
+  "SeekInfo": {
+    "MinSeekRange": 2,
+    "MaxSeekRange": 72,
+    "ChangeTargetTime": 80,
+    "SeekIterative": 10,
+    "MinTargetSize": 0.1,
+    "SeekEnergyCost": 150
+  },
+  "Weapons": {
+    "Main": {
+      "DefaultFireMode": "Auto",
+      "AvailableFireModes": "Auto",
+      "Projectile": "doggievehicle:storm_bullet",
+      "RPM": 480,
+      "Velocity": 36,
+      "Gravity": 0.0,
+      "Damage": 9,
+      "BypassesArmor": 0.1,
+      "Spread": 0.25,
+      "HeatPerShoot": 0,
+      "ShootAnimationTime": 1,
+      "RecoilTime": 0,
+      "ShootShake": [0, 0, 0],
+      "RecoilForce": 0.0,
+      "Magazine": 500,
+      "AmmoType": "FE",
+      "AmmoCostPerShoot": 2500,
+      "ShootPos": {
+        "Transform": "Barrel",
+        "Positions": [
+          [
+            0.306176,
+            -0.020568,
+            1.279418
+          ],
+          [
+            -0.306176,
+            -0.020568,
+            1.279418
+          ]
+        ],
+        "Directions": [
+          "Barrel",
+          "Barrel"
+        ]
+      },
+      "SoundRadius": 16,
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:m_2_hb_fire_1p",
+        "Fire3P": "superbwarfare:m_2_hb_fire_3p",
+        "Fire3PFar": "superbwarfare:m_2_hb_far",
+        "Fire3PVeryFar": "superbwarfare:m_2_hb_veryfar"
+      }
+    }
+  },
+  "DamageModifiers": [
+    "minecraft:arrow * 0.1",
+    "minecraft:trident * 0.2",
+    "minecraft:mob_attack * 0.3",
+    "minecraft:mob_projectile * 0.4",
+    "minecraft:explosion * 1.5",
+    "minecraft:player_explosion * 1.5",
+    "superbwarfare:custom_explosion * 0.6",
+    "superbwarfare:projectile_explosion * 0.6",
+    "superbwarfare:projectile_hit * 0.7",
+    "#superbwarfare:projectile * 0.5",
+    "All - 1"
+  ],
+  "HasLowHealthWarning": true,
+  "SelfHurtPercent": 0,
+  "VehicleContainerType": "Empty",
+  "DestroyInfo": {
+    "ParticleType": "Medium",
+    "ExplosionDamage": 16,
+    "ExplosionRadius": 3,
+    "ExplodeBlocks": false
+  },
+  "EngineType": "Fixed",
+  "VehicleIcon": "superbwarfare:textures/vehicle_icon/laser_tower_icon.png",
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/defense.png",
+  "Type": "Defense"
+}

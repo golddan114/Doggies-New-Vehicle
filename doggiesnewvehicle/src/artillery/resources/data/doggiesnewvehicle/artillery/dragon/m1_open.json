@@ -1,0 +1,201 @@
+{
+  "yaw": [
+    0.0,
+    0.699999988079071,
+    0.0
+  ],
+  "pitch": [
+    0.0,
+    2.0880152583122253,
+    -0.28173398971557617
+  ],
+  "links": [
+    {
+      "group": "link_outer_1",
+      "pivot": [
+        -0.41999998688697815,
+        1.2699999809265137,
+        1.0799999237060547
+      ],
+      "target": [
+        -0.41999998688697815,
+        1.9879999160766602,
+        -0.07200002670288086
+      ],
+      "pivot_pitched": false,
+      "target_pitched": true
+    },
+    {
+      "group": "link_inner_1",
+      "pivot": [
+        -0.41999998688697815,
+        1.9879999160766602,
+        -0.07200002670288086
+      ],
+      "target": [
+        -0.41999998688697815,
+        1.2699999809265137,
+        1.0799999237060547
+      ],
+      "pivot_pitched": true,
+      "target_pitched": false
+    },
+    {
+      "group": "link_outer_2",
+      "pivot": [
+        0.41999998688697815,
+        1.2699999809265137,
+        1.0799999237060547
+      ],
+      "target": [
+        0.41999998688697815,
+        1.9879999160766602,
+        -0.07200002670288086
+      ],
+      "pivot_pitched": false,
+      "target_pitched": true
+    },
+    {
+      "group": "link_inner_2",
+      "pivot": [
+        0.41999998688697815,
+        1.9879999160766602,
+        -0.07200002670288086
+      ],
+      "target": [
+        0.41999998688697815,
+        1.2699999809265137,
+        1.0799999237060547
+      ],
+      "pivot_pitched": true,
+      "target_pitched": false
+    }
+  ],
+  "minimum": [
+    -3.4286038875579834,
+    0.0,
+    -3.990579843521118
+  ],
+  "maximum": [
+    3.428603172302246,
+    2.8330636024475098,
+    5.622298717498779
+  ],
+  "groups": [
+    "yaw_assembly",
+    "base_static",
+    "recoil_barrel_01",
+    "pitch_assembly",
+    "link_outer_1",
+    "link_inner_1",
+    "link_outer_2",
+    "link_inner_2"
+  ],
+  "author": {
+    "path": "m1_open.blend",
+    "sha256": "0b77032d62746b61e2dbc0e64e13f4b45ca176f11ee9b5a862a31066ae2f8ea3"
+  },
+  "model": "m1_open",
+  "entity": "m1_yunlong",
+  "hp": 450,
+  "seats": 0,
+  "servo": 8,
+  "recoil_ticks": 42,
+  "recoil_stroke": 0.2,
+  "cameras": {
+    "first_person": {
+      "role": "first_person",
+      "anchor": "m1_open__camera_first_person",
+      "camera": "m1_open__view_first_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "PITCH",
+      "game_deployment_position": [
+        0.6499999761581421,
+        3.038015365600586,
+        -0.6317338943481445
+      ],
+      "native_transform": "Barrel",
+      "native_position": [
+        0.6499999761581421,
+        0.9500000476837158,
+        -0.34999990463256836
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "ads": {
+      "role": "ads",
+      "anchor": "m1_open__camera_ads",
+      "camera": "m1_open__view_ads",
+      "fov_degrees": 30,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "PITCH",
+      "game_deployment_position": [
+        0.6499999761581421,
+        3.038015365600586,
+        -0.6317338943481445
+      ],
+      "native_transform": "Barrel",
+      "native_position": [
+        0.6499999761581421,
+        0.9500000476837158,
+        -0.34999990463256836
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "third_person": {
+      "role": "third_person",
+      "anchor": "m1_open__camera_third_person",
+      "camera": "m1_open__view_third_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "YAW",
+      "game_deployment_position": [
+        4.061441421508789,
+        3.929506540298462,
+        -8.09219741821289
+      ],
+      "native_transform": "Turret",
+      "native_position": [
+        4.061441421508789,
+        3.229506552219391,
+        -8.09219741821289
+      ],
+      "direction": "look_at_camera_focus",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    }
+  },
+  "muzzles": [
+    [
+      -0.013901442289352417,
+      0.1264033317565918,
+      5.9040327072143555
+    ]
+  ],
+  "projectile_positions": [
+    [
+      -0.013901442289352417,
+      0.1264033317565918,
+      5.934032917022705
+    ]
+  ],
+  "seat_positions": [],
+  "exit_positions": [],
+  "collision_width": 3,
+  "collision_height": 2.84,
+  "runtime_camera_position": [
+    0.0,
+    3.0380152583122255,
+    2.1182660102844237
+  ],
+  "runtime_ads_position": [
+    0.0,
+    3.0380152583122255,
+    2.1182660102844237
+  ]
+}

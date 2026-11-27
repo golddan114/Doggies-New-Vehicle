@@ -1,0 +1,16 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "defense",
+  "result": {
+    "entity": "doggievehicle:blizzard"
+  },
+  "inputs": [
+    "12 #forge:storage_blocks/steel",
+    "doggiesnewvehicle:blizzard_blueprint",
+    "2 superbwarfare:cannon_core",
+    "3 superbwarfare:intelligent_chip",
+    "3 superbwarfare:large_battery_pack",
+    "3 superbwarfare:large_motor",
+    "8 minecraft:blue_ice"
+  ]
+}

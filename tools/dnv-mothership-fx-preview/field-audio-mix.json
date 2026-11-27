@@ -1,0 +1,75 @@
+{
+  "input_commit": "d9e42a3572fa923357859149e073bd23d915a85f",
+  "samples": {
+    "charge": {
+      "input_sha256": "7b548ca7781227c1984d7920f3d4c61bba6770afb1a704fefcdaf09e1af8dca0",
+      "output_sha256": "50510d5dc11bfc69e4f619f317f6ebd875b870ccce3712f6dadaecd9234820e2",
+      "seconds": 6.312,
+      "channels": 1,
+      "sample_rate": 48000,
+      "peak": 0.9192456007003784,
+      "rms_before": 0.15929130950699538,
+      "rms_after": 0.2399739052840348,
+      "rms_change_db": 3.5594387327759125,
+      "waveform_correlation": 0.975607049356213,
+      "first_second_rms": 0.3470886001166904,
+      "last_second_rms": 0.026240654962959718
+    },
+    "doomsday_charge": {
+      "input_sha256": "f24da23868801487812e7b9c77db693f28e0f8892c2e16ccbe3929ff79e5c638",
+      "output_sha256": "1858db5f2d87fbd8725cfe9f13993f93c5165d3df021f6965b46716b479e3f9f",
+      "seconds": 8.0,
+      "channels": 1,
+      "sample_rate": 48000,
+      "peak": 0.9115763902664185,
+      "rms_before": 0.21293819507967682,
+      "rms_after": 0.3596317734342755,
+      "rms_change_db": 4.552089721635814,
+      "waveform_correlation": 0.9841072788981635,
+      "first_second_rms": 0.008507581979074554,
+      "last_second_rms": 0.5065529260003038
+    },
+    "doomsday_fire": {
+      "input_sha256": "9a904279025023e9e7180d04d222daf60f3a77e664a3afa0eb40c80f25de9b41",
+      "output_sha256": "e3a8ed3778d7723111b25ff50202ef940c81438d812c70f4eb49a14f4ff6f0ce",
+      "seconds": 5.0,
+      "channels": 1,
+      "sample_rate": 48000,
+      "peak": 0.9605837464332581,
+      "rms_before": 0.3048849469266496,
+      "rms_after": 0.5165653182322001,
+      "rms_change_db": 4.579785243100306,
+      "waveform_correlation": 0.9846093999355487,
+      "first_second_rms": 0.5780925801470373,
+      "last_second_rms": 0.4472389281677642
+    },
+    "doomsday_cool": {
+      "input_sha256": "53dfde38d3bd7f9c1070a7c9f97613372e1528bc7569e21c6458e114aa1c1f9c",
+      "output_sha256": "b5bfeafe684bf0650f8086c8e7ba87f994d049e3a4700e8ad0e1b86cb77ce5f0",
+      "seconds": 5.0,
+      "channels": 1,
+      "sample_rate": 48000,
+      "peak": 0.919078528881073,
+      "rms_before": 0.18734940663252722,
+      "rms_after": 0.356352635854578,
+      "rms_change_db": 5.584553071381321,
+      "waveform_correlation": 0.987665120648036,
+      "first_second_rms": 0.5633575853841484,
+      "last_second_rms": 0.01721827648236501
+    },
+    "doomsday_abort": {
+      "input_sha256": "2dcc7b759e82d66e553487b51023e41f9c2a82a0554b45030f0ce7ad9b0ea5bc",
+      "output_sha256": "7f6dbb7b462f9493da93706e07320fa6f4a6fa10fade57f68b0cf79fc6ad0272",
+      "seconds": 1.5,
+      "channels": 1,
+      "sample_rate": 48000,
+      "peak": 0.9023895263671875,
+      "rms_before": 0.1529532986659376,
+      "rms_after": 0.3260241495418612,
+      "rms_change_db": 6.573818461299351,
+      "waveform_correlation": 0.9914084572271273,
+      "first_second_rms": 0.39630933538315305,
+      "last_second_rms": 0.20278880426392504
+    }
+  }
+}

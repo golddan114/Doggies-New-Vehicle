@@ -1,0 +1,170 @@
+{
+  "yaw": [
+    0.0,
+    0.699999988079071,
+    0.0
+  ],
+  "pitch": [
+    0.0,
+    2.0592073798179626,
+    -0.08395004272460938
+  ],
+  "links": [],
+  "minimum": [
+    -1.7070003747940063,
+    0.0,
+    -1.7935823202133179
+  ],
+  "maximum": [
+    1.7070003747940063,
+    2.73773193359375,
+    2.524946689605713
+  ],
+  "groups": [
+    "recoil_barrel_01",
+    "recoil_barrel_02",
+    "base_static",
+    "yaw_assembly",
+    "pitch_assembly"
+  ],
+  "author": {
+    "path": "bofors_twin.blend",
+    "sha256": "030a44ecd887a565c6831c13f985980068d929ad71222d5782853efbc8a63c99"
+  },
+  "model": "bofors_twin",
+  "entity": "dragon_bofors_twin",
+  "hp": 150,
+  "seats": 2,
+  "servo": 0,
+  "recoil_ticks": 4,
+  "recoil_stroke": 0.12,
+  "cameras": {
+    "first_person": {
+      "role": "first_person",
+      "anchor": "bofors_twin__camera_first_person",
+      "camera": "bofors_twin__view_first_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": false,
+      "transform_proposal": "YAW",
+      "game_deployment_position": [
+        -1.2434933185577393,
+        2.5423285961151123,
+        -0.67327880859375
+      ],
+      "native_transform": "Turret",
+      "native_position": [
+        -1.2434933185577393,
+        1.8423286080360413,
+        -0.67327880859375
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "ads": {
+      "role": "ads",
+      "anchor": "bofors_twin__camera_ads",
+      "camera": "bofors_twin__view_ads",
+      "fov_degrees": 30,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "PITCH",
+      "game_deployment_position": [
+        -0.9634935855865479,
+        2.5423285961151123,
+        -0.6451448202133179
+      ],
+      "native_transform": "Barrel",
+      "native_position": [
+        -0.9634935855865479,
+        0.4831211566925049,
+        -0.5611947774887085
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "third_person": {
+      "role": "third_person",
+      "anchor": "bofors_twin__camera_third_person",
+      "camera": "bofors_twin__view_third_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "YAW",
+      "game_deployment_position": [
+        1.8245785236358643,
+        3.838733196258545,
+        -3.59275484085083
+      ],
+      "native_transform": "Turret",
+      "native_position": [
+        1.8245785236358643,
+        3.138733208179474,
+        -3.59275484085083
+      ],
+      "direction": "look_at_camera_focus",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    }
+  },
+  "muzzles": [
+    [
+      -0.14148902893066406,
+      0.004128456115722656,
+      2.6086158752441406
+    ],
+    [
+      0.1408100128173828,
+      0.004128456115722656,
+      2.6086158752441406
+    ]
+  ],
+  "projectile_positions": [
+    [
+      -0.14148902893066406,
+      0.004128456115722656,
+      2.638615846633911
+    ],
+    [
+      0.1408100128173828,
+      0.004128456115722656,
+      2.638615846633911
+    ]
+  ],
+  "runtime_seat_contacts": [[-0.9599990844726562, 0.926555335521698, -1.1200003921985626], [0.9600000381469727, 0.926555335521698, -1.1200003921985626]],
+  "seat_positions": [
+    [
+      -0.9599990844726562,
+      0.6393119692802429,
+      -0.67327880859375
+    ],
+    [
+      0.9600000381469727,
+      0.6393119692802429,
+      -0.67327880859375
+    ]
+  ],
+  "exit_positions": [
+    [
+      -2.2570009231567383,
+      0.0,
+      -1.0232787132263184
+    ],
+    [
+      2.2570009231567383,
+      0.0,
+      -1.0232787132263184
+    ]
+  ],
+  "collision_width": 2.85,
+  "collision_height": 2.74,
+  "runtime_camera_position": [
+    -1.2434933185577393,
+    2.5423285961151123,
+    -0.67327880859375
+  ],
+  "runtime_ads_position": [
+    -0.9634936,
+    2.542328588079071,
+    -0.6451448
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "bossbar.noise.noise": "噪声",
+  "title.noise.noise": "噪声",
+  "subtitle.noise.noise": "（大象尖叫）",
+  "tooltip.noise.controller.bind": "右击噪声：绑定机体",
+  "tooltip.noise.controller.mode": "右击空气：切换自主行动/原地驻守",
+  "tooltip.noise.controller.teleport": "噪声已移除传送功能",
+  "tooltip.noise.controller.bound_hold": "已绑定 · 原地驻守",
+  "tooltip.noise.controller.bound_autonomous": "已绑定 · 自主行动",
+  "message.noise.controller.bound": "已绑定噪声",
+  "message.noise.controller.hold": "行为模式：原地驻守（武器保持工作）",
+  "message.noise.controller.autonomous": "行为模式：自主行动",
+  "message.noise.controller.teleport_blocked": "噪声没有传送功能",
+  "message.noise.controller.unavailable": "控制失败：未绑定、目标未加载或不在当前维度"
+}

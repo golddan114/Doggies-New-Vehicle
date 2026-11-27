@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "NSN",
+    "DBD",
+    "EAE"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "D": {
+      "item": "minecraft:dragon_breath"
+    },
+    "B": {
+      "item": "minecraft:netherite_block"
+    },
+    "E": {
+      "item": "doggiesnewvehicle:explosive_core"
+    },
+    "A": {
+      "item": "doggiesnewvehicle:absorption_core"
+    }
+  },
+  "result": {
+    "item": "doggiesnewvehicle:warhead_core",
+    "count": 1
+  }
+}

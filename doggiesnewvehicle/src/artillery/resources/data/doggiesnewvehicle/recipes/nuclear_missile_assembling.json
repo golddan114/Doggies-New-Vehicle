@@ -1,0 +1,15 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "1 doggiesnewvehicle:warhead_core",
+    "16 #forge:storage_blocks/steel",
+    "4 superbwarfare:heavy_armament_module",
+    "8 minecraft:tnt",
+    "16 minecraft:netherite_ingot",
+    "8 minecraft:diamond_block",
+    "16 minecraft:redstone_block",
+    "4 minecraft:ender_pearl"
+  ],
+  "result": { "item": "doggiesnewvehicle:nuclear_missile", "count": 1 }
+}

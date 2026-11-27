@@ -1,0 +1,14 @@
+{
+  "noise_main": 0.015,
+  "noise_autocannon": 0.001,
+  "noise_rocket": 0.024,
+  "noise_vls": 0.05,
+  "silent_heaven_he": 0.0125,
+  "silent_heaven_autocannon": 0.00125,
+  "silent_heaven_rocket": 0.025,
+  "silent_heaven_vls": 0.06,
+  "silent_heaven_halo": 0.03,
+  "ses_autocannon": 0.001,
+  "ses_he_rocket": 0.015,
+  "ses_twin_laser": 0.02
+}

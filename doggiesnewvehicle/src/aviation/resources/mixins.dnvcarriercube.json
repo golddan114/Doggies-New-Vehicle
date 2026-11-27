@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.liucodex.carriercube.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": ["CarrierContainerMixin", "CarrierAssemblyMixin"],
+  "client": [
+    "CarrierMissileSeekMixin",
+    "CarrierGpwsMixin",
+    "CarrierTracerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

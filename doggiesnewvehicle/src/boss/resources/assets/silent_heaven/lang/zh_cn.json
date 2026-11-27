@@ -1,0 +1,23 @@
+{
+  "bossbar.silent_heaven.guardian": "守护者",
+  "bossbar.silent_heaven.unknown": "？？",
+  "bossbar.silent_heaven.silent_heaven": "死寂天堂",
+  "title.silent_heaven.guardian": "守护者",
+  "subtitle.silent_heaven.guardian": "前文明的造物",
+  "title.silent_heaven.silent_heaven": "死寂天堂",
+  "subtitle.silent_heaven.silent_heaven": "？？？？",
+  "tooltip.silent_heaven.controller.bind": "右击死寂天堂：绑定机体",
+  "tooltip.silent_heaven.controller.mode": "右击空气：切换自主行动/原地驻守",
+  "tooltip.silent_heaven.controller.teleport": "潜行右击方块：传送至指定地面",
+  "tooltip.silent_heaven.controller.bound_hold": "已绑定 · 原地驻守",
+  "tooltip.silent_heaven.controller.bound_autonomous": "已绑定 · 自主行动",
+  "message.silent_heaven.controller.bound": "已绑定死寂天堂",
+  "message.silent_heaven.controller.hold": "行为模式：原地驻守（保留索敌与开火）",
+  "message.silent_heaven.controller.autonomous": "行为模式：自主行动",
+  "message.silent_heaven.controller.teleport_success": "传送序列已启动",
+  "message.silent_heaven.controller.teleport_cooldown": "传送冷却中：还剩 %s 秒",
+  "message.silent_heaven.controller.teleport_blocked": "传送失败：指定地点无法容纳完整车体",
+  "message.silent_heaven.controller.unavailable": "控制失败：未绑定、目标未加载或不在当前维度",
+  "death.attack.halo_piercing": "%1$s 被死寂天堂的雷电贯穿",
+  "death.attack.halo_piercing.player": "%1$s 被 %2$s 的雷电贯穿"
+}

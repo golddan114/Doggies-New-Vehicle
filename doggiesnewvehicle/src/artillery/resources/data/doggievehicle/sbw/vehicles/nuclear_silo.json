@@ -1,0 +1,13 @@
+{
+  "MaxHealth": 800,
+  "MaxEnergy": 20000000,
+  "Gravity": 0,
+  "EngineType": "Fixed",
+  "VehicleContainerType": "Small",
+  "Type": "Defense",
+  "HudType": "@Artillery",
+  "Seats": [],
+  "Weapons": {},
+  "OBB": [{"Size": [7, 4.5, 7], "Position": [0, 4.5, 0]}],
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/defense.png"
+}

@@ -1,0 +1,233 @@
+// Development-only runtime mappings; production compilation and dependencies stay unchanged.
+def apInputsDir = layout.buildDirectory.dir('ap-runtime-inputs').get().asFile
+def apManifestFile = new File(apInputsDir, 'manifest.json')
+if (!apManifestFile.isFile()) {
+    throw new GradleException('Prepare exact AP dependencies with tools/ap-runtime/prepare_inputs.py first.')
+}
+def apManifest = new groovy.json.JsonSlurper().parse(apManifestFile)
+def withDragonrise = providers.gradleProperty('dnvWithDragonrise').map { it == 'true' }.getOrElse(false)
+def apArtifacts = apManifest.artifacts.findAll { withDragonrise || it.file != 'dragonrise-reforge-exact.jar' }
+def m1RunDir = withDragonrise ? 'build/run-m1-indicator-dragonrise-gametest' : 'build/run-m1-indicator-gametest'
+def apDigest = { File artifact ->
+    java.security.MessageDigest.getInstance('SHA-256').digest(artifact.bytes).encodeHex().toString()
+}
+apArtifacts.each { item ->
+    def artifact = new File(apInputsDir, item.file)
+    if (!artifact.isFile() || apDigest(artifact) != item.sha256) {
+        throw new GradleException("AP dependency identity mismatch: ${item.file}")
+    }
+}
+def apMapping = file(apManifest.mapping.path)
+if (!apMapping.isFile() || apDigest(apMapping) != apManifest.mapping.sha256) {
+    throw new GradleException('AP development mapping identity mismatch')
+}
+
+sourceSets {
+    apRuntimeTools {
+        compileClasspath += sourceSets.main.compileClasspath
+        runtimeClasspath = output + compileClasspath
+    }
+    apRuntimeMain {
+        java.setSrcDirs([])
+        java.destinationDirectory = layout.buildDirectory.dir('classes/java/apRuntimeBase')
+        resources.setSrcDirs(sourceSets.main.resources.srcDirs)
+    }
+    apRuntimeArtillery {
+        java.setSrcDirs([])
+        java.destinationDirectory = layout.buildDirectory.dir('classes/java/apRuntimeArtillery')
+        resources.setSrcDirs(sourceSets.artillery.resources.srcDirs)
+    }
+    apRuntimePlatform {
+        java.setSrcDirs([])
+        java.destinationDirectory = layout.buildDirectory.dir('classes/java/apRuntimePlatform')
+        resources.setSrcDirs(sourceSets.platform.resources.srcDirs)
+    }
+    apRuntimeBoss {
+        java.setSrcDirs([])
+        java.destinationDirectory = layout.buildDirectory.dir('classes/java/apRuntimeBoss')
+        resources.setSrcDirs(sourceSets.boss.resources.srcDirs)
+    }
+    apRuntimeRouteCore {
+        java.setSrcDirs([])
+        java.destinationDirectory = layout.buildDirectory.dir('classes/java/apRuntimeRouteCore')
+        resources.setSrcDirs([])
+    }
+    apStationGameTest {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath +
+                sourceSets.platform.output + sourceSets.boss.output + sourceSets.artillery.output
+    }
+    apGameTest {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath = output + sourceSets.apRuntimeMain.output +
+                sourceSets.apRuntimeArtillery.output +
+                sourceSets.apRuntimePlatform.output + sourceSets.apRuntimeRouteCore.output +
+                sourceSets.apRuntimeBoss.output +
+                sourceSets.apStationGameTest.output +
+                configurations.apGameTestRuntimeClasspath.filter {
+                    it.name != 'superbwarfare-0.8.9.1-hotfix-993063bed.jar'
+                }
+    }
+}
+
+// Forge's naming service reads methods.csv/fields.csv from the system classpath.
+// Inherit the standard Minecraft runtime (including its mapping ZIP), excluding
+// only the raw SBW dependency replaced below by the exact development mapping.
+configurations {
+    apGameTestImplementation.extendsFrom implementation
+    apGameTestRuntimeOnly.extendsFrom runtimeOnly
+}
+
+repositories {
+    flatDir { dirs apInputsDir }
+}
+
+dependencies {
+    apStationGameTestImplementation files(project(':route-core').sourceSets.main.output)
+    apArtifacts.each { item ->
+        if (item.remap) {
+            apGameTestRuntimeOnly fg.deobf("dnv.ap:${item.file.replaceFirst(/\.jar$/, '')}:exact")
+        } else {
+            apGameTestRuntimeOnly files(new File(apInputsDir, item.file))
+        }
+    }
+}
+
+tasks.register('stageApRuntimeMain', JavaExec) {
+    dependsOn tasks.named('classes'), tasks.named('apRuntimeToolsClasses')
+    classpath = sourceSets.apRuntimeTools.runtimeClasspath
+    mainClass = 'com.liucodex.doggiesnewvehicle.development.ApDevelopmentNameMapper'
+    def mapping = file(apManifest.mapping.path)
+    inputs.file mapping
+    inputs.files sourceSets.main.output.classesDirs
+    outputs.dir sourceSets.apRuntimeMain.java.destinationDirectory
+    args sourceSets.main.java.destinationDirectory.get().asFile,
+            sourceSets.apRuntimeMain.java.destinationDirectory.get().asFile, mapping
+}
+
+tasks.register('stageApRuntimeArtillery', JavaExec) {
+    dependsOn tasks.named('artilleryClasses'), tasks.named('apRuntimeToolsClasses')
+    classpath = sourceSets.apRuntimeTools.runtimeClasspath
+    mainClass = 'com.liucodex.doggiesnewvehicle.development.ApDevelopmentNameMapper'
+    inputs.file apMapping
+    inputs.files sourceSets.artillery.output.classesDirs
+    outputs.dir sourceSets.apRuntimeArtillery.java.destinationDirectory
+    args sourceSets.artillery.java.destinationDirectory.get().asFile,
+            sourceSets.apRuntimeArtillery.java.destinationDirectory.get().asFile, apMapping
+}
+
+tasks.register('stageApRuntimePlatform', JavaExec) {
+    dependsOn tasks.named('platformClasses'), tasks.named('apRuntimeToolsClasses')
+    classpath = sourceSets.apRuntimeTools.runtimeClasspath
+    mainClass = 'com.liucodex.doggiesnewvehicle.development.ApDevelopmentNameMapper'
+    inputs.file apMapping
+    inputs.files sourceSets.platform.output.classesDirs
+    outputs.dir sourceSets.apRuntimePlatform.java.destinationDirectory
+    args sourceSets.platform.java.destinationDirectory.get().asFile,
+            sourceSets.apRuntimePlatform.java.destinationDirectory.get().asFile, apMapping
+}
+
+tasks.register('stageApRuntimeBoss', JavaExec) {
+    dependsOn tasks.named('bossClasses'), tasks.named('apRuntimeToolsClasses')
+    classpath = sourceSets.apRuntimeTools.runtimeClasspath
+    mainClass = 'com.liucodex.doggiesnewvehicle.development.ApDevelopmentNameMapper'
+    inputs.file apMapping
+    inputs.files sourceSets.boss.output.classesDirs
+    outputs.dir sourceSets.apRuntimeBoss.java.destinationDirectory
+    args sourceSets.boss.java.destinationDirectory.get().asFile,
+            sourceSets.apRuntimeBoss.java.destinationDirectory.get().asFile, apMapping
+}
+
+tasks.register('stageApRouteCore', Copy) {
+    dependsOn project(':route-core').tasks.named('classes')
+    from project(':route-core').sourceSets.main.output.classesDirs
+    into sourceSets.apRuntimeRouteCore.java.destinationDirectory
+}
+
+// Minecraft can swallow a loading exception and exit 0. Require this invocation's
+// exact GameTests; neither Gradle's success message nor a zero-test server is proof.
+tasks.matching { it.name == 'runGameTestServer' }.configureEach {
+        def report = file(m1RunDir + '/ap-tests.xml')
+        def receipt = file(m1RunDir + '/ap-receipt.json')
+        def started = 0L
+        def before = [:]
+        def runtimeInputs = {
+            def files = new TreeSet<File>(Comparator.comparing { File item -> item.canonicalPath })
+            files.addAll(fileTree('src').files)
+            files.addAll(fileTree('gradle').files)
+            files.addAll(fileTree('tools/ap-runtime').matching { exclude '**/__pycache__/**' }.files)
+            files.addAll([file('build.gradle'), file('settings.gradle'), apManifestFile, apMapping,
+                    file('build/createSrgToMcp/output.srg')])
+            files.addAll(sourceSets.apGameTest.runtimeClasspath.files.findAll { it.isFile() })
+            [sourceSets.apGameTest.output, sourceSets.apStationGameTest.output,
+             sourceSets.apRuntimeMain.output, sourceSets.apRuntimeArtillery.output,
+             sourceSets.apRuntimePlatform.output,
+             sourceSets.apRuntimeRouteCore.output, sourceSets.apRuntimeBoss.output].each { output ->
+                output.files.findAll { it.isDirectory() }.each { files.addAll(fileTree(it).files) }
+            }
+            files.collectEntries { [(it.canonicalPath): apDigest(it)] }
+        }
+        doFirst {
+            started = System.currentTimeMillis()
+            receipt.setText(groovy.json.JsonOutput.toJson([status: 'RUNNING', startedAtMillis: started]), 'UTF-8')
+            before = runtimeInputs()
+            file(m1RunDir + '/ap-inputs.json').setText(groovy.json.JsonOutput.prettyPrint(
+                    groovy.json.JsonOutput.toJson([startedAtMillis: started, javaVersion: System.getProperty('java.runtime.version'),
+                            gradleVersion: gradle.gradleVersion, files: before])), 'UTF-8')
+        }
+        doLast {
+            if (!report.isFile() || report.lastModified() < started) {
+                throw new GradleException('AP runtime produced no fresh XML; startup failure or zero tests is not PASS')
+            }
+            def xml = new groovy.util.XmlSlurper(false, false).parse(report)
+            def cases = xml.depthFirst().findAll { it.name() == 'testcase' }
+            def expected = [
+                    'exactmodsandnativeprojectileareloaded',
+                    'nativeserverqueueexecutesonce',
+                    'nativeexplosionstilldamagesworld',
+                    'savednativeshellkeepsmotionandexplosion',
+                    'legacymarkerdoesnotrejectfactoryrestoration',
+                    'legacymarkerdoesnotrejectdirectload',
+                    'retiredac130idshavenodnvcrewcatalog',
+                    'nativem1entityandgundataloadwithoutdch',
+                    'nativeindicatorbindsandremovesm1withoutchangingitstype',
+                    'nativeindicatorsettargetcreatestransientm1aim',
+                    'unloadedm1bindingsurvivestargetupdate',
+                    'stationcontentregistersduringthecorrectforgeevent',
+                    'cubebossspawnswithvanillateamandpersistenthoveranchor',
+                    'hoverroutestopswhenownerisnotonline',
+                    'distantownercanstoploadedhoverroutebutstrangercannot',
+                    'onlineownerrouteclimbsthenmovestowardwaypoint',
+                    'ownerdescentreplacesrouteandstopsoversolidground',
+                    'fixedlightgunskeepaiandplayerfireindependent'] as Set
+            def names = cases.collect { it.@name.text() }
+            if (names.size() != expected.size() || names.toSet() != expected ||
+                    cases.any { it.@classname.text() != 'dnvapgametest:ap_arena' } ||
+                    xml.depthFirst().any { it.name() in ['failure', 'error', 'skipped'] }) {
+                throw new GradleException("AP runtime assertions missing or failed: ${names}")
+            }
+            if (runtimeInputs() != before) throw new GradleException('AP runtime inputs changed during execution')
+            receipt.setText(groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson([
+                    status: 'PASS', evidence: 'REAL_SERVERLEVEL_EXACT_MODS_FRESH_XML',
+                    tests: names.sort(), startedAtMillis: started, finishedAtMillis: System.currentTimeMillis(),
+                    reportSha256: apDigest(report), inputsSha256: apDigest(file(m1RunDir + '/ap-inputs.json')),
+                    limitation: 'NATIVE_WORLD_AND_NBT_REGRESSION_NOT_FULL_PLATFORM_OR_CLIENT_ACCEPTANCE'])), 'UTF-8')
+            logger.lifecycle("AP runtime verified: ${names.size()} actual GameTests, fresh XML, unchanged inputs")
+        }
+}
+
+tasks.register('prepareApGameTestStructures', Copy) {
+    from file('src/apGameTest/resources/gameteststructures')
+    into file(m1RunDir + '/gameteststructures')
+}
+
+tasks.register('apGameTestCompileCheck') {
+    group = 'verification'
+    description = 'Compiles full-mod AP GameTests without building a DNV JAR.'
+    dependsOn tasks.named('apGameTestClasses'), tasks.named('apStationGameTestClasses'),
+            tasks.named('stageApRuntimeMain'), tasks.named('stageApRuntimeArtillery'), tasks.named('stageApRouteCore'),
+            tasks.named('stageApRuntimePlatform'),
+            tasks.named('stageApRuntimeBoss'),
+            tasks.named('processApRuntimeMainResources'), tasks.named('processApRuntimeArtilleryResources'),
+            tasks.named('processApRuntimePlatformResources'),
+            tasks.named('processApRuntimeBossResources')
+}

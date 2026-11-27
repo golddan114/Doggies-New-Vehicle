@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.liucodex.doggiesnewvehicle.client.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.dnvartillery.refmap.json",
+  "mixins": [],
+  "client": ["BlizzardCameraAccess", "BlizzardCameraFrameMixin", "BlizzardCameraSetupMixin", "BlizzardTvMouseMixin", "BlizzardEnergyHudMixin", "BlizzardCrosshairMixin", "BlizzardDynamicLightMixin"],
+  "injectors": {"defaultRequire": 1}
+}

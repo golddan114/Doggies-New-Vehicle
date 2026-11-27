@@ -1,0 +1,8 @@
+{
+  "ID": "doggievehicle:jingzhe_turret",
+  "Model": {
+    "Animation": "doggiesnewvehicle:animations/jingzhe_turret.animation.json",
+    "Model": "doggiesnewvehicle:geo/jingzhe_turret.geo.json",
+    "Texture": "doggiesnewvehicle:textures/entity/jingzhe_turret.png"
+  }
+}

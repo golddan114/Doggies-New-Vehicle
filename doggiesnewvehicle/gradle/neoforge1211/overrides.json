@@ -1,0 +1,8 @@
+{
+  "../libertad/src/sbw/java/com/liucodex/libertad/Libertad.java": "src/neoforge1211/naval/java/com/liucodex/libertad/Libertad.java",
+  "src/main/java/com/liucodex/doggiesnewvehicle/guide/DnvWrittenBook.java": "src/neoforge1211/main/java/com/liucodex/doggiesnewvehicle/guide/DnvWrittenBook.java",
+  "src/main/java/com/liucodex/doggiesnewvehicle/compat/DnvVehicleCrewCapability.java": "src/neoforge1211/main/java/com/liucodex/doggiesnewvehicle/compat/DnvVehicleCrewCapability.java",
+  "src/main/java/com/liucodex/doggiesnewvehicle/compat/DnvVehicleCrewCapabilityProvider.java": null,
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/SiloChunkTickets.java": "src/neoforge1211/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/SiloChunkTickets.java",
+  "src/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearContainerData.java": "src/neoforge1211/artillery/java/com/liucodex/doggiesnewvehicle/artillery/silo/NuclearContainerData.java"
+}

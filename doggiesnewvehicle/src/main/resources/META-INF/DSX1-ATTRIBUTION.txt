@@ -1,0 +1,12 @@
+Helmsman DSX1 uses the native Superb Warfare AWM gameplay implementation.
+The DSX1 animation resource and empty bone scaffold are adapted from the AWM
+resources in Superb Warfare 0.8.9.2, commit 65d985a64 (Minecraft 1.20.1).
+Upstream: https://github.com/Mercurows/SuperbWarfare
+Upstream authors: Atsuishio, Roki27, Light_Quanta and other contributors.
+Upstream mod license: GNU General Public License v3.0.
+Changes: removed native cubes and absent animation targets; adjusted DSX1
+bolt/magazine pivots and left hand anchor; added own mesh binding leaves;
+reduced handle lift to 30 degrees and retargeted the matching right hand keys
+to clear the DSX1 scope housing while retaining native timing and bolt travel.
+The DSX1 mesh, UV atlas and material resources are the project's authored assets.
+Sounds and crosshair are referenced from installed SBW; no duplicate sound files.

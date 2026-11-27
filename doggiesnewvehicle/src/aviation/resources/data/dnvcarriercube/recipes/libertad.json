@@ -1,0 +1,14 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "water",
+  "inputs": [
+    "32 dnvcarriercube:hull_section",
+    "2 dnvcarriercube:propulsion_section",
+    "dnvcarriercube:ship_armament",
+    "8 superbwarfare:intelligent_chip",
+    "dnvcarriercube:libertad_blueprint"
+  ],
+  "result": {
+    "entity": "libertad:libertad"
+  }
+}

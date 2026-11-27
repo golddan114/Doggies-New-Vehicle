@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": ["ICI", "RGR", "III"],
+  "key": {
+    "I": {"tag": "forge:ingots/iron"},
+    "C": {"item": "minecraft:comparator"},
+    "R": {"item": "minecraft:redstone"},
+    "G": {"item": "minecraft:glass_pane"}
+  },
+  "result": {"item": "doggiesnewvehicle:remote_weapon_station"},
+  "show_notification": true
+}

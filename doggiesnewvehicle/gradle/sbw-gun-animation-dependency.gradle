@@ -1,0 +1,25 @@
+// Both libraries are supplied by the hash-pinned SBW at runtime.
+def extractSbwApi = { String library, String taskName ->
+    tasks.register(taskName) {
+        inputs.file(sbwGunDependencyJar)
+        outputs.file(layout.buildDirectory.file("sbw-gun-api/${library}.jar"))
+        doLast {
+            new java.util.zip.ZipFile(sbwGunDependencyJar).withCloseable { zip ->
+                def entries = java.util.Collections.list(zip.entries()).findAll {
+                    it.name.startsWith("META-INF/jarjar/${library}-") && it.name.endsWith('.jar')
+                }
+                if (entries.size() != 1) throw new GradleException("Expected exactly one SBW ${library} dependency")
+                def output = outputs.files.singleFile
+                output.parentFile.mkdirs()
+                zip.getInputStream(entries[0]).withCloseable { stream -> output.bytes = stream.readAllBytes() }
+            }
+        }
+    }
+}
+def gunAnimationApi = extractSbwApi('geckolib', 'extractSbwGunAnimationApi')
+extractSbwApi('simplebedrockmodel', 'extractSbwProjectileModelApi')
+dependencies {
+    compileOnly files(gunAnimationApi)
+    testCompileOnly files(gunAnimationApi)
+    testRuntimeOnly files(gunAnimationApi)
+}

@@ -1,0 +1,276 @@
+{
+  "yaw": [
+    0.0,
+    0.6500040888786316,
+    0.0
+  ],
+  "pitch": [
+    0.0,
+    2.442014157772064,
+    -1.6133947372436523
+  ],
+  "links": [
+    {
+      "group": "link_outer_1",
+      "pivot": [
+        -1.3773527145385742,
+        1.3046807050704956,
+        0.27506351470947266
+      ],
+      "target": [
+        -1.3773527145385742,
+        2.3964197635650635,
+        -1.2297735214233398
+      ],
+      "pivot_pitched": false,
+      "target_pitched": true
+    },
+    {
+      "group": "link_inner_1",
+      "pivot": [
+        -1.3773527145385742,
+        2.3964197635650635,
+        -1.2297735214233398
+      ],
+      "target": [
+        -1.3773527145385742,
+        1.3046807050704956,
+        0.27506351470947266
+      ],
+      "pivot_pitched": true,
+      "target_pitched": false
+    },
+    {
+      "group": "link_outer_2",
+      "pivot": [
+        -0.36504077911376953,
+        1.3046804666519165,
+        0.27506303787231445
+      ],
+      "target": [
+        -0.36504077911376953,
+        2.3964197635650635,
+        -1.2297744750976562
+      ],
+      "pivot_pitched": false,
+      "target_pitched": true
+    },
+    {
+      "group": "link_inner_2",
+      "pivot": [
+        -0.36504077911376953,
+        2.3964197635650635,
+        -1.2297744750976562
+      ],
+      "target": [
+        -0.36504077911376953,
+        1.3046804666519165,
+        0.27506303787231445
+      ],
+      "pivot_pitched": true,
+      "target_pitched": false
+    },
+    {
+      "group": "link_outer_3",
+      "pivot": [
+        1.3773536682128906,
+        1.3046809434890747,
+        0.27506351470947266
+      ],
+      "target": [
+        1.3773536682128906,
+        2.3964200019836426,
+        -1.2297735214233398
+      ],
+      "pivot_pitched": false,
+      "target_pitched": true
+    },
+    {
+      "group": "link_inner_3",
+      "pivot": [
+        1.3773536682128906,
+        2.3964200019836426,
+        -1.2297735214233398
+      ],
+      "target": [
+        1.3773536682128906,
+        1.3046809434890747,
+        0.27506351470947266
+      ],
+      "pivot_pitched": true,
+      "target_pitched": false
+    },
+    {
+      "group": "link_outer_4",
+      "pivot": [
+        0.36504173278808594,
+        1.3046807050704956,
+        0.27506303787231445
+      ],
+      "target": [
+        0.36504173278808594,
+        2.3964200019836426,
+        -1.2297744750976562
+      ],
+      "pivot_pitched": false,
+      "target_pitched": true
+    },
+    {
+      "group": "link_inner_4",
+      "pivot": [
+        0.36504173278808594,
+        2.3964200019836426,
+        -1.2297744750976562
+      ],
+      "target": [
+        0.36504173278808594,
+        1.3046807050704956,
+        0.27506303787231445
+      ],
+      "pivot_pitched": true,
+      "target_pitched": false
+    }
+  ],
+  "minimum": [
+    -2.9057834148406982,
+    0.0,
+    -3.0747146606445312
+  ],
+  "maximum": [
+    2.9057834148406982,
+    3.2261741161346436,
+    5.684821128845215
+  ],
+  "groups": [
+    "yaw_assembly",
+    "recoil_barrel_01",
+    "pitch_assembly",
+    "base_static",
+    "recoil_barrel_02",
+    "link_outer_1",
+    "link_inner_1",
+    "link_outer_2",
+    "link_inner_2",
+    "link_outer_3",
+    "link_inner_3",
+    "link_outer_4",
+    "link_inner_4"
+  ],
+  "author": {
+    "path": "flak40.blend",
+    "sha256": "758b6687847f08820c5b775d301c4b8fb5d6131cfd13101ee05aef1d708d8952"
+  },
+  "model": "flak40",
+  "entity": "dragon_flak40",
+  "hp": 500,
+  "seats": 0,
+  "servo": 12,
+  "recoil_ticks": 24,
+  "recoil_stroke": 0.2,
+  "cameras": {
+    "first_person": {
+      "role": "first_person",
+      "anchor": "flak40__camera_first_person",
+      "camera": "flak40__view_first_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "PITCH",
+      "game_deployment_position": [
+        0.0,
+        3.142014265060425,
+        -2.263395309448242
+      ],
+      "native_transform": "Barrel",
+      "native_position": [
+        0.0,
+        0.7000000476837158,
+        -0.6500005722045898
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "ads": {
+      "role": "ads",
+      "anchor": "flak40__camera_ads",
+      "camera": "flak40__view_ads",
+      "fov_degrees": 30,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "PITCH",
+      "game_deployment_position": [
+        0.0,
+        3.142014265060425,
+        -2.263395309448242
+      ],
+      "native_transform": "Barrel",
+      "native_position": [
+        0.0,
+        0.7000000476837158,
+        -0.6500005722045898
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "third_person": {
+      "role": "third_person",
+      "anchor": "flak40__camera_third_person",
+      "camera": "flak40__view_third_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "YAW",
+      "game_deployment_position": [
+        3.70090389251709,
+        4.539027214050293,
+        -8.730517387390137
+      ],
+      "native_transform": "Turret",
+      "native_position": [
+        3.70090389251709,
+        3.8890231251716614,
+        -8.730517387390137
+      ],
+      "direction": "look_at_camera_focus",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    }
+  },
+  "muzzles": [
+    [
+      -0.8711986541748047,
+      -0.020748615264892578,
+      7.298215866088867
+    ],
+    [
+      0.8711919784545898,
+      -0.020748138427734375,
+      7.298215866088867
+    ]
+  ],
+  "projectile_positions": [
+    [
+      -0.8711986541748047,
+      -0.020748615264892578,
+      7.328216075897217
+    ],
+    [
+      0.8711919784545898,
+      -0.020748138427734375,
+      7.328216075897217
+    ]
+  ],
+  "seat_positions": [],
+  "exit_positions": [],
+  "collision_width": 4.9,
+  "collision_height": 3.23,
+  "runtime_camera_position": [
+    0.0,
+    3.3920141577720644,
+    0.38660526275634766
+  ],
+  "runtime_ads_position": [
+    0.0,
+    3.3920141577720644,
+    0.38660526275634766
+  ]
+}

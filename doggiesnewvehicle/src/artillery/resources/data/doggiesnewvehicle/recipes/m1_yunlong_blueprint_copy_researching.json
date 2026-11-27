@@ -1,0 +1,8 @@
+{
+  "type": "superbwarfare:researching",
+  "addition": {"item": "minecraft:lapis_lazuli"},
+  "base": {"item": "minecraft:paper"},
+  "input": {"item": "doggiesnewvehicle:m1_yunlong_blueprint"},
+  "result": {"item": "doggiesnewvehicle:m1_yunlong_blueprint", "count": 2},
+  "time": 600
+}

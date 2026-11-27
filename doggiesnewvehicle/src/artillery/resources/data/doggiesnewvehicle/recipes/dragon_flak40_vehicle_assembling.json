@@ -1,0 +1,14 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "defense",
+  "inputs": [
+    "20 #forge:storage_blocks/steel",
+    "#doggiesnewvehicle:blueprints/dragon_flak40",
+    "2 superbwarfare:cannon_core",
+    "2 superbwarfare:motor",
+    "2 superbwarfare:large_battery_pack"
+  ],
+  "result": {
+    "entity": "doggievehicle:dragon_flak40"
+  }
+}

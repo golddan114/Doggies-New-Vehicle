@@ -1,0 +1,14 @@
+// One authored chassis/weapon configuration; the AI variant overrides only engine movement rates.
+tasks.named('processArtilleryResources') {
+    from(provider { sourceSets.artillery.resources.srcDirs.collect {
+        new File(it, 'data/doggievehicle/sbw/vehicles/apocalypse.json')
+    } }) {
+        into 'data/doggievehicle/sbw/vehicles'
+        rename { 'apocalypse_ai.json' }
+        filter { line ->
+            line.replaceAll(/("MaxForwardSpeedRate"\s*:\s*)[0-9.eE+\-]+/) { full, prefix -> prefix + '0.454666666667' }
+                .replaceAll(/("MaxBackwardSpeedRate"\s*:\s*)[0-9.eE+\-]+/) { full, prefix -> prefix + '0.227333333333' }
+                .replaceAll(/("SteeringSpeed"\s*:\s*)[0-9.eE+\-]+/) { full, prefix -> prefix + '0.04' }
+        }
+    }
+}

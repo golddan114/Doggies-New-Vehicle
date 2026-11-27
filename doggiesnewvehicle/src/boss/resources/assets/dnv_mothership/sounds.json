@@ -1,0 +1,23 @@
+{
+  "lock": {"sounds": [{"name": "dnv_mothership:charge", "attenuation_distance": 160}]},
+  "charge": {"sounds": [{"name": "dnv_mothership:doomsday_charge", "attenuation_distance": 85, "stream": true}]},
+  "fire": {"sounds": [{"name": "dnv_mothership:doomsday_fire", "attenuation_distance": 85, "stream": true}]},
+  "cool": {"sounds": [{"name": "dnv_mothership:doomsday_cool", "attenuation_distance": 85, "stream": true}]},
+  "abort": {"sounds": [{"name": "dnv_mothership:doomsday_abort", "attenuation_distance": 160}]},
+  "blast": {"sounds": [
+    {"name": "minecraft:random/explode1", "attenuation_distance": 85},
+    {"name": "minecraft:random/explode2", "attenuation_distance": 85},
+    {"name": "minecraft:random/explode3", "attenuation_distance": 85},
+    {"name": "minecraft:random/explode4", "attenuation_distance": 85}
+  ]},
+  "idle": {"sounds": [{"name": "dnv_mothership:idle", "attenuation_distance": 96}]},
+  "propulsion": {"sounds": [{"name": "dnv_mothership:propulsion", "attenuation_distance": 96}]},
+  "autocannon_fire": {"sounds": [{"name": "superbwarfare:vehicle/bmp_2/bmp_2_cannon_fire_3p", "attenuation_distance": 192}]},
+  "rocket_fire": {"sounds": [{"name": "superbwarfare:gun/rpg/rpg_fire_3p", "attenuation_distance": 192}]},
+  "laser_fire": {"sounds": [
+    {"name": "superbwarfare:waveforce_tower/waveforce_tower_fire_1", "attenuation_distance": 192},
+    {"name": "superbwarfare:waveforce_tower/waveforce_tower_fire_2", "attenuation_distance": 192},
+    {"name": "superbwarfare:waveforce_tower/waveforce_tower_fire_3", "attenuation_distance": 192},
+    {"name": "superbwarfare:waveforce_tower/waveforce_tower_fire_4", "attenuation_distance": 192}
+  ]}
+}

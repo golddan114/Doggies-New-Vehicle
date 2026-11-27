@@ -1,0 +1,23 @@
+{
+  "bossbar.silent_heaven.guardian": "Guardian",
+  "bossbar.silent_heaven.unknown": "??",
+  "bossbar.silent_heaven.silent_heaven": "Silent Heaven",
+  "title.silent_heaven.guardian": "Guardian",
+  "subtitle.silent_heaven.guardian": "Relic of a Former Civilization",
+  "title.silent_heaven.silent_heaven": "Silent Heaven",
+  "subtitle.silent_heaven.silent_heaven": "????",
+  "tooltip.silent_heaven.controller.bind": "Use on Silent Heaven: bind vehicle",
+  "tooltip.silent_heaven.controller.mode": "Use in air: toggle autonomous/hold position",
+  "tooltip.silent_heaven.controller.teleport": "Sneak-use on a block: teleport to that ground",
+  "tooltip.silent_heaven.controller.bound_hold": "Bound · Holding position",
+  "tooltip.silent_heaven.controller.bound_autonomous": "Bound · Autonomous",
+  "message.silent_heaven.controller.bound": "Silent Heaven bound",
+  "message.silent_heaven.controller.hold": "Behavior: hold position (targeting and weapons remain active)",
+  "message.silent_heaven.controller.autonomous": "Behavior: autonomous",
+  "message.silent_heaven.controller.teleport_success": "Teleport sequence initiated",
+  "message.silent_heaven.controller.teleport_cooldown": "Teleport cooling down: %s seconds remaining",
+  "message.silent_heaven.controller.teleport_blocked": "Teleport failed: destination cannot fit the full vehicle",
+  "message.silent_heaven.controller.unavailable": "Control failed: unbound, unloaded, or in another dimension",
+  "death.attack.halo_piercing": "%1$s was pierced by Silent Heaven lightning",
+  "death.attack.halo_piercing.player": "%1$s was pierced by %2$s's lightning"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "4 superbwarfare:large_motor",
+    "2 superbwarfare:large_propeller",
+    "4 superbwarfare:large_battery_pack"
+  ],
+  "result": {
+    "item": "dnvcarriercube:propulsion_section"
+  }
+}

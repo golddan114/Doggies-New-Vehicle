@@ -1,0 +1,92 @@
+{
+  "ID": "doggievehicle:jingzhe_turret",
+  "MaxHealth": 350,
+  "MaxEnergy": 5000000,
+  "Mass": 1.8,
+  "TurretPos": [
+    0.0,
+    2.413222,
+    0.0
+  ],
+  "TurretTurnSpeed": [
+    1.0,
+    1.0
+  ],
+  "TurretPitchRange": [
+    -90,
+    90
+  ],
+  "BarrelPos": [
+    0.0,
+    2.413222,
+    0.0
+  ],
+  "SeekInfo": {
+    "MinSeekRange": 2,
+    "MaxSeekRange": 72,
+    "ChangeTargetTime": 40,
+    "SeekIterative": 4,
+    "MinTargetSize": 0.1,
+    "SeekEnergyCost": 0
+  },
+  "Weapons": {
+    "Main": {
+      "DefaultFireMode": "Auto",
+      "AvailableFireModes": "Auto",
+      "Projectile": "superbwarfare:cannon_shell",
+      "RPM": 1,
+      "Velocity": 1,
+      "Gravity": 0.0,
+      "Damage": 0,
+      "Spread": 0.0,
+      "HeatPerShoot": 0,
+      "ShootAnimationTime": 1,
+      "RecoilTime": 0,
+      "ShootShake": [0, 0, 0],
+      "RecoilForce": 0.0,
+      "Magazine": 1,
+      "AmmoType": "FE",
+      "AmmoCostPerShoot": 0,
+      "ShootPos": {
+        "Transform": "Barrel",
+        "Positions": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      },
+      "SoundRadius": 0
+    }
+  },
+  "DamageModifiers": [
+    "minecraft:arrow * 0.1",
+    "minecraft:trident * 0.2",
+    "minecraft:mob_attack * 0.3",
+    "minecraft:mob_projectile * 0.4",
+    "minecraft:explosion * 1.5",
+    "minecraft:player_explosion * 1.5",
+    "superbwarfare:custom_explosion * 0.6",
+    "superbwarfare:projectile_explosion * 0.6",
+    "superbwarfare:projectile_hit * 0.7",
+    "#superbwarfare:projectile * 0.5",
+    "All - 1"
+  ],
+  "HasLowHealthWarning": true,
+  "SelfHurtPercent": 0,
+  "VehicleContainerType": "Empty",
+  "DestroyInfo": {
+    "ParticleType": "Medium",
+    "ExplosionDamage": 0,
+    "ExplosionRadius": 0,
+    "ExplodeBlocks": false
+  },
+  "EngineType": "Fixed",
+  "VehicleIcon": "superbwarfare:textures/vehicle_icon/laser_tower_icon.png",
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/defense.png",
+  "Type": "Defense"
+}

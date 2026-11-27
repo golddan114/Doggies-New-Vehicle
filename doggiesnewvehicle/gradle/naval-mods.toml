@@ -1,0 +1,54 @@
+# Libertad keeps its original registry and network namespace inside the DNV archive.
+[[mods]]
+modId="libertad"
+version="${file.jarVersion}"
+displayName="Libertad Battleship"
+description="自由号战列舰。Libertad battleship included with Doggie's New Vehicle."
+
+[[dependencies.libertad]]
+modId="doggiesnewvehicle"
+mandatory=true
+versionRange="[1.20hotfix]"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.libertad]]
+modId="forge"
+mandatory=true
+versionRange="[47.4.18,48)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.libertad]]
+modId="superbwarfare"
+mandatory=true
+versionRange="[0.8.9.2]"
+ordering="AFTER"
+side="BOTH"
+
+[[mods]]
+modId="dnvcarriercube"
+version="${file.jarVersion}"
+displayName="Yue Naval Aviation"
+description="岳级航空母舰与飞鹰型舰载机。Yue-class aircraft carrier and Feiying carrier fighter included with Doggie's New Vehicle."
+
+[[dependencies.dnvcarriercube]]
+modId="doggiesnewvehicle"
+mandatory=true
+versionRange="[1.20hotfix]"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.dnvcarriercube]]
+modId="forge"
+mandatory=true
+versionRange="[47.4.18,48)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.dnvcarriercube]]
+modId="superbwarfare"
+mandatory=true
+versionRange="[0.8.9.2]"
+ordering="AFTER"
+side="BOTH"

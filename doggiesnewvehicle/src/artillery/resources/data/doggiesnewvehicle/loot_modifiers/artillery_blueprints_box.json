@@ -1,0 +1,9 @@
+{
+  "type": "doggiesnewvehicle:artillery_blueprint_box",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "superbwarfare:containers/blueprints"
+    }
+  ]
+}

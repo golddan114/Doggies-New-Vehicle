@@ -1,0 +1,15 @@
+{
+  "blastRadius": 112,
+  "fluidRadius": 40,
+  "terrainRadius": 40,
+  "radiationRadius": 48,
+  "scentRadius": 52,
+  "centerKillRadius": 12,
+  "blastFraction": 0.6,
+  "radiationDamage": 10,
+  "radiationFraction": 0.02,
+  "radiationTicks": 400,
+  "radiationInterval": 20,
+  "visitsPerTick": 8192,
+  "blocksPerTick": 1024
+}

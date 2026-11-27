@@ -1,0 +1,196 @@
+{
+  "mesh_sha256": "0747bdce5155e0c2d4ba6461c2c20646780be482846325a93ae477a27cca9df9",
+  "renderer_sha256": "be6cc5b60e70a2887ae57ba55ea3219c21bc10a2c4b7a3f67d24f48fb6710aaa",
+  "renderer": "doggiesnewvehicle\\src\\boss\\java\\com\\liucodex\\silentheaven\\client\\SilentHeavenMeshLayer.java",
+  "pivots": {
+    "ROAD_WHEEL_L_X": 1.7925,
+    "ROAD_WHEEL_R_X": -1.7925,
+    "ROAD_WHEEL_Y": 0.7198,
+    "CORE_PIVOT_Y": 2.304092,
+    "MAIN_GUN_L_PIVOT_X": 1.88055,
+    "MAIN_GUN_R_PIVOT_X": -1.88055,
+    "MAIN_GUN_PIVOT_Y": 3.574424,
+    "MAIN_GUN_L_PIVOT_Z": -1.085218,
+    "MAIN_GUN_R_PIVOT_Z": -1.085219,
+    "AUTOCANNON_L_YAW_X": 1.705815,
+    "AUTOCANNON_R_YAW_X": -1.705815,
+    "AUTOCANNON_YAW_Y": 1.528245,
+    "AUTOCANNON_YAW_Z": 1.050607,
+    "AUTOCANNON_L_PITCH_X": 1.705815,
+    "AUTOCANNON_R_PITCH_X": -1.705815,
+    "AUTOCANNON_PITCH_Y": 1.709482,
+    "AUTOCANNON_PITCH_Z": 1.330202,
+    "MISSILE_POD_L_YAW_X": 1.345815,
+    "MISSILE_POD_R_YAW_X": -1.325815,
+    "MISSILE_POD_YAW_Y": 4.678438,
+    "MISSILE_POD_YAW_Z": -0.797716,
+    "MISSILE_POD_L_PITCH_X": 1.349663,
+    "MISSILE_POD_R_PITCH_X": -1.329664,
+    "MISSILE_POD_PITCH_Y": 4.890142,
+    "MISSILE_POD_PITCH_Z": -0.799954,
+    "HALO_PIVOT_Y": 7.840268,
+    "LAUNCH_HATCH_L_X": 2.968506,
+    "LAUNCH_HATCH_R_X": -2.968506,
+    "LAUNCH_HATCH_Y": 3.574424,
+    "LAUNCH_HATCH_Z": -1.570013
+  },
+  "boxes": [
+    {
+      "group": "chassis",
+      "center": [
+        -1.1920928955078125e-07,
+        1.119678258895874,
+        -0.0701289176940918
+      ],
+      "half": [
+        2.2735519409179688,
+        0.780949592590332,
+        2.7389400005340576
+      ]
+    },
+    {
+      "group": "core",
+      "center": [
+        0.0,
+        3.2410051822662354,
+        -0.5721338987350464
+      ],
+      "half": [
+        2.9875993728637695,
+        1.4673488140106201,
+        2.115647792816162
+      ]
+    },
+    {
+      "group": "autocannon_l_yaw",
+      "center": [
+        1.705815076828003,
+        1.6777212619781494,
+        1.050607442855835
+      ],
+      "half": [
+        0.41171950101852417,
+        0.08587616682052612,
+        0.41171953082084656
+      ]
+    },
+    {
+      "group": "autocannon_r_yaw",
+      "center": [
+        -1.705815076828003,
+        1.6777212619781494,
+        1.050607442855835
+      ],
+      "half": [
+        0.41171950101852417,
+        0.08587616682052612,
+        0.41171953082084656
+      ]
+    },
+    {
+      "group": "missile_pod_l_yaw",
+      "center": [
+        1.3458149433135986,
+        4.810033798217773,
+        -0.8044954538345337
+      ],
+      "half": [
+        0.15930145978927612,
+        0.12321233749389648,
+        0.11784932017326355
+      ]
+    },
+    {
+      "group": "missile_pod_l_pitch",
+      "center": [
+        1.3496633768081665,
+        4.91026496887207,
+        -0.7941122055053711
+      ],
+      "half": [
+        0.15386128425598145,
+        0.07505488395690918,
+        0.17556092143058777
+      ]
+    },
+    {
+      "group": "missile_pod_r_yaw",
+      "center": [
+        -1.3258150815963745,
+        4.810033798217773,
+        -0.8044953346252441
+      ],
+      "half": [
+        0.15930140018463135,
+        0.12321233749389648,
+        0.11784940958023071
+      ]
+    },
+    {
+      "group": "missile_pod_r_pitch",
+      "center": [
+        -1.3296635150909424,
+        4.9102654457092285,
+        -0.7941120862960815
+      ],
+      "half": [
+        0.1538611650466919,
+        0.07505464553833008,
+        0.17556092143058777
+      ]
+    },
+    {
+      "group": "launch_hatch_l",
+      "center": [
+        3.1121153831481934,
+        3.5744237899780273,
+        -1.1171095371246338
+      ],
+      "half": [
+        0.12287282943725586,
+        0.48499536514282227,
+        0.5168870091438293
+      ]
+    },
+    {
+      "group": "launch_hatch_r",
+      "center": [
+        -3.1102347373962402,
+        3.5744237899780273,
+        -1.1171103715896606
+      ],
+      "half": [
+        0.12475335597991943,
+        0.48499536514282227,
+        0.5168870687484741
+      ]
+    },
+    {
+      "group": "chassis",
+      "center": [
+        -1.7925,
+        0.719814,
+        -0.1526019999999999
+      ],
+      "half": [
+        0.35,
+        0.706,
+        2.892468
+      ]
+    },
+    {
+      "group": "chassis",
+      "center": [
+        1.7925,
+        0.719814,
+        -0.1526019999999999
+      ],
+      "half": [
+        0.35,
+        0.706,
+        2.892468
+      ]
+    }
+  ],
+  "method": "one local box per major body/turret/pod/hatch or tread bank; thin main/autocannon barrels and halo excluded; renderer pivots retained"
+}

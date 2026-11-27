@@ -1,0 +1,17 @@
+{
+  "type": "superbwarfare:researching",
+  "base": {
+    "item": "minecraft:paper"
+  },
+  "input": {
+    "item": "superbwarfare:legendary_material_pack"
+  },
+  "addition": {
+    "item": "superbwarfare:large_propeller"
+  },
+  "result": {
+    "item": "dnvcarriercube:yue_blueprint",
+    "count": 1
+  },
+  "time": 2400
+}

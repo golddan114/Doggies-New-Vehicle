@@ -1,0 +1,18 @@
+{
+  "storm": 0.001,
+  "changfeng": 0.045,
+  "jingzhe": 0.035,
+  "yunlong": 0.08,
+  "blizzard_mode1": 0.003,
+  "blizzard_mode2": 0.114,
+  "apocalypse_he": 0.035,
+  "apocalypse_ap": 0.05,
+  "apocalypse_rocket": 0.01,
+  "apocalypse_missile": 0.03,
+  "project612_ap": 0.06,
+  "dragon_bofors_twin": 0.003,
+  "dragon_bofors_quad": 0.003,
+  "dragon_flak38": 0.001,
+  "dragon_flak88": 0.04,
+  "dragon_flak40": 0.04
+}

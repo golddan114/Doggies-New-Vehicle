@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.liucodex.doggiesnewvehicle.compat.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.dnvplatform.refmap.json",
+  "client": [
+    "TacticalMapScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

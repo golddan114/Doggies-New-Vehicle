@@ -1,0 +1,600 @@
+{
+  "blizzard_idle": {
+    "subtitle": "subtitle.doggiesnewvehicle.blizzard_idle",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:blizzard_idle",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "nuclear_turntable": {
+    "subtitle": "subtitle.doggiesnewvehicle.nuclear_turntable",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:nuclear/turntable",
+        "attenuation_distance": 64,
+        "stream": true
+      }
+    ]
+  },
+  "nuclear_cover": {
+    "subtitle": "subtitle.doggiesnewvehicle.nuclear_cover",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:nuclear/cover",
+        "attenuation_distance": 64,
+        "stream": true
+      }
+    ]
+  },
+  "nuclear_lift": {
+    "subtitle": "subtitle.doggiesnewvehicle.nuclear_lift",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:nuclear/lift",
+        "attenuation_distance": 64,
+        "stream": true
+      }
+    ]
+  },
+  "blizzard_hover": {
+    "subtitle": "subtitles.doggiesnewvehicle.blizzard_hover",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:blizzard_hover",
+        "volume": 0.75,
+        "pitch": 1.0,
+        "stream": false
+      }
+    ]
+  },
+  "cannon_fire_01": {
+    "subtitle": "subtitles.doggiesnewvehicle.cannon_fire",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:cannon_fire_01",
+        "stream": false
+      }
+    ]
+  },
+  "m1_cannon_fire": {
+    "subtitle": "subtitles.doggiesnewvehicle.cannon_fire",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:cannon_fire_01",
+        "volume": 1.25,
+        "stream": false
+      }
+    ]
+  },
+  "jingzhe_activate": {
+    "subtitle": "subtitles.doggiesnewvehicle.jingzhe_activate",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:jingzhe_activate",
+        "stream": false
+      }
+    ]
+  },
+  "jingzhe_attack": {
+    "subtitle": "subtitles.doggiesnewvehicle.jingzhe_attack",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:jingzhe_attack",
+        "stream": false
+      }
+    ]
+  },
+  "jingzhe_idle": {
+    "subtitle": "subtitles.doggiesnewvehicle.jingzhe_idle",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:jingzhe_idle",
+        "volume": 0.85,
+        "stream": false
+      }
+    ]
+  },
+  "blizzard_laser": {
+    "subtitle": "subtitles.doggiesnewvehicle.blizzard_laser",
+    "sounds": [
+      {
+        "name": "superbwarfare:waveforce_tower_fire",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "blizzard_charge": {
+    "sounds": [{"name": "superbwarfare:annihilator_reload", "type": "event"}]
+  },
+  "blizzard_fire": {
+    "subtitle": "subtitles.doggiesnewvehicle.blizzard_fire",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:blizzard_fire",
+        "volume": 1.0,
+        "pitch": 1.0,
+        "attenuation_distance": 48,
+        "stream": false
+      }
+    ]
+  },
+  "nuclear_ready": {
+    "subtitle": "subtitle.doggiesnewvehicle.nuclear_ready",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:nuclear/snukread",
+        "attenuation_distance": 64,
+        "stream": false
+      }
+    ]
+  },
+  "nuclear_ready_voice": {
+    "subtitle": "subtitle.doggiesnewvehicle.nuclear_ready_voice",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:nuclear/csof003",
+        "volume": 1.0,
+        "pitch": 1.0,
+        "stream": false
+      }
+    ]
+  },
+  "nuclear_siren": {
+    "subtitle": "subtitle.doggiesnewvehicle.nuclear_siren",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:nuclear/snuksire",
+        "attenuation_distance": 128,
+        "stream": false
+      }
+    ]
+  },
+  "nuclear_launch": {
+    "subtitle": "subtitle.doggiesnewvehicle.nuclear_launch",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:nuclear/snuklaun",
+        "attenuation_distance": 256,
+        "stream": false
+      }
+    ]
+  },
+  "nuclear_explosion": {
+    "subtitle": "subtitle.doggiesnewvehicle.nuclear_explosion",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:nuclear/snukexpl",
+        "attenuation_distance": 256,
+        "stream": false
+      }
+    ]
+  },
+  "dogegg_extend": {
+    "subtitle": "subtitle.doggiesnewvehicle.dogegg_extend",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:dogegg_extend",
+        "attenuation_distance": 64,
+        "stream": false
+      }
+    ]
+  },
+  "dogegg_ready": {
+    "subtitle": "subtitle.doggiesnewvehicle.dogegg_ready",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:dogegg_ready",
+        "attenuation_distance": 64,
+        "stream": false
+      }
+    ]
+  },
+  "dogegg_launch": {
+    "subtitle": "subtitle.doggiesnewvehicle.dogegg_launch",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:dogegg_launch",
+        "attenuation_distance": 128,
+        "stream": false
+      }
+    ]
+  },
+  "dogegg_impact": {
+    "subtitle": "subtitle.doggiesnewvehicle.dogegg_impact",
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:dogegg_impact",
+        "attenuation_distance": 128,
+        "stream": false
+      }
+    ]
+  },
+  "dragon_bofors_twin_fire_1p": {
+    "sounds": [
+      {
+        "name": "superbwarfare:bradley_cannon_fire_1p",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_twin_fire_3p": {
+    "sounds": [
+      {
+        "name": "superbwarfare:bradley_cannon_fire_3p",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_twin_fire_far": {
+    "sounds": [
+      {
+        "name": "superbwarfare:bradley_cannon_far",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_twin_fire_veryfar": {
+    "sounds": [
+      {
+        "name": "superbwarfare:bradley_cannon_veryfar",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_twin_yaw": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_twin_pitch": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_twin_reload": {
+    "sounds": [
+      {
+        "name": "superbwarfare:m_2_hb_reload_empty",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_twin_select": {
+    "sounds": [
+      {
+        "name": "superbwarfare:into_cannon",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_quad_fire_1p": {
+    "sounds": [
+      {
+        "name": "superbwarfare:bradley_cannon_fire_1p",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_quad_fire_3p": {
+    "sounds": [
+      {
+        "name": "superbwarfare:bradley_cannon_fire_3p",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_quad_fire_far": {
+    "sounds": [
+      {
+        "name": "superbwarfare:bradley_cannon_far",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_quad_fire_veryfar": {
+    "sounds": [
+      {
+        "name": "superbwarfare:bradley_cannon_veryfar",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_quad_yaw": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_quad_pitch": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_quad_reload": {
+    "sounds": [
+      {
+        "name": "superbwarfare:m_2_hb_reload_empty",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_bofors_quad_select": {
+    "sounds": [
+      {
+        "name": "superbwarfare:into_cannon",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak38_fire_1p": {
+    "sounds": [
+      {
+        "name": "superbwarfare:lav_150_cannon_fire_1p",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak38_fire_3p": {
+    "sounds": [
+      {
+        "name": "superbwarfare:lav_150_cannon_fire_3p",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak38_fire_far": {
+    "sounds": [
+      {
+        "name": "superbwarfare:lav_150_cannon_far",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak38_fire_veryfar": {
+    "sounds": [
+      {
+        "name": "superbwarfare:lav_150_cannon_veryfar",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak38_yaw": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak38_pitch": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak38_reload": {
+    "sounds": [
+      {
+        "name": "superbwarfare:m_2_hb_reload_empty",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak38_select": {
+    "sounds": [
+      {
+        "name": "superbwarfare:into_cannon",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak88_fire_1p": {
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:cannon_fire_01",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak88_fire_3p": {
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:cannon_fire_01",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak88_fire_far": {
+    "sounds": [
+      {
+        "name": "superbwarfare:mk_42_far",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak88_fire_veryfar": {
+    "sounds": [
+      {
+        "name": "superbwarfare:mk_42_veryfar",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak88_yaw": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak88_pitch": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak88_reload": {
+    "sounds": [
+      {
+        "name": "superbwarfare:cannon_reload",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak88_select": {
+    "sounds": [
+      {
+        "name": "superbwarfare:into_cannon",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_m1_open_fire_1p": {
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:m1_cannon_fire",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_m1_open_fire_3p": {
+    "sounds": [
+      {
+        "name": "doggiesnewvehicle:m1_cannon_fire",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_m1_open_fire_far": {
+    "sounds": [
+      {
+        "name": "superbwarfare:mk_42_far",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_m1_open_fire_veryfar": {
+    "sounds": [
+      {
+        "name": "superbwarfare:mk_42_veryfar",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_m1_open_yaw": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_m1_open_pitch": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_m1_open_reload": {
+    "sounds": [
+      {
+        "name": "superbwarfare:cannon_reload",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_m1_open_select": {
+    "sounds": [
+      {
+        "name": "superbwarfare:into_cannon",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak40_fire_1p": {
+    "sounds": [
+      {
+        "name": "superbwarfare:mk_42_fire_1p",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak40_fire_3p": {
+    "sounds": [
+      {
+        "name": "superbwarfare:mk_42_fire_3p",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak40_fire_far": {
+    "sounds": [
+      {
+        "name": "superbwarfare:mk_42_far",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak40_fire_veryfar": {
+    "sounds": [
+      {
+        "name": "superbwarfare:mk_42_veryfar",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak40_yaw": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak40_pitch": {
+    "sounds": [
+      {
+        "name": "superbwarfare:turret_turn",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak40_reload": {
+    "sounds": [
+      {
+        "name": "superbwarfare:cannon_reload",
+        "type": "event"
+      }
+    ]
+  },
+  "dragon_flak40_select": {
+    "sounds": [
+      {
+        "name": "superbwarfare:into_cannon",
+        "type": "event"
+      }
+    ]
+  }
+}

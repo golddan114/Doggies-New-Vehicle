@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_redstone": {"trigger": "minecraft:inventory_changed", "conditions": {"items": [{"items": ["minecraft:redstone"]}]}},
+    "has_the_recipe": {"trigger": "minecraft:recipe_unlocked", "conditions": {"recipe": "doggiesnewvehicle:remote_weapon_station"}}
+  },
+  "requirements": [["has_redstone", "has_the_recipe"]],
+  "rewards": {"recipes": ["doggiesnewvehicle:remote_weapon_station"]},
+  "sends_telemetry_event": false
+}

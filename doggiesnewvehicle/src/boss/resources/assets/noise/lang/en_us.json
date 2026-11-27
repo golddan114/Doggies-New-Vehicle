@@ -1,0 +1,15 @@
+{
+  "bossbar.noise.noise": "Noise",
+  "title.noise.noise": "Noise",
+  "subtitle.noise.noise": "(elephantine scream)",
+  "tooltip.noise.controller.bind": "Use on Noise: bind vehicle",
+  "tooltip.noise.controller.mode": "Use in air: toggle autonomous/hold position",
+  "tooltip.noise.controller.teleport": "Noise has no teleport system",
+  "tooltip.noise.controller.bound_hold": "Bound · Holding position",
+  "tooltip.noise.controller.bound_autonomous": "Bound · Autonomous",
+  "message.noise.controller.bound": "Noise bound",
+  "message.noise.controller.hold": "Behavior: hold position (weapons remain active)",
+  "message.noise.controller.autonomous": "Behavior: autonomous",
+  "message.noise.controller.teleport_blocked": "Noise has no teleport system",
+  "message.noise.controller.unavailable": "Control failed: unbound, unloaded, or in another dimension"
+}

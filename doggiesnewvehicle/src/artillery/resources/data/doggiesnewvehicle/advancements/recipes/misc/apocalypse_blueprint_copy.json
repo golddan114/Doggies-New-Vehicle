@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blueprint": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doggiesnewvehicle:apocalypse_blueprint"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doggiesnewvehicle:apocalypse_blueprint_copy"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_blueprint",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "doggiesnewvehicle:apocalypse_blueprint_copy"
+    ]
+  },
+  "sends_telemetry_event": false
+}

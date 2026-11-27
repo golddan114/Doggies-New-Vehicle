@@ -1,0 +1,13 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "64 #forge:storage_blocks/steel",
+    "2 superbwarfare:large_motor",
+    "8 minecraft:piston",
+    "2 minecraft:redstone_block"
+  ],
+  "result": {
+    "item": "dnvcarriercube:flight_deck_section"
+  }
+}

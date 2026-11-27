@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {"item": "doggiesnewvehicle:nuclear_silo_deployer"},
+    {"item": "minecraft:egg"}
+  ],
+  "result": {"item": "doggiesnewvehicle:dogegg_silo_deployer", "count": 1}
+}

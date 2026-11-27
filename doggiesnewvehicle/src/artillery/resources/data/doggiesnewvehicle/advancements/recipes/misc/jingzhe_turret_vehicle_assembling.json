@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blueprint": {"trigger": "minecraft:inventory_changed", "conditions": {"items": [{"items": ["doggiesnewvehicle:jingzhe_turret_blueprint"]}]}},
+    "has_the_recipe": {"trigger": "minecraft:recipe_unlocked", "conditions": {"recipe": "doggiesnewvehicle:jingzhe_turret_vehicle_assembling"}}
+  },
+  "requirements": [["has_blueprint", "has_the_recipe"]],
+  "rewards": {"recipes": ["doggiesnewvehicle:jingzhe_turret_vehicle_assembling"]},
+  "sends_telemetry_event": false
+}

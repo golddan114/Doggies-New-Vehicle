@@ -1,0 +1,15 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "128 #forge:storage_blocks/steel",
+    "8 superbwarfare:heavy_armament_module",
+    "4 superbwarfare:large_battery_pack",
+    "16 superbwarfare:large_motor",
+    "32 minecraft:netherite_ingot",
+    "16 minecraft:diamond_block",
+    "4 minecraft:beacon",
+    "64 minecraft:redstone_block"
+  ],
+  "result": { "item": "doggiesnewvehicle:nuclear_silo_deployer", "count": 1 }
+}

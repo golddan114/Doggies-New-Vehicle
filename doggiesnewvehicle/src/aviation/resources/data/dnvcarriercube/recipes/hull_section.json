@@ -1,0 +1,11 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "128 #forge:storage_blocks/steel",
+    "8 superbwarfare:cemented_carbide_block"
+  ],
+  "result": {
+    "item": "dnvcarriercube:hull_section"
+  }
+}

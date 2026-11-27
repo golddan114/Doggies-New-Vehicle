@@ -1,0 +1,15 @@
+{
+  "Model": {
+    "Animation": "doggiesnewvehicle:animations/dsx1.animation.json",
+    "Model": "doggiesnewvehicle:geo/dsx1.geo.json",
+    "Texture": "doggiesnewvehicle:textures/item/dsx1.png",
+    "LODModel": "doggiesnewvehicle:geo/dsx1.geo.json",
+    "LODTexture": "doggiesnewvehicle:textures/item/dsx1.png"
+  },
+  "FlarePosition": [
+    0,
+    0.179366875,
+    2.5561865596772333
+  ],
+  "FlareSize": 0.6
+}

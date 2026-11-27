@@ -1,0 +1,29 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.liucodex.doggiesnewvehicle.compat.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.dnvartillery.refmap.json",
+  "mixins": [
+    "VehicleEnergyBudgetMixin",
+    "VehicleEnergyInputMixin",
+    "DnvBlizzardFireReleaseMixin",
+    "ApocalypseAutonomousDriveMixin",
+    "ApocalypseAmmoSelectionMixin",
+    "ApocalypseSeekFilterMixin",
+    "M1RemoteBodySaveMixin",
+    "M1ReloadSoundMixin",
+    "ArtilleryIndicatorItemMixin",
+    "ArtilleryIndicatorFireMessageMixin",
+    "NuclearContainerTickMixin",
+    "NuclearThreatMixin",
+    "NuclearHostileMixin"
+  ],
+  "client": [
+    "ApocalypseClientFireMixin",
+    "DragonClientPredictionMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "meaning": "Opaque geometry frozen from the input Git checkpoint; only UV and the two non-lamp draws may change",
+  "variants": [
+    {
+      "level": 1,
+      "sourceSha256": "a1b039f5a84c05b2c0b226a87b3d7d69f87a6481c0855906b14962c76c44927d",
+      "triangles": 2738,
+      "groups": [
+        {
+          "name": "Barrel",
+          "opaqueGeometrySha256": "b0de78d89bfad873edfd9c2819cd8e7b319b5adc769179e6014e20c53287760d",
+          "opaqueTriangles": 197
+        },
+        {
+          "name": "Body",
+          "opaqueGeometrySha256": "448746ffa28ef2a341fadaa8e36e1a7203c042bfa3c1d48e1813d65312a647bd",
+          "opaqueTriangles": 1601
+        },
+        {
+          "name": "HatchLeft",
+          "opaqueGeometrySha256": "1673984883c5acf0142c74f6fa8d681f13070712737ee107b8dfc1821786cdd7",
+          "opaqueTriangles": 12
+        },
+        {
+          "name": "HatchRight",
+          "opaqueGeometrySha256": "f16b27af70efcfdc4486976f5a532ff2fe63daf7eab922f513d6683f54624dcb",
+          "opaqueTriangles": 12
+        },
+        {
+          "name": "Turret",
+          "opaqueGeometrySha256": "ff11ed5e47c901635ba6cf257e26e71bee8eba7cdf5d993a14273e639c6a88a1",
+          "opaqueTriangles": 714
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "sourceSha256": "37ea4dee1cb5879ff01c6ff7c9bad27f334b097ff1b0583a24b27a2283cf2020",
+      "triangles": 2250,
+      "groups": [
+        {
+          "name": "Barrel",
+          "opaqueGeometrySha256": "68f325ccc6d3da9123ca63c72136e8dfeac2fec2d21df23ebca8450e55f09acd",
+          "opaqueTriangles": 158
+        },
+        {
+          "name": "Body",
+          "opaqueGeometrySha256": "03c6a38105d334357f3dfab0c57b01b06ffebda642a4e417397c176d2e2b6294",
+          "opaqueTriangles": 1299
+        },
+        {
+          "name": "HatchLeft",
+          "opaqueGeometrySha256": "1673984883c5acf0142c74f6fa8d681f13070712737ee107b8dfc1821786cdd7",
+          "opaqueTriangles": 12
+        },
+        {
+          "name": "HatchRight",
+          "opaqueGeometrySha256": "f16b27af70efcfdc4486976f5a532ff2fe63daf7eab922f513d6683f54624dcb",
+          "opaqueTriangles": 12
+        },
+        {
+          "name": "Turret",
+          "opaqueGeometrySha256": "97cf3b1963ed0a0138e255ffcfdfef629651dfad72b29987ad0656edfca5a2f6",
+          "opaqueTriangles": 567
+        }
+      ]
+    }
+  ]
+}

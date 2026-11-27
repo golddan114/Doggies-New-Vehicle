@@ -1,0 +1,215 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+
+if (JavaVersion.current() != JavaVersion.VERSION_21) {
+    throw new GradleException('DNV Minecraft 1.21.1 requires Java 21.')
+}
+group = 'com.liucodex.doggiesnewvehicle'
+version = '1.20hotfix'
+base.archivesName = 'doggiesnewvehicle-neoforge-1.21.1-sbw0.8.9.2'
+layout.buildDirectory = file('build/neoforge1211')
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+def python = providers.gradleProperty('dnvPython').orElse(providers.environmentVariable('DNV_PYTHON')).getOrElse('python')
+def modules = ['main', 'artillery', 'platform', 'boss', 'naval']
+def selected = ['main'] + ['artillery', 'platform', 'boss', 'naval'].findAll {
+    providers.gradleProperty('dnv' + it.capitalize()).getOrElse('true') == 'true'
+}
+def profile = providers.gradleProperty('dnvSbwProfile').getOrElse('0.8.9.2')
+def pins = [
+    '0.8.9.2': ['superbwarfare-0.8.9.2-hotfix-mc1.21.1-e0c2b27f.jar', 'f1003f5e6b9d8a6c5e27592aa33df9b88c87b71ff3b5e623f4224222ae140535']
+]
+if (!pins.containsKey(profile)) throw new GradleException("Unsupported exact NeoForge SBW profile: ${profile}")
+def dependency = file("libs/neoforge1211/${pins[profile][0]}")
+if (!dependency.isFile()) throw new GradleException("Missing pinned NeoForge SBW: ${dependency}")
+if (java.security.MessageDigest.getInstance('SHA-256').digest(dependency.bytes).encodeHex().toString() != pins[profile][1]) {
+    throw new GradleException("Wrong NeoForge SBW dependency bytes: ${dependency}")
+}
+
+def prepare = tasks.register('prepareNeoForgeSources', Exec) {
+    inputs.files(modules.collect { fileTree("src/${it}") })
+    inputs.files(fileTree('src/neoforge1211'), fileTree('gradle/neoforge1211'))
+    inputs.files(fileTree('../libertad/src'), fileTree('src/aviation'), fileTree('src/navalCommon'))
+    inputs.files(new groovy.json.JsonSlurper().parse(file('gradle/neoforge1211/tests.json')).collect { file(it) })
+    inputs.property('modules', selected.join(','))
+    outputs.dir(layout.buildDirectory.dir('generated'))
+    commandLine python, file('gradle/neoforge1211/project_sources.py'), '--modules', selected.join(',')
+}
+
+sourceSets {
+    artillery
+    platform
+    boss
+    naval
+    navalTest {
+        java.setSrcDirs([layout.buildDirectory.dir('generated/navalTest/java')])
+        resources.setSrcDirs(['../libertad/src/test/resources'])
+        compileClasspath += sourceSets.naval.output + sourceSets.main.output + sourceSets.test.compileClasspath
+        runtimeClasspath = output + sourceSets.naval.output + sourceSets.main.output + sourceSets.test.runtimeClasspath
+    }
+}
+tasks.named('compileNavalTestJava') { dependsOn prepare }
+modules.each { name ->
+    def sources = sourceSets.getByName(name)
+    sources.java.setSrcDirs([layout.buildDirectory.dir("generated/${name}/java")])
+    sources.resources.setSrcDirs([layout.buildDirectory.dir("generated/${name}/resources")])
+    if (name != 'main') {
+        sources.compileClasspath += sourceSets.main.output
+        sources.runtimeClasspath += sourceSets.main.output
+        configurations.getByName(name + 'Implementation').extendsFrom(configurations.implementation)
+        configurations.getByName(name + 'CompileOnly').extendsFrom(configurations.compileOnly)
+    }
+    tasks.named(sources.compileJavaTaskName) { dependsOn prepare }
+    tasks.named(sources.processResourcesTaskName) { dependsOn prepare }
+}
+evaluationDependsOn(':route-core')
+ext.sbwGunDependencyJar = dependency
+apply from: 'gradle/sbw-gun-animation-dependency.gradle'
+apply from: 'gradle/apocalypse-ai-resources.gradle'
+
+neoForge {
+    enable {
+        version = '21.1.227'
+        disableRecompilation = true
+    }
+    modules.findAll { it != 'main' }.each { addModdingDependenciesTo sourceSets.getByName(it) }
+    addModdingDependenciesTo sourceSets.test
+    mods {
+        doggiesnewvehicle {
+            selected.each { sourceSet sourceSets.getByName(it) }
+        }
+    }
+}
+repositories { mavenCentral() }
+dependencies {
+    implementation files(dependency)
+    artilleryCompileOnly files(tasks.named('extractSbwProjectileModelApi'))
+    navalCompileOnly files(tasks.named('extractSbwProjectileModelApi'))
+    compileOnly 'org.jetbrains.kotlin:kotlin-stdlib:2.2.0'
+    platformImplementation files(project(':route-core').sourceSets.main.output)
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation('com.tngtech.archunit:archunit:1.5.0') {
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+    }
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation files(project(':route-core').sourceSets.main.output)
+    testRuntimeOnly 'org.jetbrains.kotlin:kotlin-stdlib:2.2.0'
+}
+sourceSets.test.java.setSrcDirs(['src/neoforge1211/test/java', layout.buildDirectory.dir('generated/test/java')])
+sourceSets.test.compileClasspath += sourceSets.artillery.output + sourceSets.boss.output + sourceSets.platform.output
+sourceSets.test.runtimeClasspath += sourceSets.artillery.output + sourceSets.boss.output + sourceSets.platform.output
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs.addAll(['-Xlint:deprecation', '-Xmaxerrs', '500'])
+}
+// Source checks consume today's compiled classes. Artifact checks are a separate,
+// explicitly packaging task; excluding jar must never silently test an old archive.
+def productionClassDirs = files(selected.collect { sourceSets.getByName(it).output.classesDirs })
+def productionResourceDirs = files(selected.collect { sourceSets.getByName(it).output.resourcesDir })
+if (selected.contains('platform')) productionClassDirs += project(':route-core').sourceSets.main.output.classesDirs
+tasks.withType(Test).configureEach {
+    def probeProfile = providers.gradleProperty('dnvProbeSbwProfile').getOrElse(profile)
+    if (!pins.containsKey(probeProfile)) throw new GradleException("Unsupported probe profile: ${probeProfile}")
+    def probeDependency = file("libs/neoforge1211/${pins[probeProfile][0]}")
+    if (java.security.MessageDigest.getInstance('SHA-256').digest(probeDependency.bytes).encodeHex().toString() != pins[probeProfile][1]) {
+        throw new GradleException('Wrong probe SBW bytes')
+    }
+    systemProperty 'dnv.sbw.jar', probeDependency.absolutePath
+    systemProperty 'dnv.sbw.profile', probeProfile
+    systemProperty 'dnv.sbw.sha256', pins[probeProfile][1]
+    systemProperty 'java.awt.headless', 'true'
+    systemProperty 'dnv.modules', selected.join(',')
+    inputs.file(probeDependency)
+    if (providers.gradleProperty('dnvForceTests').getOrElse('false') == 'true') outputs.upToDateWhen { false }
+    testLogging { events 'failed', 'skipped' }
+}
+tasks.named('test', Test) {
+    useJUnitPlatform { excludeTags 'artifact' }
+    systemProperty 'dnv.production.classDirs', productionClassDirs.asPath
+    systemProperty 'dnv.production.resourceDirs', productionResourceDirs.asPath
+    inputs.files(productionClassDirs)
+    inputs.files(productionResourceDirs)
+    selected.each { dependsOn sourceSets.getByName(it).classesTaskName }
+}
+def artifactCheck = tasks.register('artifactCheck', Test) {
+    group = 'verification'
+    description = 'Packages and checks the current NeoForge JAR; requires artifact-build authorization.'
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+    useJUnitPlatform()
+    filter {
+        includeTestsMatching 'com.liucodex.doggiesnewvehicle.neoforge.NeoArtifactLinkageTest.allShippedMinecraftNeoForgeAndSbwCallsResolveAgainstSelectedProfile'
+        includeTestsMatching 'com.liucodex.doggiesnewvehicle.compat.DnvMuzzleMixinApplicationTest'
+        includeTestsMatching 'com.liucodex.doggiesnewvehicle.compat.BlizzardTvMixinApplicationTest'
+        includeTestsMatching 'com.liucodex.doggiesnewvehicle.compat.BlizzardNeoCameraOrderTest'
+        includeTestsMatching 'com.liucodex.doggiesnewvehicle.compat.BlizzardEnergyHudExecutionTest'
+        includeTestsMatching 'com.liucodex.doggiesnewvehicle.compat.ApocalypseClientFireExecutionTest'
+    }
+    def artifact = tasks.named('jar', Jar).flatMap { it.archiveFile }
+    systemProperty 'dnv.artifact', artifact.get().asFile.absolutePath
+    inputs.file(artifact)
+    dependsOn 'testClasses', 'jar'
+    shouldRunAfter tasks.named('test')
+    onlyIf {
+        if (gradle.startParameter.excludedTaskNames.any { it == 'jar' || it.endsWith(':jar') }) {
+            throw new GradleException('artifactCheck requires the current jar task; -x jar cannot reuse an old artifact.')
+        }
+        true
+    }
+}
+tasks.named('build') { dependsOn artifactCheck }
+tasks.named('compileTestJava') { dependsOn prepare }
+tasks.named('jar', Jar) {
+    // Incremental resource outputs can still contain files from earlier releases.
+    exclude 'assets/dnvcarriercube/models/shanyue/*.obj', 'assets/dnvcarriercube/models/shanyue/*.mtl',
+            'assets/doggiesnewvehicle/textures/entity/apocalypse_tracks.png',
+            'assets/doggiesnewvehicle/textures/entity/project612_tracks.png',
+            'assets/doggievehicle/models/bedrock/projectile/apocalypse_missile.geo.json',
+            'assets/doggievehicle/textures/bedrock/projectile/apocalypse_missile.png'
+    selected.findAll { it != 'main' }.each { from(sourceSets.getByName(it).output) }
+    if (selected.contains('platform')) from(project(':route-core').sourceSets.main.output)
+    from('../LICENSE') { rename { 'LICENSE_doggiesnewvehicle' } }
+    duplicatesStrategy = DuplicatesStrategy.FAIL
+    manifest.attributes('Implementation-Version': project.version, 'Automatic-Module-Name': 'doggiesnewvehicle')
+}
+tasks.register('quickCheck') {
+    group = 'verification'
+    description = 'Checks current NeoForge sources and compiled linkage without producing or reading a DNV JAR.'
+    dependsOn 'test'
+    selected.each { dependsOn sourceSets.getByName(it).classesTaskName }
+}
+tasks.named('check') { dependsOn 'quickCheck' }
+if (selected.contains('naval')) {
+    apply from: 'gradle/naval-check.gradle'
+    def navalPack = tasks.register('stageNavalPackCheck', Sync) {
+        dependsOn 'processResources', 'processNavalResources'
+        into layout.buildDirectory.dir('naval-pack-check')
+        from sourceSets.main.output.resourcesDir
+        from sourceSets.naval.output.resourcesDir
+        duplicatesStrategy = DuplicatesStrategy.FAIL
+    }
+    tasks.named('navalPackCheck', JavaExec) {
+        dependsOn navalPack
+        setArgs([providers.gradleProperty('dnvNavalVerifyArchive').getOrElse(
+                layout.buildDirectory.dir('naval-pack-check').get().asFile.absolutePath)])
+    }
+    tasks.named('quickCheck') {
+        dependsOn tasks.matching { it.name.startsWith('naval') && it.name.endsWith('Check') }
+    }
+}
+apply from: 'gradle/damage-tag-assembly.gradle'
+apply from: 'gradle/runtime-art.gradle'
+tasks.register('writeNeoForgeClasspath') {
+    dependsOn prepare
+    doLast {
+        def target = layout.buildDirectory.file('resolved-classpath.json').get().asFile
+        target.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson([
+            minecraft: '1.21.1', neoforge: '21.1.227', java: System.getProperty('java.version'), sbw: profile,
+            dependency: dependency.absolutePath,
+            compile: sourceSets.main.compileClasspath.files.collect { it.absolutePath },
+            test: sourceSets.test.runtimeClasspath.files.collect { it.absolutePath }
+        ]))
+    }
+}

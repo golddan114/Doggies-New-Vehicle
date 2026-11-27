@@ -1,0 +1,33 @@
+{
+  "Type": "Car",
+  "HudType": "@Empty",
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/land.png",
+  "VehicleContainerType": "Small",
+  "MaxHealth": 250,
+  "MaxEnergy": 0,
+  "Mass": 2,
+  "UpStep": 1,
+  "Gravity": 0,
+  "EngineType": "Empty",
+  "EngineInfo": {},
+  "OBB": [{"Size": [0.5518, 0.49476, 1.1824], "Position": [0, 0.44776, -0.0986]}],
+  "ThirdPersonCameraPos": [0, 2, 6],
+  "Weapons": {},
+  "Seats": [{
+    "HidePassenger": false,
+    "Transform": "Vehicle",
+    "Position": [0, 0.65, 0],
+    "Pose": "Default",
+    "CanRotateHead": true,
+    "Weapons": [],
+    "DismountInfo": {"Transform": "Vehicle", "Position": [2.5, 0, 0]},
+    "CameraPos": {
+      "Transform": "Vehicle",
+      "UseFixedCameraPos": true,
+      "Position": [0, 1.25, 0.25],
+      "ZoomPosition": [0, 1.25, 0.25],
+      "Direction": "Passenger",
+      "ZoomDirection": "Passenger"
+    }
+  }]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "superbwarfare:javelin_missile"},
+    {"item": "minecraft:packed_ice"},
+    {"item": "minecraft:packed_ice"},
+    {"item": "minecraft:sponge"},
+    {"item": "minecraft:sponge"},
+    {"item": "minecraft:sponge"},
+    {"item": "minecraft:bucket"},
+    {"item": "minecraft:bucket"},
+    {"item": "minecraft:bucket"}
+  ],
+  "result": {"item": "doggiesnewvehicle:cryo_missile", "count": 1}
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "adapterId": "sbw_0_8_9_1_hotfix:yx_100",
+  "revision": 1,
+  "vehicleTypeId": "superbwarfare:yx_100",
+  "expectedLayoutFingerprint": 2955411892,
+  "aiStationIds": ["seat_0", "seat_1"]
+}

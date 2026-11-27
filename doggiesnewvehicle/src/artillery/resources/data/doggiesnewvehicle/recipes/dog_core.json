@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["CNC", "DMD", "FFF"],
+  "key": {
+    "C": {"item": "minecraft:chorus_fruit"},
+    "N": {"item": "minecraft:nether_star"},
+    "D": {"item": "minecraft:dragon_breath"},
+    "M": {"item": "doggiesnewvehicle:wild_dog_milk"},
+    "F": {"item": "minecraft:fire_charge"}
+  },
+  "result": {"item": "doggiesnewvehicle:dog_core", "count": 1}
+}

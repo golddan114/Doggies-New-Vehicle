@@ -1,0 +1,13 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "8 superbwarfare:cannon_core",
+    "4 superbwarfare:medium_armament_module",
+    "4 superbwarfare:legendary_material_pack",
+    "24 minecraft:netherite_ingot"
+  ],
+  "result": {
+    "item": "dnvcarriercube:main_turret"
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "EngineSound": "superbwarfare:yx_100_engine",
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/land.png",
+  "VehicleContainerType": "Medium",
+  "HudType": "@Land",
+  "Type": "Tank",
+  "MaxHealth": 650,
+  "MaxEnergy": 5000000,
+  "HUDColor": "0xFFC700",
+  "Mass": 80,
+  "TurretPos": [
+    0.0,
+    2.33396149,
+    0.7726379
+  ],
+  "BarrelPos": [
+    0,
+    0,
+    0
+  ],
+  "TurretTurnSpeed": [
+    0.9,
+    0
+  ],
+  "TurretPitchRange": [
+    -3,
+    25
+  ],
+  "TurretYawRange": [
+    0,
+    0
+  ],
+  "UpStep": 0.9908035627339902,
+  "RotateOffsetHeight": 0.9082365991728244,
+  "InertiaRotateRate": 0.65,
+  "EngineType": "Track",
+  "ThirdPersonCameraPos": [
+    0.0,
+    5.779687449281609,
+    14.036383805398195
+  ],
+  "VehicleIcon": "superbwarfare:textures/vehicle_icon/t_90a_icon.png",
+  "EngineInfo": {
+    "Buoyancy": 0,
+    "EnergyCostRate": 128,
+    "WheelRotSpeed": 1,
+    "WheelDifferential": 0.75,
+    "TrackRotSpeed": 1,
+    "TrackDifferential": 0.6,
+    "MaxForwardSpeedRate": 0.1705,
+    "MaxBackwardSpeedRate": 0.0568333333333333,
+    "Increment": 0.0196,
+    "Decrement": 0.0196,
+    "SteeringSpeed": 0.03,
+    "EngineSoundVolume": 0.6
+  },
+  "Seats": [
+    {
+      "HidePassenger": true,
+      "RotateWithVehicle": false,
+      "Transform": "Vehicle",
+      "Position": [
+        0.0,
+        2.8072767610796387,
+        0.8256696356116585
+      ],
+      "CameraPos": {
+        "Transform": "Project612Main",
+        "UseFixedCameraPos": true,
+        "Position": [
+          0.0,
+          4.582466477644704,
+          1.4862053441009853
+        ],
+        "ZoomPosition": [
+          0.0,
+          2.8898437246408046,
+          5.366852631475781
+        ],
+        "Direction": "Passenger",
+        "ZoomDirection": "Passenger"
+      },
+      "Weapons": [
+        "Main"
+      ],
+      "CanRotateHead": true,
+      "MinPitch": -85,
+      "MaxPitch": 85,
+      "Sensitivity": [
+        0.35,
+        0.45,
+        0.65
+      ],
+      "HasThermalImaging": true,
+      "DismountInfo": {
+        "Transform": "Vehicle",
+        "Position": [
+          3.1375446153243023,
+          0.24770089068349754,
+          0.0
+        ]
+      }
+    }
+  ],
+  "OBB": [
+    {
+      "Part": "Body",
+      "Position": [
+        0.0,
+        1.798411712050438,
+        0.9261047840118408
+      ],
+      "Size": [
+        2.528613328933716,
+        1.4449218660593033,
+        4.1771790981292725
+      ],
+      "Transform": "Project612Body",
+      "Rotation": "Project612Body"
+    },
+    {
+      "Part": "Body",
+      "Position": [
+        0.19619512557983398,
+        2.7530921697616577,
+        0.09040212631225586
+      ],
+      "Size": [
+        1.7701278924942017,
+        1.6255370378494263,
+        3.4446849822998047
+      ],
+      "Transform": "Project612Body",
+      "Rotation": "Project612Body"
+    },
+    {
+      "Part": "Turret",
+      "Position": [
+        0.0,
+        2.3402572870254517,
+        4.4785037860274315
+      ],
+      "Size": [
+        0.43863698840141296,
+        0.5418456792831421,
+        4.375295080244541
+      ],
+      "Transform": "Project612Main",
+      "Rotation": "Project612Main"
+    },
+    {
+      "Part": "WheelLeft",
+      "Position": [
+        -2.012569785118103,
+        0.6373138045892119,
+        0.774065375328064
+      ],
+      "Size": [
+        0.35090959072113037,
+        0.6192522430792451,
+        4.1811805963516235
+      ],
+      "Transform": "Project612Body",
+      "Rotation": "Project612Body"
+    },
+    {
+      "Part": "WheelRight",
+      "Position": [
+        2.012569785118103,
+        0.6373138045892119,
+        0.774065375328064
+      ],
+      "Size": [
+        0.35090959072113037,
+        0.6192522430792451,
+        4.1811805963516235
+      ],
+      "Transform": "Project612Body",
+      "Rotation": "Project612Body"
+    },
+    {
+      "Part": "Collision",
+      "Position": [
+        0.0,
+        2.1983453845605254,
+        0.8480843305587769
+      ],
+      "Size": [
+        2.528613328933716,
+        2.1983453845605254,
+        4.255199551582336
+      ]
+    }
+  ],
+  "TerrainCompat": [
+    [
+      -2.01256967,
+      0,
+      4.33476543
+    ],
+    [
+      -2.01256967,
+      0,
+      -2.78663516
+    ],
+    [
+      -2.01256967,
+      0,
+      3.31742263
+    ],
+    [
+      -2.01256967,
+      0,
+      2.30007982
+    ],
+    [
+      -2.01256967,
+      0,
+      1.28273678
+    ],
+    [
+      -2.01256967,
+      0,
+      0.26539382
+    ],
+    [
+      -2.01256967,
+      0,
+      -0.75194913
+    ],
+    [
+      -2.01256967,
+      0,
+      -1.769292
+    ],
+    [
+      2.01256967,
+      0,
+      4.33476543
+    ],
+    [
+      2.01256967,
+      0,
+      -2.78663516
+    ],
+    [
+      2.01256967,
+      0,
+      3.31742263
+    ],
+    [
+      2.01256967,
+      0,
+      2.30007982
+    ],
+    [
+      2.01256967,
+      0,
+      1.28273678
+    ],
+    [
+      2.01256967,
+      0,
+      0.26539382
+    ],
+    [
+      2.01256967,
+      0,
+      -0.75194913
+    ],
+    [
+      2.01256967,
+      0,
+      -1.769292
+    ]
+  ],
+  "PartHealth": {
+    "Turret": 200,
+    "LeftWheel": 150,
+    "RightWheel": 150,
+    "MainEngine": 200,
+    "SubEngine": 200
+  },
+  "DestroyInfo": {
+    "ExplosionDamage": 120,
+    "ExplosionRadius": 4,
+    "SympatheticDetonation": false
+  },
+  "DamageModifiers": [],
+  "Weapons": {
+    "Main": {
+      "Projectile": "superbwarfare:cannon_shell",
+      "ShellType": "AP",
+      "AmmoType": "superbwarfare:large_shell_ap",
+      "Damage": 560,
+      "Velocity": 36,
+      "Magazine": 1,
+      "EmptyReloadTime": 160,
+      "NormalReloadTime": 160,
+      "RPM": 120,
+      "DefaultFireMode": "Semi",
+      "AvailableFireModes": "Semi",
+      "ExplosionDamage": 0,
+      "ExplosionRadius": 0,
+      "ExplosionDestroy": true,
+      "Headshot": 1,
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/ap_shell.png",
+      "Name": "weapon.doggievehicle.project612_main",
+      "DefaultZoom": 3,
+      "ProjectileLife": 50,
+      "Gravity": 0.03,
+      "ApDurability": 100,
+      "RecoilTime": 14,
+      "RecoilForce": 0.15,
+      "ShootShake": [
+        0,
+        0,
+        0
+      ],
+      "Spread": 0.02,
+      "ShootAnimationTime": 14,
+      "Crosshair": "@VehicleRuApc",
+      "CrosshairColor": "0xFFC700",
+      "ShootDelayTime": 0,
+      "WithdrawAmmoWhenChangeSlot": false,
+      "SoundRadius": 32,
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:t_90a_fire_1p",
+        "Fire3P": "superbwarfare:t_90a_fire_3p",
+        "Fire3PFar": "superbwarfare:t_90a_far",
+        "Fire3PVeryFar": "superbwarfare:t_90a_veryfar",
+        "VehicleReload": "superbwarfare:t_90a_reload",
+        "Change": "superbwarfare:into_cannon",
+        "CancellableSounds": [
+          "superbwarfare:t_90a_reload"
+        ]
+      },
+      "ShootPos": {
+        "Transform": "Project612Main",
+        "Positions": [
+          [
+            0.0,
+            2.33251667,
+            8.85379887
+          ]
+        ],
+        "Directions": [
+          "Barrel"
+        ]
+      }
+    }
+  }
+}

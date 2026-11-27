@@ -1,0 +1,40 @@
+modLoader="javafml"
+loaderVersion="[47,48)"
+license="GPL-3.0-only (code) / All Rights Reserved (original DNV models)"
+
+[[mods]]
+modId="doggiesnewvehicle"
+version="1.20hotfix"
+displayName="Doggie's New Vehicle"
+logoFile="assets/doggiesnewvehicle/textures/item/dnv_icon.png"
+authors="所至皆青山（GoldenDoggieBall）\n代码：GPT26075\n协助：MPR时殇（030814）"
+description='''
+《卓越前线》的非官方附属模组，包含火炮、装甲载具、战略发射设施与大型战斗单位。
+完整版本还提供自由号战列舰、岳级航空母舰、飞鹰型舰载机及两本中英玩法手册。
+
+An unofficial Superb Warfare add-on with artillery, armored vehicles, strategic launch sites, and large combat units.
+The full build includes the Libertad battleship, Yue-class aircraft carrier, Feiying carrier fighter, and two in-game player guides.
+
+测试QQ群：815277094
+'''
+
+[[dependencies.doggiesnewvehicle]]
+modId="forge"
+mandatory=true
+versionRange="[47.2.0,48)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.doggiesnewvehicle]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.doggiesnewvehicle]]
+modId="superbwarfare"
+mandatory=true
+versionRange="[0.8.9.2]"
+ordering="AFTER"
+side="BOTH"

@@ -1,0 +1,17 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "land",
+  "inputs": [
+    "24 #forge:storage_blocks/steel",
+    "2 superbwarfare:heavy_armament_module",
+    "6 superbwarfare:medium_battery_pack",
+    "8 superbwarfare:track",
+    "4 superbwarfare:large_motor",
+    "2 superbwarfare:intelligent_chip",
+    "4 minecraft:green_dye",
+    "doggiesnewvehicle:apocalypse_blueprint"
+  ],
+  "result": {
+    "entity": "doggievehicle:apocalypse"
+  }
+}

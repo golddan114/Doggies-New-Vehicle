@@ -1,0 +1,15 @@
+def manifest = file('gradle/runtime-art-inputs.txt')
+if (manifest.isFile()) {
+    def verifyRuntimeArt = tasks.register('verifyRuntimeArt') {
+        group = 'verification'
+        description = 'Checks that the local checkout has the runtime art needed for a playable DNV JAR.'
+        doLast {
+            def required = manifest.readLines('UTF-8')
+            def missing = required.findAll { !file(it).isFile() }
+            if (missing) {
+                throw new GradleException("Missing ${missing.size()} DNV runtime assets. First missing input: ${missing.first()}. See docs/corresponding-source.md.")
+            }
+        }
+    }
+    tasks.named('jar').configure { dependsOn verifyRuntimeArt }
+}

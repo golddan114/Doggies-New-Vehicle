@@ -1,0 +1,38 @@
+{
+  "source_blend": "Noise_DropRig_Rigged_v01_Editable.blend",
+  "mesh": "noise_drop_rig.shm",
+  "part_count": 5,
+  "triangle_total": 308,
+  "bounds_min_mc": [
+    -4.712681,
+    0.857656,
+    -6.082219
+  ],
+  "bounds_max_mc": [
+    4.712681,
+    3.454667,
+    6.082219
+  ],
+  "objects": {
+    "NoiseDropRig_Core_Mesh": {
+      "group": "drop_rig_core",
+      "triangles": 132
+    },
+    "NoiseDropRig_Thruster_FL_Mesh": {
+      "group": "drop_rig_thruster_fl",
+      "triangles": 44
+    },
+    "NoiseDropRig_Thruster_FR_Mesh": {
+      "group": "drop_rig_thruster_fr",
+      "triangles": 44
+    },
+    "NoiseDropRig_Thruster_RL_Mesh": {
+      "group": "drop_rig_thruster_rl",
+      "triangles": 44
+    },
+    "NoiseDropRig_Thruster_RR_Mesh": {
+      "group": "drop_rig_thruster_rr",
+      "triangles": 44
+    }
+  }
+}

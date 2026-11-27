@@ -1,0 +1,19 @@
+scope	module	internal	allowed_targets	class_name_regex	cycle_participant(default=true)	bytecode_root(optional)
+dnv	dnv-rws-ui-contract	true		^com\.liucodex\.doggiesnewvehicle\.api\.rws(?:\..*|$)	true
+dnv	dnv-route-core	true		^com\.liucodex\.doggiesnewvehicle\.route(?:\..*|$)
+dnv	dnv-platform	true	dnv-mission,dnv-route-core,dnv-kernel-platforms,dnv-client-experience,dnv-sbw-adapter,dnv-platform-sensors	^com\.liucodex\.doggiesnewvehicle\.platform(?:\..*|$)
+dnv	dnv-platform	true	dnv-mission,dnv-route-core,dnv-kernel-platforms,dnv-client-experience,dnv-sbw-adapter	^com\.liucodex\.doggiesnewvehicle\.entity\.DnvHoverRoutePlatformEntity(?:\$.*)?$
+dnv	dnv-platform	true	dnv-mission,dnv-route-core,dnv-kernel-platforms,dnv-client-experience,dnv-sbw-adapter	^com\.liucodex\.doggiesnewvehicle\.compat\.(?:DnvAirRouteWorldValidation|DnvHoverCrewExitRules|DnvHoverPlatformCrew|DnvHoverPlatformWeapons|DnvHoverPlatformGunNetwork|DnvHoverRoutePlatform(?:Services|Runtime|Commands)|DnvTacticalRoute(?:ClientGate|NetworkCodec|Network|Services))(?:\$.*)?$
+dnv	dnv-platform	true	dnv-mission,dnv-route-core,dnv-kernel-platforms,dnv-client-experience,dnv-sbw-adapter	^com\.liucodex\.doggiesnewvehicle\.compat\.mixin\.TacticalMapScreenMixin(?:\$.*)?$
+dnv	dnv-platform	true	dnv-mission,dnv-route-core,dnv-kernel-platforms,dnv-client-experience,dnv-sbw-adapter	^com\.liucodex\.doggiesnewvehicle\.mission\.DnvTacticalRouteClientProjection(?:\$.*)?$
+dnv	dnv-mission	true	dnv-route-core	^com\.liucodex\.doggiesnewvehicle\.(?:mission(?:\..*|$)|item\.DnvAerialMissionCodec(?:\$.*)?$)
+dnv	dnv-autonomy-kernel	true		^com\.liucodex\.doggiesnewvehicle\.core(?:\..*|$)
+dnv	dnv-combat-contracts	true		^com\.liucodex\.doggiesnewvehicle\.api\.combat(?:\..*|$)
+dnv	dnv-platform-sensors	true	dnv-autonomy-kernel	^com\.liucodex\.doggiesnewvehicle\.compat\.(?:DnvBossTeamMembership|DnvDefaultTeams|DnvTargetCandidateCache|DnvTargetSectionPager|DnvTargetingBudget|DnvTargetSight|DnvTargetLineOfSight|DnvSightObservation|DnvGroundTerrainProbe|DnvObstructionPolicy)(?:\$.*)?$
+dnv	dnv-platform-sensors	true	dnv-autonomy-kernel	^com\.liucodex\.doggiesnewvehicle\.compat\.mixin\.Dnv(?:ServerLevelEntityManager|PersistentEntitySections|EntitySectionEntities|EntitySectionKeys)Access(?:\$.*)?$
+dnv	dnv-autonomy-crew	true	dnv-autonomy-kernel,dnv-combat-contracts,dnv-kernel-platforms,dnv-mission,dnv-platform-sensors	^com\.liucodex\.doggiesnewvehicle\.(?:ai(?:\..*|$)|item\.DnvVehicleCrew.*|compat\.DnvSbw(?:AimChannelRuntime|CrewAutonomy|CrewDiagnosticProjector|StationEngagementAdapter|StationRuntime|WeaponScheduler|WeaponFeedback)(?:\$.*)?$|compat\.DnvVehicleCrewRuntime(?:\$.*)?$)
+dnv	dnv-client-experience	true	dnv-mission,dnv-route-core,dnv-autonomy-crew,dnv-rws-ui-contract,dnv-kernel-platforms,dnv-combat-contracts	^com\.liucodex\.(?:(?:doggiesnewvehicle|noise|silentheaven)\.client(?:\..*|$)|doggiesnewvehicle\.(?:artillery|boss)\.client(?:\..*|$))
+dnv	dnv-kernel-platforms	true	dnv-autonomy-kernel,dnv-combat-contracts,dnv-platform-sensors,dnv-route-core,dnv-energy	^com\.liucodex\.doggiesnewvehicle\.compat\.mixin\.ApocalypseAutonomousDriveMixin(?:\$.*)?$	true	doggiesnewvehicle/build/classes/java/artillery/
+dnv	dnv-energy	true		^com\.liucodex\.doggiesnewvehicle\.artillery\.energy(?:\..*|$)	true	doggiesnewvehicle/build/classes/java/artillery/
+dnv	dnv-sbw-adapter	true	dnv-autonomy-kernel,dnv-combat-contracts,dnv-kernel-platforms,dnv-mission,dnv-route-core,dnv-autonomy-crew,dnv-rws-ui-contract,dnv-platform-sensors,dnv-energy	^com\.liucodex\.doggiesnewvehicle\.compat(?:\..*|$)
+dnv	dnv-kernel-platforms	true	dnv-autonomy-kernel,dnv-combat-contracts,dnv-platform-sensors,dnv-route-core,dnv-energy	^com\.liucodex\.(?:doggiesnewvehicle|noise|silentheaven)(?:\..*|$)

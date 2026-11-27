@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "adapterId": "sbw_0_8_9_1_hotfix:mi_28",
+  "revision": 1,
+  "vehicleTypeId": "superbwarfare:mi_28",
+  "expectedLayoutFingerprint": 3267468057,
+  "aiStationIds": ["seat_1"]
+}

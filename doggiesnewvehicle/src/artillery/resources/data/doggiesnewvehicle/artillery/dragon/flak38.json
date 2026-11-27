@@ -1,0 +1,182 @@
+{
+  "yaw": [
+    0.0,
+    0.7087785601615906,
+    0.0
+  ],
+  "pitch": [
+    0.0,
+    1.458030343055725,
+    -0.1339874267578125
+  ],
+  "links": [],
+  "minimum": [
+    -2.0888831615448,
+    0.0,
+    -2.7150731086730957
+  ],
+  "maximum": [
+    2.0888826847076416,
+    2.584488868713379,
+    2.0777602195739746
+  ],
+  "groups": [
+    "recoil_barrel_01",
+    "recoil_barrel_02",
+    "recoil_barrel_03",
+    "recoil_barrel_04",
+    "pitch_assembly",
+    "yaw_assembly",
+    "base_static"
+  ],
+  "author": {
+    "path": "flak38.blend",
+    "sha256": "a35f7818f8c2539c036be6336a20377f12558a745b45d450d2a787ac4d50bee8"
+  },
+  "model": "flak38",
+  "entity": "dragon_flak38",
+  "hp": 100,
+  "seats": 1,
+  "servo": 0,
+  "recoil_ticks": 3,
+  "recoil_stroke": 0.12,
+  "cameras": {
+    "first_person": {
+      "role": "first_person",
+      "anchor": "flak38__camera_first_person",
+      "camera": "flak38__view_first_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": false,
+      "transform_proposal": "YAW",
+      "game_deployment_position": [
+        -0.2798760235309601,
+        2.3890857696533203,
+        -0.9463505744934082
+      ],
+      "native_transform": "Turret",
+      "native_position": [
+        -0.2798760235309601,
+        1.6803072094917297,
+        -0.9463505744934082
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "ads": {
+      "role": "ads",
+      "anchor": "flak38__camera_ads",
+      "camera": "flak38__view_ads",
+      "fov_degrees": 30,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "PITCH",
+      "game_deployment_position": [
+        0.0001242607831954956,
+        2.389085531234741,
+        -0.19189661741256714
+      ],
+      "native_transform": "Barrel",
+      "native_position": [
+        0.0001242607831954956,
+        0.9310551881790161,
+        -0.05790919065475464
+      ],
+      "direction": "Barrel",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    },
+    "third_person": {
+      "role": "third_person",
+      "anchor": "flak38__camera_third_person",
+      "camera": "flak38__view_third_person",
+      "fov_degrees": 75,
+      "near_clip": 0.05,
+      "mounted_eye_translation_follows_pitch": null,
+      "transform_proposal": "YAW",
+      "game_deployment_position": [
+        2.0249719619750977,
+        3.1379482746124268,
+        -4.028164386749268
+      ],
+      "native_transform": "Turret",
+      "native_position": [
+        2.0249719619750977,
+        2.429169714450836,
+        -4.028164386749268
+      ],
+      "direction": "look_at_camera_focus",
+      "status": "BLENDER_PRESET_NATIVE_PLAYER_FIT_NOT_RUN"
+    }
+  },
+  "muzzles": [
+    [
+      -0.6944351196289062,
+      -0.17731177806854248,
+      1.6803884506225586
+    ],
+    [
+      -0.6944351196289062,
+      0.1773083209991455,
+      1.6803884506225586
+    ],
+    [
+      0.6944332122802734,
+      -0.17731177806854248,
+      1.6803884506225586
+    ],
+    [
+      0.6944332122802734,
+      0.1773083209991455,
+      1.6803884506225586
+    ]
+  ],
+  "projectile_positions": [
+    [
+      -0.6944351196289062,
+      -0.17731177806854248,
+      1.710388422012329
+    ],
+    [
+      -0.6944351196289062,
+      0.1773083209991455,
+      1.710388422012329
+    ],
+    [
+      0.6944332122802734,
+      -0.17731177806854248,
+      1.710388422012329
+    ],
+    [
+      0.6944332122802734,
+      0.1773083209991455,
+      1.710388422012329
+    ]
+  ],
+  "runtime_seat_contacts": [[0.0, 0.7660772204399109, -1.3563504219055176]],
+  "seat_positions": [
+    [
+      0.0,
+      0.4750973582267761,
+      -0.9463505744934082
+    ]
+  ],
+  "exit_positions": [
+    [
+      2.6388816833496094,
+      0.0,
+      -1.2963504791259766
+    ]
+  ],
+  "collision_width": 2.55,
+  "collision_height": 2.59,
+  "runtime_camera_position": [
+    -0.2798760235309601,
+    2.3890857696533203,
+    -0.9463505744934082
+  ],
+  "runtime_ads_position": [
+    0.0001243,
+    2.3890855601615906,
+    -0.1918966
+  ]
+}

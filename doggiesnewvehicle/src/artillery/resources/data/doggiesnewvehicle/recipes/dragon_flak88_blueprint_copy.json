@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "ACA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "B": {
+      "item": "minecraft:paper"
+    },
+    "C": {
+      "item": "doggiesnewvehicle:dragon_flak88_blueprint"
+    }
+  },
+  "result": {
+    "item": "doggiesnewvehicle:dragon_flak88_blueprint",
+    "count": 2
+  },
+  "show_notification": true
+}

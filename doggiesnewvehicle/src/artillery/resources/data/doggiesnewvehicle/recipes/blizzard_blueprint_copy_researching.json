@@ -1,0 +1,17 @@
+{
+  "type": "superbwarfare:researching",
+  "addition": {
+    "item": "minecraft:lapis_lazuli"
+  },
+  "base": {
+    "item": "minecraft:paper"
+  },
+  "input": {
+    "item": "doggiesnewvehicle:blizzard_blueprint"
+  },
+  "result": {
+    "item": "doggiesnewvehicle:blizzard_blueprint",
+    "count": 2
+  },
+  "time": 600
+}

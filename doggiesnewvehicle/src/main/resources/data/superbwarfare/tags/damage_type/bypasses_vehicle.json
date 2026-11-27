@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "doggiesnewvehicle:boss_piercing_laser",
+      "required": false
+    },
+    {
+      "id": "doggiesnewvehicle:mothership_doomsday_blast",
+      "required": false
+    },
+    {
+      "id": "doggiesnewvehicle:blizzard_cold",
+      "required": false
+    }
+  ]
+}
